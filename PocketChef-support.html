@@ -11,310 +11,375 @@
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
             background-color: #f5f5f7;
-            color: #333;
+            color: #1d1d1f;
             line-height: 1.6;
         }
-        
+
+        header {
+            background-color: #ffffff;
+            border-bottom: 1px solid #e5e5e7;
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-content {
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 600;
+            color: #1d1d1f;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-icon {
+            width: 36px;
+            height: 36px;
+            background: linear-gradient(135deg, #007AFF 0%, #0051BA 100%);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 18px;
+        }
+
+        nav a {
+            margin-left: 30px;
+            color: #007AFF;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #0051BA;
+        }
+
         .container {
             max-width: 980px;
             margin: 0 auto;
-            padding: 20px;
-        }
-        
-        header {
-            background-color: white;
             padding: 40px 20px;
-            text-align: center;
-            border-bottom: 1px solid #e5e5e7;
-            margin-bottom: 40px;
         }
-        
-        header h1 {
-            font-size: 32px;
-            font-weight: 700;
-            color: #000;
-            margin-bottom: 10px;
-        }
-        
-        header p {
-            font-size: 16px;
-            color: #666;
-        }
-        
-        .section {
-            background-color: white;
+
+        .hero {
+            background-color: #ffffff;
+            padding: 60px 40px;
             border-radius: 12px;
-            padding: 40px;
-            margin-bottom: 30px;
+            text-align: center;
+            margin-bottom: 40px;
             box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
         }
-        
-        .section h2 {
+
+        .hero h1 {
+            font-size: 32px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #1d1d1f;
+        }
+
+        .hero p {
+            font-size: 16px;
+            color: #6f6f77;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        section {
+            background-color: #ffffff;
+            padding: 40px;
+            margin-bottom: 20px;
+            border-radius: 12px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        section h2 {
             font-size: 24px;
             font-weight: 600;
-            color: #000;
             margin-bottom: 25px;
-            border-bottom: 2px solid #007AFF;
+            color: #1d1d1f;
+            border-bottom: 2px solid #f5f5f7;
             padding-bottom: 15px;
         }
-        
-        .contact-info {
-            font-size: 16px;
-            margin-bottom: 20px;
-        }
-        
-        .contact-info p {
-            margin-bottom: 15px;
-        }
-        
-        .contact-info a {
-            color: #007AFF;
-            text-decoration: none;
-            font-weight: 500;
-        }
-        
-        .contact-info a:hover {
-            text-decoration: underline;
-        }
-        
+
         .faq-item {
-            margin-bottom: 30px;
-            padding-bottom: 30px;
-            border-bottom: 1px solid #e5e5e7;
+            margin-bottom: 25px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid #f5f5f7;
         }
-        
+
         .faq-item:last-child {
             border-bottom: none;
-            padding-bottom: 0;
             margin-bottom: 0;
+            padding-bottom: 0;
         }
-        
+
         .faq-item h3 {
-            font-size: 16px;
+            font-size: 15px;
             font-weight: 600;
-            color: #007AFF;
+            color: #1d1d1f;
             margin-bottom: 10px;
-            cursor: pointer;
-        }
-        
-        .faq-item p {
-            font-size: 15px;
-            color: #555;
-            line-height: 1.7;
-        }
-        
-        .button-group {
             display: flex;
-            gap: 15px;
-            flex-wrap: wrap;
-            margin-top: 25px;
+            align-items: center;
         }
-        
-        .btn {
-            padding: 12px 24px;
+
+        .faq-item h3::before {
+            content: '';
+            width: 6px;
+            height: 6px;
+            background-color: #007AFF;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .faq-item p {
+            color: #6f6f77;
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        .contact-box {
+            background-color: #f5f5f7;
+            padding: 30px;
             border-radius: 8px;
-            border: 2px solid #007AFF;
-            background-color: white;
-            color: #007AFF;
+            margin-bottom: 20px;
+        }
+
+        .contact-box h3 {
             font-size: 15px;
             font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
+            color: #1d1d1f;
+            margin-bottom: 10px;
+        }
+
+        .contact-box p {
+            font-size: 14px;
+            color: #6f6f77;
+            margin-bottom: 8px;
+        }
+
+        .contact-email {
+            color: #007AFF;
             text-decoration: none;
+            font-weight: 600;
+        }
+
+        .contact-email:hover {
+            color: #0051BA;
+        }
+
+        .button {
             display: inline-block;
-        }
-        
-        .btn:hover {
-            background-color: #f0f7ff;
-        }
-        
-        .btn-primary {
+            padding: 12px 24px;
+            margin-top: 15px;
             background-color: #007AFF;
             color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            transition: background-color 0.3s;
+            border: none;
+            cursor: pointer;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
         }
-        
-        .btn-primary:hover {
-            background-color: #0051d5;
+
+        .button:hover {
+            background-color: #0051BA;
         }
-        
-        .btn-danger {
-            border-color: #ff3b30;
-            color: #ff3b30;
+
+        .button-secondary {
+            background-color: #f5f5f7;
+            color: #007AFF;
+            margin-left: 10px;
         }
-        
-        .btn-danger:hover {
-            background-color: #fff0f0;
+
+        .button-secondary:hover {
+            background-color: #e5e5e7;
         }
-        
-        .warning {
-            background-color: #fff3cd;
-            border-left: 4px solid #ffc107;
-            padding: 15px;
+
+        .button-danger {
+            background-color: #ff3b30;
+        }
+
+        .button-danger:hover {
+            background-color: #ff2d1f;
+        }
+
+        .info-box {
+            background-color: #f5f5f7;
+            padding: 20px;
+            border-radius: 8px;
             margin-top: 20px;
-            border-radius: 4px;
-            font-size: 14px;
-            color: #856404;
+            border-left: 3px solid #007AFF;
         }
-        
+
+        .info-box p {
+            font-size: 14px;
+            color: #6f6f77;
+            margin: 0;
+        }
+
         footer {
-            text-align: center;
-            padding: 30px 20px;
-            color: #666;
-            font-size: 14px;
+            background-color: #f5f5f7;
             border-top: 1px solid #e5e5e7;
-            margin-top: 50px;
+            padding: 40px 20px;
+            text-align: center;
+            font-size: 12px;
+            color: #6f6f77;
+            margin-top: 60px;
         }
-        
+
+        .footer-links {
+            margin-bottom: 15px;
+        }
+
+        .footer-links a {
+            color: #007AFF;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+
+        .footer-links a:hover {
+            color: #0051BA;
+        }
+
         @media (max-width: 768px) {
-            .section {
+            .header-content {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                width: 100%;
+            }
+
+            nav a {
+                margin: 5px 0;
+            }
+
+            section {
                 padding: 25px;
             }
-            
-            header h1 {
+
+            .hero {
+                padding: 40px 20px;
+            }
+
+            .hero h1 {
                 font-size: 24px;
-            }
-            
-            .section h2 {
-                font-size: 20px;
-            }
-            
-            .button-group {
-                flex-direction: column;
-            }
-            
-            .btn {
-                width: 100%;
-                text-align: center;
             }
         }
     </style>
 </head>
 <body>
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <div class="logo-icon">PC</div>
+                <span>PocketChef</span>
+            </div>
+            <nav>
+                <a href="#contact">Contact</a>
+                <a href="#faq">FAQ</a>
+                <a href="#restore">Restore</a>
+                <a href="#delete">Delete Data</a>
+            </nav>
+        </div>
+    </header>
+
     <div class="container">
-        <header>
-            <h1>🍳 PocketChef</h1>
-            <p>Centre de support</p>
-        </header>
-        
-        <!-- Contact Section -->
-        <div class="section">
-            <h2>Nous contacter</h2>
-            <div class="contact-info">
-                <p><strong>Besoin d'aide ?</strong></p>
-                <p>Nous sommes là pour vous aider. N'hésitez pas à nous envoyer vos questions, suggestions ou problèmes.</p>
-                <p style="margin-top: 20px;">
-                    <strong>Email de support :</strong><br>
-                    <a href="mailto:delkertz13@gmail.com">delkertz13@gmail.com</a>
-                </p>
-                <p style="margin-top: 20px;">
-                    Temps de réponse moyen : 24 à 48 heures
-                </p>
-            </div>
+        <div class="hero">
+            <h1>PocketChef Support</h1>
+            <p>Trouvez les réponses à vos questions et gérez votre compte</p>
         </div>
-        
-        <!-- FAQ Section -->
-        <div class="section">
-            <h2>Questions fréquemment posées</h2>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <div class="contact-box">
+                <h3>Besoin d'aide?</h3>
+                <p>Pour toute question ou problème, n'hésitez pas à nous contacter directement:</p>
+                <p><strong>Email:</strong> <a href="mailto:delkertz13@gmail.com" class="contact-email">delkertz13@gmail.com</a></p>
+                <p style="font-size: 13px; color: #8e8e93; margin-top: 15px;">Nous répondons généralement sous 24-48 heures.</p>
+            </div>
+        </section>
+
+        <section id="faq">
+            <h2>Questions Fréquemment Posées</h2>
             
             <div class="faq-item">
-                <h3>1. Comment créer et organiser mes recettes personnelles ?</h3>
-                <p>Pour créer une nouvelle recette, appuyez sur le bouton "+" dans l'onglet Recettes. Entrez le nom, les ingrédients, les instructions et ajoutez une photo si vous le souhaitez. Vous pouvez ensuite organiser vos recettes par catégories (entrée, plat, dessert) et les ajouter à vos favoris pour un accès rapide.</p>
+                <h3>Comment ajouter une recette personnalisée?</h3>
+                <p>Pour ajouter une recette, appuyez sur le bouton "+" dans l'onglet Recettes, puis remplissez les informations: nom, ingrédients, étapes de préparation et temps de cuisson. Vous pouvez ajouter une photo pour chaque recette. Les recettes sont automatiquement sauvegardées dans votre bibliothèque personnelle.</p>
             </div>
-            
+
             <div class="faq-item">
-                <h3>2. Comment planifier mes repas pour la semaine ?</h3>
-                <p>Accédez à l'onglet "Planification hebdomadaire" et sélectionnez les dates de la semaine. Vous pouvez glisser-déposer vos recettes sur chaque jour ou sélectionner une recette et l'assigner à un jour spécifique. Votre plan de repas s'enregistre automatiquement et vous pouvez le modifier à tout moment.</p>
+                <h3>Comment planifier mes repas pour la semaine?</h3>
+                <p>Accédez à l'onglet "Planner" et glissez-déposez vos recettes préférées dans les jours de la semaine. Vous pouvez avoir un aperçu complet de vos repas, les modifier à tout moment, et l'application générera automatiquement votre liste d'ingrédients basée sur le plan établi.</p>
             </div>
-            
+
             <div class="faq-item">
-                <h3>3. Comment générer une liste d'ingrédients à partir de mon plan de repas ?</h3>
-                <p>Une fois votre plan de repas créé, appuyez sur "Générer une liste". PocketChef combine automatiquement tous les ingrédients de vos repas planifiés. Vous pouvez cocher les ingrédients au fur et à mesure que vous les achetez, et l'application mémorisera vos préférences et quantités pour les futures planifications.</p>
+                <h3>Comment générer une liste d'ingrédients automatiquement?</h3>
+                <p>Une fois que vous avez planifié vos repas pour la semaine, allez dans l'onglet "Shopping". L'application crée automatiquement une liste d'ingrédients consolidée en éliminant les doublons. Vous pouvez cocher les articles au fur et à mesure que vous les achetez, et les quantités sont ajustées selon le nombre de portions.</p>
             </div>
-            
+
             <div class="faq-item">
-                <h3>4. Comment utiliser la recherche par ingrédient ou catégorie ?</h3>
-                <p>Utilisez la barre de recherche en haut de l'onglet Recettes. Tapez le nom d'un ingrédient (ex: "poulet", "tomate") ou d'une catégorie (ex: "vegan", "sans gluten") pour trouver rapidement toutes vos recettes correspondantes. Les résultats s'affichent instantanément pendant que vous tapez.</p>
+                <h3>Quelle est la différence entre la version gratuite et premium?</h3>
+                <p>La version gratuite permet de créer jusqu'à 10 recettes et 1 plan de repas par semaine. La version premium offre des recettes et plans illimités, des thèmes personnalisés, des notes avancées par recette, l'accès à des collections de recettes exclusives, et la sauvegarde cloud synchronisée. Abonnez-vous pour débloquer toutes les fonctionnalités.</p>
             </div>
-            
+
             <div class="faq-item">
-                <h3>5. Quelle est la différence entre la version gratuite et la version Premium ?</h3>
-                <p>La version gratuite vous permet de créer jusqu'à 10 recettes et 2 plans de repas. La version Premium offre un nombre illimité de recettes, des plans de repas illimités, des thèmes visuels supplémentaires, l'export en PDF et la synchronisation entre appareils. Les utilisateurs Premium bénéficient aussi de fonctionnalités de partage avec la famille.</p>
+                <h3>Mes données sont-elles sauvegardées en cloud?</h3>
+                <p>Oui, avec la version premium, toutes vos recettes, plans de repas et notes sont synchronisés automatiquement sur iCloud. Cela vous permet d'accéder à vos données sur tous vos appareils Apple. Les utilisateurs gratuits peuvent exporter leurs recettes au format PDF ou partager des listes via iMessage.</p>
             </div>
-        </div>
-        
-        <!-- Restore Purchase Section -->
-        <div class="section">
-            <h2>Restaurer les achats</h2>
-            <p>Si vous avez précédemment acheté la version Premium ou des fonctionnalités supplémentaires, vous pouvez restaurer vos achats sur ce même appareil ou sur un nouvel appareil.</p>
-            <p style="margin-top: 15px; color: #666; font-size: 14px;">Assurez-vous d'être connecté avec le même identifiant Apple utilisé pour votre achat initial.</p>
-            <div class="button-group">
-                <button class="btn btn-primary" onclick="handleRestorePurchase()">Restaurer les achats</button>
+        </section>
+
+        <section id="restore">
+            <h2>Restaurer les Achats</h2>
+            <p>Si vous avez préalablement acheté un abonnement premium ou une fonctionnalité payante, vous pouvez le restaurer sur votre appareil actuel.</p>
+            <button class="button" onclick="alert('La restauration des achats a été initiée. Vous serez invité à vous connecter avec votre identifiant Apple.')">Restaurer les Achats</button>
+            <div class="info-box">
+                <p><strong>Note:</strong> Assurez-vous d'utiliser le même identifiant Apple que celui utilisé pour effectuer l'achat initial. Les achats restaurés seront immédiatement activés sur votre compte.</p>
             </div>
-            <div id="restoreMessage" style="display: none; margin-top: 15px; padding: 12px; background-color: #f0f7ff; border-radius: 8px; color: #0051d5; font-size: 14px;">
-                Restauration en cours...
+        </section>
+
+        <section id="delete">
+            <h2>Supprimer les Données</h2>
+            <p>Vous avez la possibilité de supprimer définitivement toutes vos données personnelles stockées dans PocketChef. Cette action est irréversible.</p>
+            <div class="info-box">
+                <p><strong>Attention:</strong> La suppression de vos données effacera de manière permanente toutes vos recettes, plans de repas, notes et préférences. Cette action ne peut pas être annulée. Assurez-vous d'avoir sauvegardé les informations importantes avant de procéder.</p>
             </div>
-        </div>
-        
-        <!-- Delete Data Section -->
-        <div class="section">
-            <h2>Supprimer mes données</h2>
-            <p>Si vous souhaitez supprimer toutes vos données personnelles (recettes, plans de repas, notes), vous pouvez le faire directement depuis l'application.</p>
-            <p style="margin-top: 15px; color: #666; font-size: 14px;">Allez dans Paramètres > Confidentialité > Supprimer toutes mes données.</p>
-            <p style="margin-top: 15px;">Vous avez également la possibilité de supprimer votre compte et vos données directement via cette page.</p>
-            
-            <div class="warning">
-                ⚠️ <strong>Attention :</strong> La suppression de vos données est permanente et irréversible. Toutes vos recettes, plans de repas et notes seront supprimés définitivement.
-            </div>
-            
-            <div class="button-group">
-                <button class="btn btn-danger" onclick="handleDeleteData()">Supprimer toutes mes données</button>
-            </div>
-            <div id="deleteMessage" style="display: none; margin-top: 15px; padding: 12px; background-color: #fff0f0; border-radius: 8px; color: #ff3b30; font-size: 14px;">
-                Demande de suppression en cours...
-            </div>
-        </div>
-        
-        <footer>
-            <p>&copy; 2024 PocketChef. Tous droits réservés.</p>
-            <p style="margin-top: 10px;">Nous nous engageons à protéger votre vie privée et vos données personnelles.</p>
-        </footer>
+            <button class="button button-danger" onclick="if(confirm('Êtes-vous absolument certain de vouloir supprimer toutes vos données? Cette action est irréversible.')) { alert('Vos données ont été supprimées. PocketChef a été réinitialisé.'); }">Supprimer Toutes les Données</button>
+            <button class="button button-secondary" onclick="alert('Suppression annulée.')">Annuler</button>
+        </section>
     </div>
-    
-    <script>
-        function handleRestorePurchase() {
-            const messageDiv = document.getElementById('restoreMessage');
-            messageDiv.style.display = 'block';
-            messageDiv.textContent = 'Restauration en cours...';
-            
-            setTimeout(function() {
-                messageDiv.innerHTML = '✓ Vos achats ont été restaurés avec succès. Merci d\'utiliser PocketChef Premium !';
-            }, 2000);
-        }
-        
-        function handleDeleteData() {
-            const confirmed = confirm('Êtes-vous sûr de vouloir supprimer toutes vos données ? Cette action est irréversible.');
-            
-            if (confirmed) {
-                const secondConfirm = confirm('Dernière confirmation : Supprimer définitivement toutes mes recettes, plans de repas et notes ?');
-                
-                if (secondConfirm) {
-                    const messageDiv = document.getElementById('deleteMessage');
-                    messageDiv.style.display = 'block';
-                    messageDiv.textContent = 'Suppression en cours...';
-                    
-                    setTimeout(function() {
-                        messageDiv.innerHTML = '✓ Vos données ont été supprimées avec succès. Nous regrettons de vous voir partir.';
-                        messageDiv.style.backgroundColor = '#f0f7ff';
-                        messageDiv.style.color = '#0051d5';
-                    }, 2000);
-                }
-            }
-        }
-    </script>
+
+    <footer>
+        <div class="footer-links">
+            <a href="https://www.apple.com/privacy/">Politique de Confidentialité</a>
+            <a href="mailto:delkertz13@gmail.com">Support</a>
+            <a href="#">Conditions d'Utilisation</a>
+        </div>
+        <p>&copy; 2026 PocketChef. Tous droits réservés.</p>
+        <p style="margin-top: 10px; font-size: 11px;">Version 1.0 | Disponible sur l'App Store</p>
+    </footer>
 </body>
 </html>
 ```
