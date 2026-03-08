@@ -11,343 +11,334 @@
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
-            background: #f5f5f7;
-            color: #1d1d1d;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: #f5f5f7;
+            color: #1d1d1f;
             line-height: 1.6;
         }
-        
+
         .container {
             max-width: 980px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 40px 20px;
         }
-        
+
         header {
-            background: white;
+            text-align: center;
+            margin-bottom: 60px;
+            padding-bottom: 40px;
             border-bottom: 1px solid #e5e5e7;
-            padding: 40px 0;
-            margin-bottom: 40px;
         }
-        
-        .header-content {
-            display: flex;
-            align-items: center;
-            gap: 20px;
+
+        .logo {
+            font-size: 48px;
+            font-weight: 700;
+            color: #007AFF;
+            margin-bottom: 12px;
         }
-        
-        .app-icon {
-            width: 60px;
-            height: 60px;
-            background: #007AFF;
-            border-radius: 14px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 32px;
-            font-weight: bold;
+
+        .tagline {
+            font-size: 20px;
+            color: #555;
+            font-weight: 400;
         }
-        
-        .header-text h1 {
+
+        section {
+            margin-bottom: 50px;
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+        }
+
+        h2 {
             font-size: 28px;
             font-weight: 600;
-            margin-bottom: 4px;
+            margin-bottom: 24px;
+            color: #1d1d1f;
+            border-left: 4px solid #007AFF;
+            padding-left: 16px;
         }
-        
-        .header-text p {
+
+        .contact-info {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin-top: 20px;
+        }
+
+        .contact-card {
+            padding: 20px;
+            background: #f5f5f7;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .contact-label {
+            font-size: 13px;
             color: #666;
-            font-size: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
         }
-        
-        .content {
-            background: white;
-            border-radius: 12px;
-            margin-bottom: 40px;
-            overflow: hidden;
-        }
-        
-        .section {
-            padding: 40px;
-            border-bottom: 1px solid #f5f5f7;
-        }
-        
-        .section:last-child {
-            border-bottom: none;
-        }
-        
-        .section-title {
-            font-size: 24px;
-            font-weight: 600;
-            margin-bottom: 24px;
-            color: #1d1d1d;
-        }
-        
-        .faq-item {
-            margin-bottom: 24px;
-        }
-        
-        .faq-item:last-child {
-            margin-bottom: 0;
-        }
-        
-        .faq-question {
+
+        .contact-value {
             font-size: 16px;
             font-weight: 500;
             color: #007AFF;
-            margin-bottom: 8px;
-            cursor: pointer;
+            word-break: break-all;
         }
-        
-        .faq-answer {
-            font-size: 15px;
-            color: #666;
-            line-height: 1.7;
-        }
-        
-        .contact-box {
-            background: #f5f5f7;
-            padding: 24px;
-            border-radius: 8px;
+
+        .faq-item {
             margin-bottom: 24px;
+            padding-bottom: 24px;
+            border-bottom: 1px solid #e5e5e7;
         }
-        
-        .contact-box p {
-            font-size: 15px;
-            margin-bottom: 12px;
-            color: #666;
+
+        .faq-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
         }
-        
-        .contact-link {
+
+        .faq-question {
+            font-size: 16px;
+            font-weight: 600;
             color: #007AFF;
-            text-decoration: none;
-            font-weight: 500;
-        }
-        
-        .contact-link:hover {
-            text-decoration: underline;
-        }
-        
-        .button-group {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
-        
-        .button {
-            padding: 14px 20px;
-            border-radius: 8px;
-            border: none;
-            font-size: 15px;
-            font-weight: 500;
+            margin-bottom: 12px;
             cursor: pointer;
-            text-align: center;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            display: inline-block;
+            display: flex;
+            align-items: center;
         }
-        
-        .button-primary {
+
+        .faq-question::before {
+            content: "+";
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            margin-right: 12px;
             background: #007AFF;
             color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 20px;
+            font-size: 14px;
+            font-weight: bold;
         }
-        
-        .button-primary:hover {
-            background: #0051d5;
+
+        .faq-answer {
+            font-size: 15px;
+            color: #555;
+            line-height: 1.7;
+            padding-left: 32px;
         }
-        
-        .button-secondary {
-            background: #f5f5f7;
-            color: #007AFF;
-            border: 1px solid #e5e5e7;
+
+        .action-buttons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-top: 24px;
         }
-        
-        .button-secondary:hover {
-            background: #efefef;
+
+        button {
+            padding: 12px 24px;
+            font-size: 16px;
+            font-weight: 500;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
         }
-        
-        .button-danger {
-            background: #ff3b30;
+
+        .btn-primary {
+            background-color: #007AFF;
             color: white;
         }
-        
-        .button-danger:hover {
-            background: #e50000;
+
+        .btn-primary:hover {
+            background-color: #0051d5;
+            box-shadow: 0 4px 12px rgba(0, 122, 255, 0.3);
         }
-        
-        .info-box {
-            background: #f5f5f7;
-            border-left: 4px solid #007AFF;
+
+        .btn-secondary {
+            background-color: #f5f5f7;
+            color: #1d1d1f;
+            border: 1px solid #e5e5e7;
+        }
+
+        .btn-secondary:hover {
+            background-color: #e8e8ed;
+        }
+
+        .btn-danger {
+            background-color: #ff3b30;
+            color: white;
+        }
+
+        .btn-danger:hover {
+            background-color: #e60a00;
+            box-shadow: 0 4px 12px rgba(255, 59, 48, 0.3);
+        }
+
+        .alert {
             padding: 16px;
-            margin: 20px 0;
-            border-radius: 4px;
-        }
-        
-        .info-box p {
+            border-radius: 8px;
+            margin-top: 20px;
             font-size: 14px;
-            color: #666;
         }
-        
-        .feature-list {
-            list-style: none;
-            margin: 20px 0;
+
+        .alert-info {
+            background-color: #d1e7ff;
+            border-left: 4px solid #007AFF;
+            color: #003d7a;
         }
-        
-        .feature-list li {
-            padding: 8px 0;
-            font-size: 15px;
-            color: #666;
+
+        .alert-warning {
+            background-color: #fff3cd;
+            border-left: 4px solid #ffa500;
+            color: #664d00;
         }
-        
-        .feature-list li:before {
-            content: "✓ ";
-            color: #007AFF;
-            font-weight: bold;
-            margin-right: 8px;
-        }
-        
+
         footer {
-            background: white;
-            border-top: 1px solid #e5e5e7;
-            padding: 40px 0;
             text-align: center;
+            padding-top: 40px;
+            margin-top: 40px;
+            border-top: 1px solid #e5e5e7;
             color: #666;
             font-size: 13px;
-            margin-top: 40px;
         }
-        
+
         @media (max-width: 768px) {
-            .header-content {
-                flex-direction: column;
-                text-align: center;
+            .contact-info,
+            .action-buttons {
+                grid-template-columns: 1fr;
             }
-            
-            .section {
+
+            h2 {
+                font-size: 22px;
+            }
+
+            section {
                 padding: 24px;
             }
-            
-            .section-title {
-                font-size: 20px;
-            }
-            
-            .button-group {
-                flex-direction: column;
+
+            .logo {
+                font-size: 36px;
             }
         }
     </style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <div class="header-content">
-                <div class="app-icon">RP</div>
-                <div class="header-text">
-                    <h1>ReturnPal</h1>
-                    <p>Ne ratez plus jamais vos délais de retour</p>
-                </div>
-            </div>
-        </div>
-    </header>
-    
     <div class="container">
-        <div class="content">
-            <!-- Contact Section -->
-            <div class="section">
-                <h2 class="section-title">Nous contacter</h2>
-                <div class="contact-box">
-                    <p>Vous avez des questions ou besoin d'aide ? Nous sommes là pour vous aider.</p>
-                    <p>
-                        Envoyez-nous un email à : 
-                        <a href="mailto:delkertz13@gmail.com" class="contact-link">delkertz13@gmail.com</a>
-                    </p>
-                    <p style="font-size: 13px; color: #999; margin-top: 12px;">
-                        Temps de réponse moyen : 24-48 heures
-                    </p>
+        <header>
+            <div class="logo">ReturnPal</div>
+            <p class="tagline">Ne manquez jamais un délai de retour</p>
+        </header>
+
+        <section id="contact">
+            <h2>Contact et Support</h2>
+            <p>Vous avez une question ? Nous sommes là pour vous aider.</p>
+            <div class="contact-info">
+                <div class="contact-card">
+                    <div class="contact-label">Email</div>
+                    <div class="contact-value">delkertz13@gmail.com</div>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-label">Support</div>
+                    <div class="contact-value">Support 24/7</div>
                 </div>
             </div>
-            
-            <!-- FAQ Section -->
-            <div class="section">
-                <h2 class="section-title">Questions fréquemment posées</h2>
-                
-                <div class="faq-item">
-                    <div class="faq-question">1. Comment ajouter un nouvel achat dans ReturnPal ?</div>
-                    <div class="faq-answer">
-                        Appuyez sur le bouton "+" en bas à droite et remplissez les 4 champs : le nom de la boutique, le produit acheté, la date d'achat et la durée de la politique de retour. ReturnPal détecte automatiquement les politiques de 50+ grands retailers comme Amazon (30j), ASOS (45j) et Zara (30j) pour vous gagner du temps.
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question">2. Comment fonctionnent les notifications ?</div>
-                    <div class="faq-answer">
-                        ReturnPal envoie des notifications intelligentes 7 jours, 3 jours et 1 jour avant l'expiration de votre délai de retour. Vous pouvez ajuster ces paramètres dans les préférences. Chaque notification contient un lien direct vers l'application du retailer si elle est installée sur votre téléphone.
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question">3. Quelle est la différence entre la version gratuite et ReturnPal Pro ?</div>
-                    <div class="faq-answer">
-                        La version gratuite vous permet de suivre jusqu'à 10 achats actifs simultanément. ReturnPal Pro (1,99 € achat unique) offre : suivi illimité d'achats, accès à la bibliothèque complète de retailers, historique archivé permanent et interface premium. Vous bénéficiez également des mises à jour futures.
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question">4. Mes données personnelles sont-elles sécurisées ?</div>
-                    <div class="faq-answer">
-                        Oui, vos données sont stockées localement sur votre appareil par défaut. Nous n'envoyons aucune information personnelle à nos serveurs. Si vous activez la synchronisation iCloud (optionnel), vos données sont chiffrées de bout en bout selon les normes de sécurité Apple.
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question">5. Comment puis-je restaurer mon achat ReturnPal Pro ?</div>
-                    <div class="faq-answer">
-                        Si vous avez acheté ReturnPal Pro et que vous avez réinstallé l'app, utilisez le bouton "Restaurer les achats" dans les paramètres. Si vous avez changé d'appareil, connectez-vous avec le même Apple ID et vos achats seront restaurés automatiquement.
-                    </div>
-                </div>
+            <div class="alert alert-info">
+                Répondez à vos emails dans les 24 heures. Merci de votre patience !
             </div>
-            
-            <!-- Restore Purchase Section -->
-            <div class="section">
-                <h2 class="section-title">Restaurer les achats</h2>
-                <p style="font-size: 15px; color: #666; margin-bottom: 20px;">
-                    Si vous avez acheté ReturnPal Pro et que vous ne pouvez pas y accéder après avoir réinstallé l'application ou changé d'appareil, vous pouvez restaurer votre achat.
-                </p>
-                <div class="info-box">
-                    <p>Vous serez redirigé vers l'App Store pour vérifier votre compte Apple ID. Aucun frais supplémentaire ne sera appliqué.</p>
-                </div>
-                <div class="button-group" style="max-width: 300px;">
-                    <button class="button button-primary" onclick="alert('Restauration des achats en cours...\n\nVous serez redirigé vers App Store pour vérifier votre identité.')">
-                        Restaurer les achats
-                    </button>
-                </div>
+        </section>
+
+        <section id="faq">
+            <h2>Questions Fréquemment Posées</h2>
+
+            <div class="faq-item">
+                <div class="faq-question">Comment ajouter un achat dans ReturnPal ?</div>
+                <div class="faq-answer">Appuyez sur le bouton "+" dans l'onglet Accueil, sélectionnez votre revendeur dans la bibliothèque préremplie (ou ajoutez-le manuellement), entrez l'article, la date d'achat et la durée de retour. ReturnPal calculera automatiquement la date limite de retour.</div>
             </div>
-            
-            <!-- Delete Data Section -->
-            <div class="section">
-                <h2 class="section-title">Supprimer mes données</h2>
-                <p style="font-size: 15px; color: #666; margin-bottom: 20px;">
-                    Vous pouvez supprimer toutes vos données ReturnPal à tout moment. Cette action est irréversible.
-                </p>
-                <div class="info-box">
-                    <p><strong>Attention :</strong> La suppression de vos données supprimera tous vos achats en suivi et l'historique archivé. Cette action ne peut pas être annulée. Assurez-vous de sauvegarder toute information importante avant de continuer.</p>
-                </div>
-                <div class="button-group" style="max-width: 300px;">
-                    <button class="button button-danger" onclick="if(confirm('Êtes-vous certain de vouloir supprimer toutes vos données ? Cette action est irréversible.')) { alert('Vos données ont été supprimées.'); }">
-                        Supprimer toutes mes données
-                    </button>
-                </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Comment fonctionnent les notifications ?</div>
+                <div class="faq-answer">Vous recevrez des rappels intelligents à 7 jours, 3 jours et 1 jour avant l'expiration de votre fenêtre de retour. Chaque notification inclut un lien direct vers l'app du revendeur pour un retour facile.</div>
             </div>
-        </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Quelle est la différence entre la version gratuite et Pro ?</div>
+                <div class="faq-answer">La version gratuite permet de suivre jusqu'à 10 achats actifs simultanés avec une bibliothèque de 50+ revendeurs. La version Pro (1,99 € achat unique) offre un suivi illimité, la bibliothèque complète de revendeurs et un historique archivé.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Mes données sont-elles sécurisées ?</div>
+                <div class="faq-answer">Oui, toutes vos données sont stockées localement sur votre appareil. ReturnPal ne collecte jamais vos informations d'achat ou de paiement. Votre vie privée est notre priorité.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Puis-je restaurer mes achats sur un nouvel appareil ?</div>
+                <div class="faq-answer">Utilisez la fonction "Restaurer les achats" pour synchroniser vos données via iCloud. Si vous n'utilisez pas iCloud, vous pouvez exporter vos données pour les importer ultérieurement.</div>
+            </div>
+        </section>
+
+        <section id="restore">
+            <h2>Restaurer les Achats</h2>
+            <p>Si vous avez précédemment acheté ReturnPal Pro ou si vous avez changé d'appareil, utilisez cette option pour restaurer votre accès à la version Premium.</p>
+            <div class="action-buttons">
+                <button class="btn-primary">Restaurer les Achats</button>
+                <button class="btn-secondary">Besoin d'aide ?</button>
+            </div>
+            <div class="alert alert-info">
+                Vous serez redirigé vers l'authentification App Store pour vérifier votre achat précédent.
+            </div>
+        </section>
+
+        <section id="delete-data">
+            <h2>Supprimer les Données</h2>
+            <p>Vous pouvez supprimer toutes vos données ReturnPal à tout moment. Cette action est irréversible et supprimera tous vos achats enregistrés et vos paramètres.</p>
+            <div class="alert alert-warning">
+                ⚠️ Attention : La suppression de vos données ne peut pas être annulée. Assurez-vous que vous n'avez plus besoin de vos retours suivis avant de continuer.
+            </div>
+            <div class="action-buttons">
+                <button class="btn-danger">Supprimer Toutes les Données</button>
+                <button class="btn-secondary">Annuler</button>
+            </div>
+        </section>
+
+        <footer>
+            <p>ReturnPal © 2026. Tous droits réservés.<br>Suivi des retours simplifié pour les acheteurs en ligne.</p>
+        </footer>
     </div>
-    
-    <footer>
-        <div class="container">
-            <p>ReturnPal • Support Client</p>
-            <p style="margin-top: 8px;">© 2026 ReturnPal. Tous droits réservés.</p>
-        </div>
-    </footer>
+
+    <script>
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', function() {
+                this.classList.toggle('active');
+            });
+        });
+
+        document.querySelector('.btn-primary').addEventListener('click', function() {
+            alert('Redirection vers App Store pour restaurer vos achats...');
+        });
+
+        document.querySelectorAll('.btn-danger')[0].addEventListener('click', function() {
+            if (confirm('Êtes-vous vraiment sûr ? Cette action supprimera toutes vos données.')) {
+                alert('Données supprimées. ReturnPal a été réinitialisé.');
+            }
+        });
+
+        document.querySelectorAll('.btn-secondary')[1].addEventListener('click', function() {
+            document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+        });
+
+        document.querySelectorAll('.btn-secondary')[0].addEventListener('click', function() {
+            window.location.href = 'mailto:delkertz13@gmail.com?subject=Question ReturnPal';
+        });
+    </script>
 </body>
 </html>
 ```
