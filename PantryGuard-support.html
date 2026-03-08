@@ -1,0 +1,438 @@
+```html
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support PantryGuard</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f5f5f7;
+            color: #1d1d1f;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 60px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid #e5e5e7;
+        }
+        
+        .logo {
+            font-size: 48px;
+            margin-bottom: 16px;
+        }
+        
+        h1 {
+            font-size: 32px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            letter-spacing: -0.5px;
+        }
+        
+        .tagline {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 24px;
+        }
+        
+        .status {
+            display: inline-block;
+            background-color: #34c759;
+            color: white;
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 13px;
+            font-weight: 500;
+        }
+        
+        section {
+            margin-bottom: 50px;
+        }
+        
+        h2 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 24px;
+            letter-spacing: -0.3px;
+            padding-top: 20px;
+        }
+        
+        .section-divider {
+            height: 1px;
+            background-color: #e5e5e7;
+            margin: 50px 0;
+        }
+        
+        .faq-item {
+            margin-bottom: 28px;
+            padding-bottom: 28px;
+            border-bottom: 1px solid #e5e5e7;
+        }
+        
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+        
+        .faq-question {
+            font-size: 16px;
+            font-weight: 600;
+            color: #007AFF;
+            margin-bottom: 12px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .faq-question::after {
+            content: '▼';
+            font-size: 12px;
+            transition: transform 0.3s;
+        }
+        
+        .faq-item.open .faq-question::after {
+            transform: rotate(180deg);
+        }
+        
+        .faq-answer {
+            font-size: 15px;
+            color: #555;
+            line-height: 1.7;
+            display: none;
+        }
+        
+        .faq-item.open .faq-answer {
+            display: block;
+        }
+        
+        .contact-card {
+            background-color: white;
+            padding: 24px;
+            border-radius: 12px;
+            border: 1px solid #e5e5e7;
+            margin-bottom: 20px;
+        }
+        
+        .contact-card h3 {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: #1d1d1f;
+        }
+        
+        .contact-card p {
+            font-size: 15px;
+            color: #555;
+            margin-bottom: 16px;
+        }
+        
+        .email-link {
+            display: inline-block;
+            color: #007AFF;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 10px 16px;
+            border: 1px solid #007AFF;
+            border-radius: 8px;
+            transition: all 0.2s;
+        }
+        
+        .email-link:hover {
+            background-color: #007AFF;
+            color: white;
+        }
+        
+        .button-group {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: 20px;
+        }
+        
+        .button {
+            display: inline-block;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-size: 15px;
+            font-weight: 500;
+            text-decoration: none;
+            text-align: center;
+            cursor: pointer;
+            border: none;
+            transition: all 0.2s;
+        }
+        
+        .button-primary {
+            background-color: #007AFF;
+            color: white;
+        }
+        
+        .button-primary:hover {
+            background-color: #0051d5;
+        }
+        
+        .button-secondary {
+            background-color: white;
+            color: #007AFF;
+            border: 1px solid #007AFF;
+        }
+        
+        .button-secondary:hover {
+            background-color: #f5f5f7;
+        }
+        
+        .button-danger {
+            background-color: #ff3b30;
+            color: white;
+        }
+        
+        .button-danger:hover {
+            background-color: #ff453a;
+        }
+        
+        .warning-box {
+            background-color: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 16px;
+            border-radius: 8px;
+            margin-top: 20px;
+            font-size: 14px;
+            color: #856404;
+        }
+        
+        .info-box {
+            background-color: #d1ecf1;
+            border-left: 4px solid #17a2b8;
+            padding: 16px;
+            border-radius: 8px;
+            margin-top: 20px;
+            font-size: 14px;
+            color: #0c5460;
+        }
+        
+        footer {
+            text-align: center;
+            padding-top: 40px;
+            border-top: 1px solid #e5e5e7;
+            color: #999;
+            font-size: 13px;
+            margin-top: 60px;
+        }
+        
+        @media (max-width: 600px) {
+            .container {
+                padding: 30px 16px;
+            }
+            
+            h1 {
+                font-size: 28px;
+            }
+            
+            h2 {
+                font-size: 20px;
+            }
+            
+            .button-group {
+                flex-direction: column;
+            }
+            
+            .button {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">🥫</div>
+            <h1>PantryGuard</h1>
+            <p class="tagline">Support & Aide</p>
+            <span class="status">Assistance disponible</span>
+        </header>
+
+        <section>
+            <h2>Bienvenue</h2>
+            <p>Merci d'utiliser PantryGuard, votre assistant pour éviter le gaspillage alimentaire. Cette page regroupe les réponses aux questions les plus fréquentes, ainsi que les options pour nous contacter ou gérer votre compte.</p>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <section id="faq">
+            <h2>Questions fréquemment posées</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">Comment ajouter rapidement des articles à mon inventaire ?</div>
+                <div class="faq-answer">
+                    Vous pouvez ajouter des articles de trois façons : en tapant manuellement le nom du produit, en utilisant la reconnaissance vocale (appuyez sur le microphone), ou en scannant le code-barres. PantryGuard fonctionne entièrement hors ligne, donc aucun internet n'est nécessaire pour ajouter ou consulter vos articles. L'ajout typique prend moins de 5 secondes.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Mes données sont-elles sauvegardées et synchronisées ?</div>
+                <div class="faq-answer">
+                    Oui, vos données sont sauvegardées localement sur votre appareil avec SwiftData. Dans les futures mises à jour, nous pourrons offrir une synchronisation optionnelle entre vos appareils. Actuellement, vos données ne quittent jamais votre iPhone pour préserver votre vie privée. Si vous avez besoin de transférer vos données, contactez-nous.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Comment fonctionne la limite de 30 articles en version gratuite ?</div>
+                <div class="faq-answer">
+                    La version gratuite de PantryGuard vous permet de gérer jusqu'à 30 articles simultanément. Cela couvre la majorité des foyers. Si vous dépassez cette limite ou souhaitez accéder aux catégories personnalisées et au widget configurable, vous pouvez upgrader vers PantryGuard Pro pour 2.99$ en achat unique (jamais d'abonnement).
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Comment fonctionne la notification de péremption J-3 ?</div>
+                <div class="faq-answer">
+                    PantryGuard envoie automatiquement une notification 3 jours avant la date d'expiration de vos articles. Vous verrez également une liste « À utiliser en priorité » qui met en évidence les produits les plus urgents à consommer. Assurez-vous que les notifications sont activées dans les paramètres de votre iPhone (Réglages > PantryGuard > Notifications).
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Que faire si le widget ne s'affiche pas sur mon écran d'accueil ?</div>
+                <div class="faq-answer">
+                    Appuyez longuement sur votre écran d'accueil pour accéder à la galerie de widgets, recherchez « PantryGuard », puis sélectionnez « Ajouter le widget ». Le widget iOS natif affiche les 3 articles qui périment bientôt. Si le widget ne s'affiche pas, assurez-vous que vous utilisez iOS 16 ou plus récent, et redémarrez votre appareil.
+                </div>
+            </section>
+
+        <div class="section-divider"></div>
+
+        <section id="contact">
+            <h2>Nous contacter</h2>
+            
+            <div class="contact-card">
+                <h3>📧 Support par email</h3>
+                <p>Avez-vous une question, un bug à signaler ou une suggestion de fonctionnalité ? Notre équipe répond en général sous 24 heures.</p>
+                <a href="mailto:delkertz13@gmail.com" class="email-link">delkertz13@gmail.com</a>
+            </div>
+
+            <div class="contact-card">
+                <h3>💡 Soumettre une idée</h3>
+                <p>Nous adorons les retours de nos utilisateurs. Partagez vos idées d'amélioration ou vos cas d'usage pour nous aider à développer PantryGuard.</p>
+                <a href="mailto:delkertz13@gmail.com?subject=Suggestion%20PantryGuard" class="email-link">Envoyer une suggestion</a>
+            </div>
+
+            <div class="info-box">
+                <strong>💡 Conseil :</strong> Incluez le numéro de version de l'app (disponible dans Réglages > À propos) lorsque vous signalez un bug.
+            </div>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <section id="account">
+            <h2>Gestion du compte</h2>
+            
+            <div class="contact-card">
+                <h3>🔄 Restaurer les achats</h3>
+                <p>Si vous avez acheté PantryGuard Pro sur un autre appareil ou après une réinstallation de l'app, utilisez cette option pour restaurer votre accès à la version complète.</p>
+                <div class="button-group">
+                    <button class="button button-primary" onclick="restorePurchases()">Restaurer les achats</button>
+                </div>
+                <div class="info-box" style="margin-top: 16px;">
+                    <strong>ℹ️ Information :</strong> Vous serez invité à vous connecter à votre compte App Store pour vérifier votre achat.
+                </div>
+            </div>
+
+            <div class="contact-card">
+                <h3>🗑️ Supprimer mes données</h3>
+                <p>Vous pouvez supprimer toutes vos données et réinitialiser l'application à tout moment. Cette action est irréversible.</p>
+                <div class="button-group">
+                    <button class="button button-danger" onclick="deleteData()">Supprimer toutes les données</button>
+                </div>
+                <div class="warning-box">
+                    <strong>⚠️ Avertissement :</strong> Cette action supprimera définitivement tous vos articles et vos statistiques. Assurez-vous de vouloir procéder avant de continuer.
+                </div>
+            </div>
+
+            <div class="contact-card">
+                <h3>📋 Exporter mes données</h3>
+                <p>Vous pouvez exporter vos données d'inventaire dans un format lisible pour vos dossiers personnels ou à des fins de sauvegarde.</p>
+                <div class="button-group">
+                    <button class="button button-secondary" onclick="exportData()">Exporter mes données</button>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <section id="info">
+            <h2>Informations supplémentaires</h2>
+            
+            <div class="contact-card">
+                <h3>📱 Version de l'application</h3>
+                <p id="version-info">Pour connaître votre numéro de version actuel, allez dans Réglages > À propos de l'application.</p>
+            </div>
+
+            <div class="contact-card">
+                <h3>📜 Politique de confidentialité</h3>
+                <p>PantryGuard ne collecte aucune donnée personnelle. Tous vos inventaires restent privés et stockés localement sur votre appareil.</p>
+            </div>
+
+            <div class="contact-card">
+                <h3>⭐ Nous aimer ? Laissez un avis</h3>
+                <p>Si PantryGuard vous aide à réduire le gaspillage alimentaire, pensez à laisser un avis dans l'App Store. Vos commentaires nous motivent à améliorer continuellement l'app.</p>
+                <div class="button-group">
+                    <button class="button button-primary" onclick="openAppStore()">Laisser un avis sur l'App Store</button>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>PantryGuard © 2026. Tous droits réservés.</p>
+            <p style="margin-top: 12px; font-size: 12px;">Dernière mise à jour : Mars 2026</p>
+        </footer>
+    </div>
+
+    <script>
+        // FAQ Toggle
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', function() {
+                const faqItem = this.closest('.faq-item');
+                faqItem.classList.toggle('open');
+            });
+        });
+
+        // Restore Purchases
+        function restorePurchases() {
+            alert('Cliquez sur "Restaurer les achats" depuis les paramètres de l\'app PantryGuard pour vérifier votre achat via l\'App Store.');
+        }
+
+        // Delete Data
+        function deleteData() {
+            if (confirm('⚠️ Êtes-vous absolument certain ? Tous vos articles et données seront supprimés définitivement.\n\nCette action ne peut pas être annulée.')) {
+                if (confirm('Dernière confirmation : voulez-vous vraiment supprimer TOUTES vos données ?')) {
+                    alert('Pour supprimer vos données, allez dans les paramètres de l\'app PantryGuard et sélectionnez "Réinitialiser l\'app". Confirmez à nouveau sur l\'écran d\'alerte.');
+                }
+            }
+        }
+
+        // Export Data
+        function exportData() {
+            alert('Pour exporter vos données, allez dans les paramètres de l\'app PantryGuard et sélectionnez "Exporter les données". Un fichier CSV sera généré.');
+        }
+
+        // Open App Store
+        function openAppStore() {
+            // Lien générique - à remplacer par l'ID réel de l'app
+            window.location.href = 'https://apps.apple.com/app/pantryguard/id0000000000?action=write-review';
+        }
+    </script>
+</body>
+</html>
+```
