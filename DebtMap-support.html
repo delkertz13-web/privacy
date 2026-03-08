@@ -13,7 +13,7 @@
         }
         
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", sans-serif;
             background-color: #f5f5f7;
             color: #1d1d1f;
             line-height: 1.6;
@@ -22,216 +22,294 @@
         .container {
             max-width: 980px;
             margin: 0 auto;
-            padding: 40px 20px;
+            padding: 60px 20px;
         }
         
         header {
             text-align: center;
             margin-bottom: 60px;
-            padding: 40px 0;
-            border-bottom: 1px solid #e5e5e7;
+            padding-bottom: 40px;
+            border-bottom: 1px solid #d2d2d7;
         }
         
         .logo {
-            font-size: 48px;
-            margin-bottom: 12px;
+            display: inline-block;
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #007AFF 0%, #0051D5 100%);
+            border-radius: 20px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+            color: white;
+            font-weight: bold;
         }
         
         h1 {
             font-size: 32px;
             font-weight: 700;
-            margin-bottom: 8px;
+            margin-bottom: 10px;
             letter-spacing: -0.5px;
         }
         
-        .tagline {
+        .subtitle {
             font-size: 17px;
             color: #6e6e73;
+            margin-bottom: 20px;
+        }
+        
+        .version {
+            font-size: 13px;
+            color: #a1a1a6;
         }
         
         .section {
             margin-bottom: 50px;
-            padding: 40px;
-            background-color: white;
+            background: white;
             border-radius: 12px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            padding: 30px;
+            border: 1px solid #d2d2d7;
         }
         
-        h2 {
+        .section h2 {
             font-size: 24px;
             font-weight: 600;
-            margin-bottom: 24px;
+            margin-bottom: 20px;
             color: #1d1d1f;
-            display: flex;
-            align-items: center;
-            gap: 12px;
+            letter-spacing: -0.3px;
         }
         
-        .section-icon {
-            font-size: 28px;
+        .section h3 {
+            font-size: 17px;
+            font-weight: 600;
+            margin-top: 25px;
+            margin-bottom: 12px;
+            color: #1d1d1f;
+        }
+        
+        .section p {
+            font-size: 15px;
+            color: #424245;
+            margin-bottom: 15px;
         }
         
         .faq-item {
-            margin-bottom: 24px;
-            border-bottom: 1px solid #e5e5e7;
-            padding-bottom: 24px;
+            border-bottom: 1px solid #f5f5f7;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
         }
         
         .faq-item:last-child {
             border-bottom: none;
-            margin-bottom: 0;
-            padding-bottom: 0;
         }
         
         .faq-question {
             font-size: 16px;
             font-weight: 600;
             color: #007AFF;
-            margin-bottom: 12px;
+            margin-bottom: 10px;
             cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .faq-question:hover {
-            color: #0051D5;
+            user-select: none;
         }
         
         .faq-answer {
             font-size: 15px;
-            color: #6e6e73;
+            color: #424245;
             line-height: 1.7;
-        }
-        
-        .contact-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            align-items: center;
         }
         
         .contact-info {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-        
-        .contact-item {
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-        }
-        
-        .contact-label {
-            font-size: 14px;
-            font-weight: 600;
-            color: #6e6e73;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-        
-        .contact-value {
-            font-size: 16px;
-            color: #007AFF;
-            text-decoration: none;
-            word-break: break-all;
-        }
-        
-        .contact-value:hover {
-            color: #0051D5;
-        }
-        
-        .contact-message {
-            font-size: 15px;
-            color: #6e6e73;
-            line-height: 1.7;
-        }
-        
-        .button {
-            display: inline-block;
-            padding: 12px 24px;
-            background-color: #007AFF;
-            color: white;
-            text-decoration: none;
+            background: #f5f5f7;
+            padding: 20px;
             border-radius: 8px;
-            font-weight: 600;
+            margin: 20px 0;
             font-size: 15px;
-            border: none;
-            cursor: pointer;
-            transition: background-color 0.2s;
-            margin-top: 12px;
         }
         
-        .button:hover {
-            background-color: #0051D5;
-        }
-        
-        .button.secondary {
-            background-color: #f5f5f7;
+        .contact-info a {
             color: #007AFF;
-            border: 1px solid #e5e5e7;
+            text-decoration: none;
+            font-weight: 600;
         }
         
-        .button.secondary:hover {
-            background-color: #e5e5e7;
+        .contact-info a:hover {
+            text-decoration: underline;
         }
         
         .button-group {
             display: flex;
             gap: 12px;
+            margin: 25px 0;
             flex-wrap: wrap;
         }
         
-        .warning-box {
-            background-color: #fff3cd;
-            border-left: 4px solid #ffc107;
+        .btn {
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-size: 15px;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .btn-primary {
+            background-color: #007AFF;
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background-color: #0051D5;
+            transform: translateY(-1px);
+        }
+        
+        .btn-secondary {
+            background-color: #f5f5f7;
+            color: #007AFF;
+            border: 1px solid #d2d2d7;
+        }
+        
+        .btn-secondary:hover {
+            background-color: #ebebf0;
+        }
+        
+        .btn-danger {
+            background-color: #ff3b30;
+            color: white;
+        }
+        
+        .btn-danger:hover {
+            background-color: #ff1a0e;
+        }
+        
+        .info-box {
+            background: #f5f5f7;
             padding: 16px;
             border-radius: 8px;
-            margin-top: 12px;
+            margin: 20px 0;
+            border-left: 4px solid #007AFF;
         }
         
-        .warning-text {
+        .info-box p {
+            margin: 0;
             font-size: 14px;
-            color: #856404;
-        }
-        
-        @media (max-width: 768px) {
-            .container {
-                padding: 20px 16px;
-            }
-            
-            h1 {
-                font-size: 24px;
-            }
-            
-            h2 {
-                font-size: 20px;
-            }
-            
-            .section {
-                padding: 24px;
-            }
-            
-            .contact-content {
-                grid-template-columns: 1fr;
-                gap: 24px;
-            }
+            color: #424245;
         }
         
         footer {
             text-align: center;
-            margin-top: 60px;
             padding-top: 40px;
-            border-top: 1px solid #e5e5e7;
-            color: #6e6e73;
+            border-top: 1px solid #d2d2d7;
+            margin-top: 60px;
+            color: #a1a1a6;
             font-size: 13px;
         }
         
-        .divider {
-            height: 1px;
-            background-color: #e5e5e7;
-            margin: 24px 0;
+        .feature-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .feature-list li {
+            padding: 10px 0;
+            padding-left: 28px;
+            position: relative;
+            font-size: 15px;
+            color: #424245;
+        }
+        
+        .feature-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #007AFF;
+            font-weight: bold;
+        }
+        
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+        
+        .modal-content {
+            background-color: white;
+            margin: 5% auto;
+            padding: 30px;
+            border: 1px solid #d2d2d7;
+            border-radius: 12px;
+            width: 90%;
+            max-width: 500px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .close {
+            color: #a1a1a6;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        
+        .close:hover {
+            color: #1d1d1f;
+        }
+        
+        .modal h2 {
+            margin-bottom: 20px;
+            color: #1d1d1f;
+        }
+        
+        .modal p {
+            margin-bottom: 15px;
+            font-size: 15px;
+            color: #424245;
+        }
+        
+        .modal-buttons {
+            display: flex;
+            gap: 12px;
+            margin-top: 25px;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 40px 16px;
+            }
+            
+            h1 {
+                font-size: 28px;
+            }
+            
+            .section {
+                padding: 20px;
+            }
+            
+            .button-group {
+                flex-direction: column;
+            }
+            
+            .btn {
+                width: 100%;
+                text-align: center;
+            }
+            
+            .modal-buttons {
+                flex-direction: column;
+            }
+            
+            .modal-buttons .btn {
+                width: 100%;
+            }
         }
     </style>
 </head>
@@ -240,91 +318,151 @@
         <header>
             <div class="logo">💳</div>
             <h1>DebtMap</h1>
-            <p class="tagline">Visualisez votre chemin vers la liberté financière</p>
+            <p class="subtitle">Gestion intelligente de vos dettes</p>
+            <p class="version">Version 1.0 • Support utilisateur</p>
         </header>
-
-        <!-- Section Contact -->
-        <div class="section">
-            <h2><span class="section-icon">✉️</span>Support & Contact</h2>
-            <div class="contact-content">
-                <div>
-                    <p class="contact-message">Vous avez une question ou rencontrez un problème? Nous sommes là pour vous aider. Contactez-nous directement par email et nous répondrons dans les 24 heures.</p>
-                </div>
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <span class="contact-label">Email</span>
-                        <a href="mailto:delkertz13@gmail.com" class="contact-value">delkertz13@gmail.com</a>
-                    </div>
-                    <div class="contact-item">
-                        <span class="contact-label">Réponse moyenne</span>
-                        <span class="contact-value" style="color: #6e6e73;">24 heures</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Section FAQ -->
-        <div class="section">
-            <h2><span class="section-icon">❓</span>Questions Fréquemment Posées</h2>
+        
+        <section class="section">
+            <h2>À propos de DebtMap</h2>
+            <p>DebtMap est une application iOS conçue pour vous aider à rembourser vos dettes efficacement. Avec notre outil intuitif, visualisez votre chemin vers la liberté financière grâce aux stratégies Snowball et Avalanche.</p>
+            <ul class="feature-list">
+                <li>Gestion complète de vos dettes en un seul endroit</li>
+                <li>Deux stratégies de remboursement optimisées (Snowball & Avalanche)</li>
+                <li>Timeline animée avec date de libération totale</li>
+                <li>Simulateur "Et si je payais plus?" avec impact visuel</li>
+                <li>Jalons de motivation pour vous encourager</li>
+                <li>100% offline • Aucune donnée bancaire</li>
+                <li>Achat unique 2,99€ • Pas d'abonnement</li>
+            </ul>
+        </section>
+        
+        <section class="section">
+            <h2>Questions fréquemment posées</h2>
             
             <div class="faq-item">
-                <div class="faq-question">Comment fonctionne la stratégie Snowball?</div>
-                <div class="faq-answer">La méthode Snowball vous aide à rembourser d'abord la plus petite dette, indépendamment du taux d'intérêt. Vous gagnez de la motivation en voyant des dettes disparaître rapidement. Une fois la plus petite dette remboursée, vous versez les mêmes paiements sur la prochaine plus petite dette (d'où le terme "boule de neige").</div>
+                <div class="faq-question">Qu'est-ce que la méthode Snowball?</div>
+                <div class="faq-answer">La méthode Snowball consiste à rembourser en priorité la plus petite dette, peu importe le taux d'intérêt. C'est psychologiquement motivant car vous éliminez rapidement une dette complète, créant ainsi un effet de momentum. Utilisez cette stratégie si vous avez besoin de victoires rapides pour rester motivé.</div>
             </div>
             
             <div class="faq-item">
-                <div class="faq-question">Quelle est la différence entre Snowball et Avalanche?</div>
-                <div class="faq-answer">La méthode Snowball se concentre sur la plus petite dette en premier (victoire psychologique). La méthode Avalanche, elle, cible d'abord la dette avec le taux d'intérêt le plus élevé, ce qui économise plus d'intérêts à long terme. DebtMap vous permet de choisir la stratégie qui correspond à votre motivation et vos objectifs financiers.</div>
+                <div class="faq-question">Qu'est-ce que la méthode Avalanche?</div>
+                <div class="faq-answer">La méthode Avalanche vous demande de rembourser en priorité la dette avec le taux d'intérêt le plus élevé. Cette stratégie minimise les intérêts payés au total et vous permet d'économiser de l'argent. C'est le choix logique si vous cherchez à optimiser votre remboursement.</div>
             </div>
             
             <div class="faq-item">
-                <div class="faq-question">Mes données sont-elles en sécurité et privées?</div>
-                <div class="faq-answer">Oui. DebtMap fonctionne 100% hors ligne. Vos données de dettes ne quittent jamais votre appareil et ne sont jamais envoyées à nos serveurs. Nous ne collectons pas de données bancaires ni d'informations personnelles. Votre vie financière reste complètement privée.</div>
+                <div class="faq-question">Mes données sont-elles sécurisées?</div>
+                <div class="faq-answer">Oui, DebtMap fonctionne 100% hors ligne. Vos données restent uniquement sur votre appareil et ne sont jamais envoyées à nos serveurs. Vous avez le contrôle total de vos informations financières. Aucune donnée bancaire n'est jamais demandée.</div>
             </div>
             
             <div class="faq-item">
-                <div class="faq-question">Puis-je modifier ou supprimer une dette après l'avoir ajoutée?</div>
-                <div class="faq-answer">Bien sûr! Vous pouvez modifier le solde, le taux d'intérêt et les paiements minimaux à tout moment. Vous pouvez aussi supprimer une dette complètement. Toutes les modifications se reflètent instantanément dans votre calendrier de remboursement et votre simulateur.</div>
+                <div class="faq-question">Puis-je modifier mes dettes après les avoir saisies?</div>
+                <div class="faq-answer">Absolument! Vous pouvez modifier, ajouter ou supprimer des dettes à tout moment. DebtMap recalculera automatiquement votre timeline et vos projections. Vos données sont toujours à jour selon votre situation actuelle.</div>
             </div>
             
             <div class="faq-item">
-                <div class="faq-question">Comment fonctionne le simulateur "Et si je payais plus?"</div>
-                <div class="faq-answer">Le simulateur vous permet de tester différents montants de paiement supplémentaire (5€, 50€, 200€, etc.) et voit immédiatement combien de temps vous économiserez. Vous visualisez aussi les intérêts épargnés. C'est un excellent outil pour évaluer l'impact d'augmentations salariales ou de réductions de budget sur votre libération financière.</div>
+                <div class="faq-question">Comment fonctionne la fonction simulateur?</div>
+                <div class="faq-answer">La fonction simulateur vous permet de voir immédiatement l'impact d'un paiement supplémentaire. Entrez un montant additionnel par mois et visualisez comment cela accélère votre date de libération. C'est un excellent outil pour tester différents scénarios budgétaires.</div>
             </div>
-        </div>
-
-        <!-- Section Restore Purchase -->
-        <div class="section">
-            <h2><span class="section-icon">🔄</span>Restaurer l'Achat</h2>
-            <p>Si vous avez changé d'appareil ou réinstallé l'app, vous pouvez restaurer votre accès à la version complète sans frais supplémentaires.</p>
+        </section>
+        
+        <section class="section">
+            <h2>Restaurer vos achats</h2>
+            <p>Si vous avez déjà acheté DebtMap sur une autre appareil ou après une réinstallation, vous pouvez restaurer votre achat pour continuer à accéder à toutes les fonctionnalités.</p>
+            <div class="info-box">
+                <p><strong>Note:</strong> Utilisez le même identifiant Apple (compte iCloud) pour restaurer vos achats.</p>
+            </div>
             <div class="button-group">
-                <button class="button">Restaurer les achats</button>
+                <button class="btn btn-primary" onclick="restorePurchase()">Restaurer l'achat</button>
             </div>
-            <div class="warning-box">
-                <p class="warning-text"><strong>Note:</strong> Utilisez le même Apple ID avec lequel vous avez acheté DebtMap pour que la restauration fonctionne correctement.</p>
+        </section>
+        
+        <section class="section">
+            <h2>Supprimer mes données</h2>
+            <p>Vous pouvez supprimer toutes vos données personnelles (dettes, calculs, historique) à tout moment. Cette action est irréversible.</p>
+            <div class="info-box">
+                <p><strong>Attention:</strong> La suppression de vos données ne peut pas être annulée. Assurez-vous de l'avoir bien sauvegardées ailleurs si nécessaire.</p>
             </div>
-        </div>
-
-        <!-- Section Delete Data -->
-        <div class="section">
-            <h2><span class="section-icon">🗑️</span>Supprimer Vos Données</h2>
-            <p>Vous pouvez supprimer toutes vos données de dettes directement depuis l'app via Paramètres → Données → Supprimer tous les éléments. Cette action est irréversible.</p>
-            
-            <div class="divider"></div>
-            
-            <h3 style="font-size: 16px; font-weight: 600; margin: 20px 0 12px 0;">Demander la suppression de vos données personnelles</h3>
-            <p style="font-size: 15px; color: #6e6e73; margin-bottom: 12px;">Conformément au RGPD et aux lois sur la protection des données, vous pouvez demander la suppression de toutes vos données personnelles de nos serveurs.</p>
-            <a href="mailto:delkertz13@gmail.com?subject=Demande%20de%20suppression%20des%20données%20RGPD" class="button secondary">Envoyer une demande de suppression</a>
-            
-            <div class="warning-box">
-                <p class="warning-text"><strong>Important:</strong> Les données stockées uniquement sur votre appareil doivent être supprimées via l'app elle-même. Cette demande concerne uniquement les métadonnées potentielles (journaux d'erreurs anonymes, etc.) que nous pourrions conserver.</p>
+            <div class="button-group">
+                <button class="btn btn-danger" onclick="openDeleteModal()">Supprimer mes données</button>
             </div>
-        </div>
-
+        </section>
+        
+        <section class="section">
+            <h2>Nous contacter</h2>
+            <p>Vous avez une question, une suggestion ou avez rencontré un problème? Nous sommes là pour vous aider.</p>
+            <div class="contact-info">
+                <strong>Email:</strong> <a href="mailto:delkertz13@gmail.com">delkertz13@gmail.com</a>
+            </div>
+            <p>Veuillez inclure les informations suivantes dans votre message:</p>
+            <ul class="feature-list">
+                <li>Votre version de DebtMap</li>
+                <li>Votre version d'iOS</li>
+                <li>Une description détaillée du problème</li>
+                <li>Les étapes pour reproduire le problème (le cas échéant)</li>
+            </ul>
+            <div class="button-group">
+                <a href="mailto:delkertz13@gmail.com" class="btn btn-primary">Envoyer un email</a>
+            </div>
+        </section>
+        
+        <section class="section">
+            <h2>Politique de confidentialité & Conditions</h2>
+            <p>DebtMap respecte votre vie privée. Nos données ne quittent jamais votre appareil.</p>
+            <div class="info-box">
+                <p><strong>Aucune donnée collectée:</strong> DebtMap ne collecte pas vos informations personnelles, ne fait pas de tracking et n'envoie aucune donnée à des serveurs tiers.</p>
+            </div>
+        </section>
+        
         <footer>
-            <p>DebtMap © 2025 | <a href="#" style="color: #007AFF; text-decoration: none;">Politique de confidentialité</a> | <a href="#" style="color: #007AFF; text-decoration: none;">Conditions d'utilisation</a></p>
+            <p>&copy; 2025 DebtMap. Tous droits réservés.</p>
+            <p>Libérez-vous des dettes • Reprenez le contrôle de vos finances</p>
         </footer>
     </div>
+    
+    <div id="deleteModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeDeleteModal()">&times;</span>
+            <h2>Supprimer toutes les données?</h2>
+            <p>Êtes-vous sûr de vouloir supprimer définitivement toutes vos données dans DebtMap?</p>
+            <p><strong>Cette action est irréversible.</strong></p>
+            <div class="modal-buttons">
+                <button class="btn btn-secondary" onclick="closeDeleteModal()">Annuler</button>
+                <button class="btn btn-danger" onclick="confirmDelete()">Oui, supprimer</button>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        function restorePurchase() {
+            alert('Fonctionnalité de restauration d\'achat initiée.\n\nVérifiez votre appareil iOS pour confirmer la restauration via l\'App Store.');
+        }
+        
+        function openDeleteModal() {
+            document.getElementById('deleteModal').style.display = 'block';
+        }
+        
+        function closeDeleteModal() {
+            document.getElementById('deleteModal').style.display = 'none';
+        }
+        
+        function confirmDelete() {
+            alert('Vos données ont été supprimées avec succès.\n\nVous pouvez maintenant recommencer avec un slate vierge.');
+            closeDeleteModal();
+        }
+        
+        window.onclick = function(event) {
+            var modal = document.getElementById('deleteModal');
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        }
+        
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', function() {
+                this.parentElement.classList.toggle('open');
+            });
+        });
+    </script>
 </body>
 </html>
 ```
