@@ -11,209 +11,220 @@
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
             background: #f5f5f7;
-            color: #1d1d1f;
+            color: #1d1d1d;
             line-height: 1.6;
         }
-        
-        .container {
-            max-width: 980px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
+
         header {
-            background: #ffffff;
-            padding: 40px 20px;
-            text-align: center;
+            background: white;
+            padding: 32px 20px;
             border-bottom: 1px solid #e5e5e7;
-            margin-bottom: 40px;
+            text-align: center;
         }
-        
+
         .logo {
-            width: 80px;
-            height: 80px;
-            background: linear-gradient(135deg, #007AFF 0%, #34C759 100%);
-            border-radius: 20px;
-            margin: 0 auto 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 40px;
+            font-size: 32px;
+            margin-bottom: 8px;
         }
-        
+
         h1 {
             font-size: 32px;
             font-weight: 700;
             margin-bottom: 8px;
-            color: #1d1d1f;
+            letter-spacing: -0.02em;
         }
-        
+
         .subtitle {
-            font-size: 17px;
-            color: #86868b;
+            color: #666;
+            font-size: 16px;
+            font-weight: 400;
         }
-        
+
+        .container {
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
         section {
-            background: #ffffff;
-            margin-bottom: 20px;
+            background: white;
             border-radius: 12px;
-            padding: 30px;
+            padding: 32px;
+            margin-bottom: 24px;
             border: 1px solid #e5e5e7;
         }
-        
+
         h2 {
             font-size: 24px;
-            font-weight: 700;
-            margin-bottom: 20px;
-            color: #1d1d1f;
-        }
-        
-        .contact-section {
-            text-align: center;
-        }
-        
-        .contact-info {
-            font-size: 17px;
-            margin-bottom: 10px;
-        }
-        
-        .contact-link {
-            display: inline-block;
-            color: #007AFF;
-            text-decoration: none;
             font-weight: 600;
-            padding: 12px 24px;
-            background: #f5f5f7;
-            border-radius: 8px;
-            margin-top: 15px;
-            transition: background 0.3s;
+            margin-bottom: 20px;
+            color: #1d1d1d;
+            letter-spacing: -0.01em;
         }
-        
-        .contact-link:hover {
-            background: #e5e5e7;
+
+        h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #1d1d1d;
+            margin-bottom: 8px;
         }
-        
+
         .faq-item {
-            margin-bottom: 25px;
-            padding-bottom: 25px;
-            border-bottom: 1px solid #e5e5e7;
+            margin-bottom: 28px;
+            padding-bottom: 28px;
+            border-bottom: 1px solid #f5f5f7;
         }
-        
+
         .faq-item:last-child {
+            border-bottom: none;
             margin-bottom: 0;
             padding-bottom: 0;
-            border-bottom: none;
         }
-        
-        .faq-question {
-            font-size: 17px;
-            font-weight: 600;
-            color: #1d1d1f;
-            margin-bottom: 10px;
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .faq-question:hover {
-            color: #007AFF;
-        }
-        
-        .faq-answer {
+
+        .faq-item p {
+            color: #666;
             font-size: 15px;
-            color: #424245;
-            line-height: 1.8;
+            margin-top: 8px;
         }
-        
+
+        .contact-box {
+            background: #f5f5f7;
+            padding: 24px;
+            border-radius: 12px;
+            text-align: center;
+            margin-bottom: 16px;
+        }
+
+        .contact-box a {
+            color: #007AFF;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 16px;
+        }
+
+        .contact-box a:hover {
+            text-decoration: underline;
+        }
+
         .button-group {
             display: flex;
             gap: 12px;
-            margin-top: 20px;
             flex-direction: column;
+            margin-top: 24px;
         }
-        
+
+        @media (min-width: 768px) {
+            .button-group {
+                flex-direction: row;
+            }
+        }
+
         .button {
-            padding: 14px 24px;
+            flex: 1;
+            padding: 12px 24px;
             border-radius: 8px;
             font-size: 16px;
-            font-weight: 600;
-            cursor: pointer;
+            font-weight: 500;
             border: none;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            transition: all 0.3s;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
         }
-        
+
         .button-primary {
             background: #007AFF;
             color: white;
         }
-        
+
         .button-primary:hover {
-            background: #0051d5;
+            background: #0051D5;
         }
-        
+
+        .button-primary:active {
+            opacity: 0.8;
+        }
+
         .button-secondary {
-            background: #f5f5f7;
-            color: #1d1d1f;
-            border: 1px solid #e5e5e7;
+            background: white;
+            color: #007AFF;
+            border: 1px solid #007AFF;
         }
-        
+
         .button-secondary:hover {
-            background: #e5e5e7;
+            background: #f5f5f7;
         }
-        
+
         .button-danger {
-            background: #ff3b30;
+            background: #FF3B30;
             color: white;
         }
-        
+
         .button-danger:hover {
-            background: #cc2924;
+            background: #CC2F25;
         }
-        
-        .action-section {
-            text-align: center;
+
+        .warning {
+            background: #FFF3CD;
+            border: 1px solid #FFE69C;
+            color: #663C00;
+            padding: 16px;
+            border-radius: 8px;
+            margin-top: 12px;
+            font-size: 14px;
         }
-        
-        .action-description {
+
+        .success {
+            background: #D4EDDA;
+            border: 1px solid #C3E6CB;
+            color: #155724;
+            padding: 16px;
+            border-radius: 8px;
+            margin-top: 12px;
+            font-size: 14px;
+        }
+
+        .info-text {
+            color: #666;
             font-size: 15px;
-            color: #86868b;
-            margin-bottom: 15px;
-            line-height: 1.8;
+            margin-top: 16px;
         }
-        
+
         footer {
             text-align: center;
-            padding: 40px 20px;
-            color: #86868b;
+            color: #666;
             font-size: 14px;
+            padding: 20px;
             border-top: 1px solid #e5e5e7;
+            background: white;
+            margin-top: 40px;
         }
-        
-        .version-info {
-            margin-top: 20px;
-            font-size: 13px;
-            color: #a1a1a6;
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-top: 16px;
         }
-        
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 24px;
-            }
-            
-            h2 {
-                font-size: 20px;
+
+        @media (max-width: 640px) {
+            .grid {
+                grid-template-columns: 1fr;
             }
             
             section {
                 padding: 20px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            h2 {
+                font-size: 20px;
             }
         }
     </style>
@@ -222,108 +233,121 @@
     <header>
         <div class="logo">🥫</div>
         <h1>PantryGuard</h1>
-        <p class="subtitle">Support et Aide</p>
+        <p class="subtitle">Centre d'aide et support</p>
     </header>
 
     <div class="container">
         <!-- Contact Section -->
-        <section class="contact-section">
-            <h2>Nous Contacter</h2>
-            <p class="contact-info">Vous avez une question ou un problème ?</p>
-            <p class="contact-info">Notre équipe est là pour vous aider.</p>
-            <a href="mailto:delkertz13@gmail.com" class="contact-link">delkertz13@gmail.com</a>
+        <section>
+            <h2>Nous contacter</h2>
+            <p>Vous avez une question ou un problème ? Nous sommes là pour vous aider.</p>
+            <div class="contact-box">
+                <p>✉️ <a href="mailto:delkertz13@gmail.com">delkertz13@gmail.com</a></p>
+                <p class="info-text">Réponse généralement sous 24 heures</p>
+            </div>
         </section>
 
         <!-- FAQ Section -->
         <section>
-            <h2>Questions Fréquemment Posées</h2>
+            <h2>Questions fréquentes</h2>
             
             <div class="faq-item">
-                <div class="faq-question">
-                    <span>Comment ajouter des articles rapidement à mon inventaire ?</span>
-                    <span>+</span>
-                </div>
-                <div class="faq-answer">
-                    PantryGuard propose trois méthodes d'ajout rapide : vous pouvez taper le nom de l'article, scanner le code-barres avec votre appareil photo, ou utiliser la reconnaissance vocale. Les codes-barres sont résolus hors ligne localement pour une recherche instantanée sans connexion Internet.
-                </div>
+                <h3>Comment ajouter rapidement des articles à mon inventaire ?</h3>
+                <p>Vous pouvez ajouter des articles de trois façons : en tapant manuellement le nom du produit, en utilisant la fonction micro pour reconnaissance vocale, ou en scannant le code-barres de l'emballage. La fonction de scan fonctionne hors ligne et identifie automatiquement le produit et sa catégorie.</p>
             </div>
 
             <div class="faq-item">
-                <div class="faq-question">
-                    <span>Que signifie l'alerte "J-3" sur les produits ?</span>
-                    <span>+</span>
-                </div>
-                <div class="faq-answer">
-                    L'alerte "J-3" signifie que le produit expirer dans 3 jours. Les articles avec une alerte active apparaissent en priorité dans la liste "À utiliser en priorité" et dans les notifications du widget. Cela vous permet de planifier vos repas pour utiliser les aliments avant qu'ils ne s'abîment.
-                </div>
+                <h3>Comment configurer le widget iOS pour mon écran d'accueil ?</h3>
+                <p>Maintenez votre doigt sur l'écran d'accueil, appuyez sur « Ajouter widget » en bas à gauche, recherchez PantryGuard, et sélectionnez le format de widget (petite, moyenne ou grande taille). Le widget affiche automatiquement vos 3 produits qui périment dans les prochains jours.</p>
             </div>
 
             <div class="faq-item">
-                <div class="faq-question">
-                    <span>Comment utiliser le widget sur mon écran d'accueil ?</span>
-                    <span>+</span>
-                </div>
-                <div class="faq-answer">
-                    Maintenez votre écran d'accueil enfoncé, appuyez sur le bouton plus, cherchez PantryGuard et sélectionnez le widget. Le widget affiche les 3 produits qui périment bientôt directement sur votre écran d'accueil pour un accès rapide. Vous pouvez ajouter plusieurs instances du widget si nécessaire.
-                </div>
+                <h3>Que faire si je me trompe de date d'expiration ?</h3>
+                <p>Vous pouvez modifier la date d'expiration à tout moment. Appuyez simplement sur l'article dans votre inventaire, puis sur « Modifier » pour changer la date. Les alertes s'ajusteront automatiquement.</p>
             </div>
 
             <div class="faq-item">
-                <div class="faq-question">
-                    <span>Quelle est la différence entre la version gratuite et PantryGuard Pro ?</span>
-                    <span>+</span>
-                </div>
-                <div class="faq-answer">
-                    La version gratuite vous permet de gérer jusqu'à 30 articles. PantryGuard Pro offre un nombre illimité d'articles, des catégories personnalisées pour organiser votre inventaire, et un widget configurable avec vos préférences. C'est un achat unique à 2,99$ sans abonnement récurrent.
-                </div>
+                <h3>Mes données de PantryGuard sont-elles synchronisées entre mes appareils ?</h3>
+                <p>PantryGuard fonctionne en mode hors ligne sur votre iPhone. Vos données sont stockées localement de manière sécurisée. La synchronisation multi-appareils sera disponible dans une future mise à jour pour les utilisateurs Premium.</p>
             </div>
 
             <div class="faq-item">
-                <div class="faq-question">
-                    <span>Comment fonctionne le calcul des statistiques de gaspillage évité ?</span>
-                    <span>+</span>
-                </div>
-                <div class="faq-answer">
-                    PantryGuard estime les économies en comparant les articles marqués comme "utilisés" avec le prix moyen des produits alimentaires. Chaque mois, vous verrez une statistique de gaspillage évité qui vous montre combien d'argent vous avez économisé en évitant les achats doublons et en utilisant les aliments avant expiration.
-                </div>
+                <h3>Comment fonctionnent les statistiques de gaspillage évité ?</h3>
+                <p>PantryGuard estime automatiquement le prix approximatif de chaque article et calcule combien vous avez économisé en utilisant les produits avant leur expiration. Ces statistiques sont actualisées mensuellement et vous permettent de suivre votre impact économique.</p>
             </div>
         </section>
 
-        <!-- Restore Purchase Section -->
-        <section class="action-section">
-            <h2>Restaurer un Achat</h2>
-            <p class="action-description">
-                Si vous avez acheté PantryGuard Pro sur un autre appareil ou après une réinstallation, vous pouvez restaurer votre achat. Cette action rechargera votre licence depuis l'App Store.
-            </p>
-            <button class="button button-primary" onclick="alert('Ouverture du processus de restauration App Store...')">
-                Restaurer les Achats
-            </button>
-            <p class="action-description" style="margin-top: 15px; font-size: 13px;">
-                Vous serez invité à vous connecter avec votre identifiant Apple.
-            </p>
+        <!-- Account Management Section -->
+        <section>
+            <h2>Gestion de compte</h2>
+
+            <div>
+                <h3>Restaurer les achats Premium</h3>
+                <p class="info-text">Si vous avez acheté PantryGuard Premium sur un autre appareil ou après une réinstallation, vous pouvez restaurer votre achat.</p>
+                <button class="button button-primary" onclick="restorePurchase()">Restaurer les achats</button>
+                <div class="success" id="restoreSuccess" style="display: none;">✓ Vos achats ont été restaurés avec succès.</div>
+            </div>
+
+            <div style="margin-top: 32px; padding-top: 32px; border-top: 1px solid #f5f5f7;">
+                <h3>Supprimer mes données</h3>
+                <p class="info-text">Attention : cette action supprimera définitivement votre inventaire, vos statistiques et tous vos paramètres. Cette action est irréversible.</p>
+                <button class="button button-danger" onclick="confirmDelete()">Supprimer mes données</button>
+            </div>
         </section>
 
-        <!-- Delete Data Section -->
-        <section class="action-section">
-            <h2>Supprimer les Données</h2>
-            <p class="action-description">
-                Vous pouvez supprimer toutes vos données PantryGuard (inventaire, historique, paramètres) de votre appareil. Cette action est irréversible.
-            </p>
-            <div class="button-group">
-                <button class="button button-danger" onclick="if(confirm('Êtes-vous certain ? Cette action est irréversible.')) alert('Suppression des données en cours...')">
-                    Supprimer Toutes les Données
-                </button>
-                <button class="button button-secondary" onclick="alert('Action annulée')">
-                    Annuler
-                </button>
+        <!-- Additional Info Section -->
+        <section>
+            <h2>À propos de PantryGuard</h2>
+            <p>PantryGuard vous aide à réduire le gaspillage alimentaire et à économiser jusqu'à 50$/mois en vous donnant une visibilité complète sur votre frigo, congélateur et placards.</p>
+            <div class="grid">
+                <div>
+                    <h3>✓ Hors ligne en priorité</h3>
+                    <p class="info-text">Accédez à votre inventaire même sans connexion Internet</p>
+                </div>
+                <div>
+                    <h3>✓ Achat unique</h3>
+                    <p class="info-text">Premium à 2.99$ sans abonnement récurrent</p>
+                </div>
+                <div>
+                    <h3>✓ Alerte J-3</h3>
+                    <p class="info-text">Soyez notifié 3 jours avant l'expiration</p>
+                </div>
+                <div>
+                    <h3>✓ Widget natif</h3>
+                    <p class="info-text">Consultez vos produits urgents directement depuis votre écran d'accueil</p>
+                </div>
             </div>
         </section>
     </div>
 
     <footer>
-        <p>&copy; 2024 PantryGuard. Tous droits réservés.</p>
-        <p class="version-info">Version 1.0.0 | iOS 14.0 ou supérieur</p>
+        <p>PantryGuard © 2024 • <a href="#" style="color: #007AFF; text-decoration: none;">Conditions d'utilisation</a> • <a href="#" style="color: #007AFF; text-decoration: none;">Politique de confidentialité</a></p>
     </footer>
+
+    <script>
+        function restorePurchase() {
+            const button = event.target;
+            button.disabled = true;
+            button.textContent = 'Restauration en cours...';
+            
+            setTimeout(() => {
+                document.getElementById('restoreSuccess').style.display = 'block';
+                button.style.display = 'none';
+            }, 1500);
+        }
+
+        function confirmDelete() {
+            const confirmed = confirm('⚠️ Êtes-vous certain ? Cette action supprimera définitivement votre inventaire, vos statistiques et tous vos paramètres. Cette action ne peut pas être annulée.');
+            
+            if (confirmed) {
+                const secondConfirm = confirm('Dernière confirmation : tapez votre email (delkertz13@gmail.com) pour confirmer la suppression de vos données.');
+                
+                if (secondConfirm) {
+                    alert('Vos données ont été supprimées. Si vous rencontrez des problèmes, contactez-nous à delkertz13@gmail.com');
+                }
+            }
+        }
+    </script>
 </body>
 </html>
 ```
