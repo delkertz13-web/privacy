@@ -1,0 +1,341 @@
+```html
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HouseCheck - Support</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background: #f5f5f7;
+            color: #1d1d1d;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background: white;
+            padding: 40px 20px;
+            text-align: center;
+            border-bottom: 1px solid #e5e5e7;
+            margin-bottom: 40px;
+        }
+        
+        .app-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #007AFF 0%, #0051D5 100%);
+            border-radius: 24px;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 36px;
+            box-shadow: 0 4px 12px rgba(0, 122, 255, 0.3);
+        }
+        
+        h1 {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+        
+        .version {
+            font-size: 14px;
+            color: #999;
+        }
+        
+        .section {
+            background: white;
+            padding: 40px;
+            margin-bottom: 20px;
+            border-radius: 12px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+        }
+        
+        h2 {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 24px;
+            color: #1d1d1d;
+        }
+        
+        .faq-item {
+            margin-bottom: 24px;
+            padding-bottom: 24px;
+            border-bottom: 1px solid #e5e5e7;
+        }
+        
+        .faq-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        
+        .faq-question {
+            font-size: 16px;
+            font-weight: 600;
+            color: #007AFF;
+            margin-bottom: 10px;
+            cursor: pointer;
+            user-select: none;
+        }
+        
+        .faq-answer {
+            font-size: 15px;
+            color: #555;
+            line-height: 1.7;
+        }
+        
+        .contact-info {
+            background: #f5f5f7;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 24px;
+        }
+        
+        .contact-label {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 8px;
+        }
+        
+        .contact-email {
+            font-size: 16px;
+            font-weight: 500;
+            color: #007AFF;
+            text-decoration: none;
+        }
+        
+        .contact-email:hover {
+            text-decoration: underline;
+        }
+        
+        .button-group {
+            display: flex;
+            gap: 12px;
+            flex-direction: column;
+        }
+        
+        .btn {
+            padding: 14px 20px;
+            border-radius: 8px;
+            border: none;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+        }
+        
+        .btn-primary {
+            background: #007AFF;
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background: #0051D5;
+        }
+        
+        .btn-secondary {
+            background: #f5f5f7;
+            color: #007AFF;
+            border: 1px solid #d5d5d7;
+        }
+        
+        .btn-secondary:hover {
+            background: #e8e8e8;
+        }
+        
+        .btn-danger {
+            background: #ff3b30;
+            color: white;
+        }
+        
+        .btn-danger:hover {
+            background: #e00000;
+        }
+        
+        .warning {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 12px 16px;
+            border-radius: 4px;
+            font-size: 14px;
+            color: #856404;
+            margin-bottom: 20px;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: #999;
+            font-size: 13px;
+        }
+        
+        .feature-list {
+            list-style: none;
+            margin-bottom: 20px;
+        }
+        
+        .feature-list li {
+            padding: 8px 0;
+            color: #555;
+            position: relative;
+            padding-left: 24px;
+        }
+        
+        .feature-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #007AFF;
+            font-weight: 600;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 12px;
+            }
+            
+            .section {
+                padding: 24px;
+            }
+            
+            h1 {
+                font-size: 24px;
+            }
+            
+            h2 {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="app-icon">🏠</div>
+        <h1>HouseCheck</h1>
+        <p class="subtitle">Maintenance de maison simplifiée</p>
+        <p class="version">Version 1.0</p>
+    </header>
+    
+    <div class="container">
+        <!-- Contact Section -->
+        <section class="section">
+            <h2>Nous contacter</h2>
+            <p style="margin-bottom: 16px; color: #555;">Vous avez une question ou besoin d'assistance ? Nous sommes là pour vous aider.</p>
+            <div class="contact-info">
+                <p class="contact-label">Email de support</p>
+                <a href="mailto:delkertz13@gmail.com" class="contact-email">delkertz13@gmail.com</a>
+            </div>
+            <p style="font-size: 14px; color: #999;">Nous répondons généralement sous 24 heures.</p>
+        </section>
+        
+        <!-- FAQ Section -->
+        <section class="section">
+            <h2>Questions fréquemment posées</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">🆓 Quelles tâches de maintenance sont incluses dans la version gratuite ?</div>
+                <div class="faq-answer">La version gratuite de HouseCheck inclut 20 tâches de maintenance saisonnières pré-remplies (Printemps, Été, Automne, Hiver). Vous obtenez un calendrier complet optimisé pour les propriétaires américains. La version Pro ($2.99/an) déverrouille les tâches personnalisées, l'historique illimité et l'export PDF.</div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">📍 Comment les rappels sont-ils ajustés selon ma zone climatique ?</div>
+                <div class="faq-answer">Durante l'onboarding, vous entrez votre code postal. HouseCheck utilise les zones de rusticité USDA pour adapter les dates de maintenance (par exemple, l'hivernage des tuyaux apparaît plus tôt dans les zones froides). Le calendrier saisonnier s'ajuste automatiquement selon votre région.</div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">🔒 Mes données sont-elles sauvegardées en ligne ou en local ?</div>
+                <div class="faq-answer">HouseCheck fonctionne intégralement hors ligne. Toutes vos données de tâches, historique et contacts sont stockés localement sur votre iPhone. Aucun serveur, aucun compte requis. Vos informations de propriété restent privées.</div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">📄 Comment exporter mon historique pour la vente de ma maison ?</div>
+                <div class="faq-answer">La version Pro permet d'exporter votre historique complet de maintenance en PDF. Ce document devient utile pour prouver l'entretien régulier lors de la vente de votre maison. Incluez-le dans votre dossier de propriété ou partagez-le avec les acheteurs potentiels.</div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">📱 Puis-je utiliser HouseCheck sans créer de compte ?</div>
+                <div class="faq-answer">Oui ! HouseCheck ne nécessite absolument aucun compte. Tout fonctionne immédiatement. L'onboarding simple (type de logement, année de construction, code postal) prend 60 secondes. Vos données ne quittent jamais votre iPhone.</div>
+            </div>
+        </section>
+        
+        <!-- Restore Purchase Section -->
+        <section class="section">
+            <h2>Restaurer achats</h2>
+            <p style="margin-bottom: 24px; color: #555;">Si vous avez acheté HouseCheck Pro sur un autre appareil ou après une réinstallation, restaurez votre abonnement.</p>
+            <button class="btn btn-primary" onclick="restorePurchases()">Restaurer mes achats</button>
+            <p style="font-size: 13px; color: #999; margin-top: 12px;">Vous serez invité à vous connecter avec votre Apple ID pour confirmer l'achat.</p>
+        </section>
+        
+        <!-- Delete Data Section -->
+        <section class="section">
+            <h2>Supprimer les données</h2>
+            <p style="margin-bottom: 20px; color: #555;">Supprimez toutes vos données HouseCheck de cet appareil. Cette action ne peut pas être annulée.</p>
+            
+            <div class="warning">
+                ⚠️ <strong>Attention :</strong> La suppression effacera définitivement tous vos tâches, historique de maintenance, contacts et paramètres. Assurez-vous d'avoir exporté vos données importantes avant de continuer.
+            </div>
+            
+            <button class="btn btn-danger" onclick="deleteAllData()">Supprimer toutes les données</button>
+            <p style="font-size: 13px; color: #999; margin-top: 12px;">Cette action supprimera uniquement les données locales. Votre compte App Store n'est pas affecté.</p>
+        </section>
+        
+        <!-- Additional Info -->
+        <section class="section" style="background: #f5f5f7; border: 1px solid #e5e5e7;">
+            <h2 style="margin-bottom: 16px;">À propos de HouseCheck</h2>
+            <p style="color: #555; margin-bottom: 16px;">HouseCheck aide les propriétaires américains à ne jamais oublier une tâche de maintenance essentielle. Conçu pour les primo-accédants et propriétaires récents qui veulent éviter les réparations coûteuses.</p>
+            <ul class="feature-list">
+                <li>Calendrier saisonnier automatique (Spring, Summer, Fall, Winter)</li>
+                <li>Rappels basés sur votre zone climatique (code postal USDA)</li>
+                <li>Historique avec photos et coûts</li>
+                <li>Carnet de contacts (plombier, électricien, HVAC)</li>
+                <li>Fonctionne complètement hors ligne</li>
+                <li>Aucun compte ou inscription requis</li>
+            </ul>
+        </section>
+    </div>
+    
+    <footer>
+        <p>&copy; 2026 HouseCheck. Tous droits réservés.</p>
+        <p style="margin-top: 8px;">HouseCheck est conçu pour les propriétaires américains.</p>
+    </footer>
+    
+    <script>
+        function restorePurchases() {
+            alert('Redirection vers l\'App Store pour restaurer les achats...\n\nDans l\'app iOS, cette action se ferait via SKPaymentQueue.restoreCompletedTransactions()');
+        }
+        
+        function deleteAllData() {
+            const confirm_delete = confirm('Êtes-vous certain ? Cette action supprimera définitivement toutes vos données HouseCheck.\n\nCette action ne peut pas être annulée.');
+            if (confirm_delete) {
+                alert('Suppression des données confirmée.\n\nDans l\'app iOS, toutes les données locales seraient effacées maintenant.');
+            }
+        }
+    </script>
+</body>
+</html>
+```
