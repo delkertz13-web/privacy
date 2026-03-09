@@ -1,0 +1,367 @@
+```html
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support - SymptomDiary</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background: #f5f5f7;
+            color: #1d1d1f;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 60px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid #d5d5d7;
+        }
+
+        .logo {
+            font-size: 32px;
+            font-weight: 700;
+            color: #007AFF;
+            margin-bottom: 16px;
+        }
+
+        h1 {
+            font-size: 40px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: #1d1d1f;
+        }
+
+        .subtitle {
+            font-size: 17px;
+            color: #6e6e73;
+        }
+
+        .section {
+            background: white;
+            border-radius: 12px;
+            padding: 40px;
+            margin-bottom: 32px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .section h2 {
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 24px;
+            color: #1d1d1f;
+        }
+
+        .faq-item {
+            margin-bottom: 32px;
+            padding-bottom: 32px;
+            border-bottom: 1px solid #f5f5f7;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .faq-question {
+            font-size: 17px;
+            font-weight: 600;
+            color: #007AFF;
+            margin-bottom: 12px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .faq-toggle {
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #007AFF;
+            font-size: 18px;
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item.active .faq-toggle {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            font-size: 16px;
+            color: #6e6e73;
+            line-height: 1.8;
+            display: none;
+            margin-top: 12px;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .contact-info {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
+            margin-top: 24px;
+        }
+
+        .contact-box {
+            padding: 24px;
+            background: #f5f5f7;
+            border-radius: 8px;
+        }
+
+        .contact-label {
+            font-size: 14px;
+            font-weight: 600;
+            color: #6e6e73;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+        }
+
+        .contact-link {
+            font-size: 17px;
+            color: #007AFF;
+            text-decoration: none;
+            word-break: break-all;
+        }
+
+        .contact-link:hover {
+            text-decoration: underline;
+        }
+
+        .action-buttons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-top: 32px;
+        }
+
+        .btn {
+            padding: 16px 24px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+
+        .btn-primary {
+            background: #007AFF;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #0056b3;
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: #f5f5f7;
+            color: #007AFF;
+            border: 1px solid #d5d5d7;
+        }
+
+        .btn-secondary:hover {
+            background: #efefef;
+        }
+
+        .btn-danger {
+            background: #ff3b30;
+            color: white;
+        }
+
+        .btn-danger:hover {
+            background: #cc2f26;
+            transform: translateY(-2px);
+        }
+
+        .warning-box {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 16px;
+            border-radius: 6px;
+            margin-top: 16px;
+            font-size: 14px;
+            color: #664d00;
+        }
+
+        footer {
+            text-align: center;
+            padding-top: 32px;
+            border-top: 1px solid #d5d5d7;
+            color: #6e6e73;
+            font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 24px 16px;
+            }
+
+            .section {
+                padding: 24px;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+
+            .contact-info,
+            .action-buttons {
+                grid-template-columns: 1fr;
+            }
+
+            .section h2 {
+                font-size: 22px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">SymptomDiary</div>
+            <h1>Support et Aide</h1>
+            <p class="subtitle">Trouvez des réponses à vos questions et gérez votre compte</p>
+        </header>
+
+        <section class="section">
+            <h2>Questions Fréquentes</h2>
+            
+            <div class="faq-item active">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span>Comment exporter mes données en PDF pour mon médecin?</span>
+                    <div class="faq-toggle">▼</div>
+                </div>
+                <div class="faq-answer">
+                    Dans l'onglet "Rapports", sélectionnez la période souhaitée (30, 90 jours ou personnalisée). Appuyez sur "Générer Rapport PDF" et choisissez de partager le fichier par email ou iCloud. Le rapport contient un résumé structuré de tous vos symptômes, leurs patterns et les corrélations identifiées.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span>Où sont stockées mes données et sont-elles sécurisées?</span>
+                    <div class="faq-toggle">▼</div>
+                </div>
+                <div class="faq-answer">
+                    Toutes vos données sont stockées localement sur votre iPhone. Aucune information n'est envoyée à des serveurs externes. Vos données restent sous votre contrôle total. Si vous utilisez iCloud, vous pouvez activer la synchronisation optionnelle uniquement entre vos appareils personnels via le chiffrement de bout en bout d'Apple.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span>Comment puis-je supprimer ou modifier une entrée de symptôme?</span>
+                    <div class="faq-toggle">▼</div>
+                </div>
+                <div class="faq-answer">
+                    Dans la vue Timeline, balayez vers la gauche sur l'entrée que vous souhaitez supprimer, ou appuyez sur "Modifier" pour ajuster les détails (intensité, déclencheurs, durée). Vous pouvez aussi appuyer longuement sur une entrée pour voir plus d'options. Toutes les modifications sont enregistrées automatiquement.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span>Puis-je tracker plusieurs types de symptômes à la fois?</span>
+                    <div class="faq-toggle">▼</div>
+                </div>
+                <div class="faq-answer">
+                    Oui, vous pouvez tracker simultanément douleurs, fatigue, migraines, troubles digestifs, et plus. Le widget d'accueil permet une saisie rapide en 10 secondes. La Timeline affiche tous vos symptômes avec un code couleur pour identifier facilement les patterns et les corrélations entre différents symptômes.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span>Comment fonctionne la restauration d'achat?</span>
+                    <div class="faq-toggle">▼</div>
+                </div>
+                <div class="faq-answer">
+                    Si vous avez déjà acheté l'accès illimité et que vous avez réinstallé l'app ou l'utilisez sur un nouvel appareil, utilisez le bouton "Restaurer Achats" pour récupérer votre accès. Vous serez invité à vous connecter avec votre identifiant Apple qui a effectué l'achat initial.
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Nous Contacter</h2>
+            <p>Vous avez une question ou un problème? N'hésitez pas à nous contacter directement.</p>
+            <div class="contact-info">
+                <div class="contact-box">
+                    <div class="contact-label">Support par Email</div>
+                    <a href="mailto:delkertz13@gmail.com" class="contact-link">delkertz13@gmail.com</a>
+                </div>
+                <div class="contact-box">
+                    <div class="contact-label">Temps de Réponse</div>
+                    <div style="font-size: 17px; color: #1d1d1f;">24-48 heures</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Gestion du Compte</h2>
+            
+            <div style="margin-bottom: 32px;">
+                <h3 style="font-size: 19px; font-weight: 600; margin-bottom: 16px;">Restaurer Mes Achats</h3>
+                <p style="color: #6e6e73; margin-bottom: 16px;">Si vous avez acheté l'accès premium et souhaitez le restaurer sur cet appareil, cliquez sur le bouton ci-dessous. Vous serez invité à vous authentifier avec votre identifiant Apple.</p>
+                <button class="btn btn-primary" onclick="restorePurchases()">Restaurer les Achats</button>
+            </div>
+
+            <div style="padding-top: 32px; border-top: 1px solid #f5f5f7;">
+                <h3 style="font-size: 19px; font-weight: 600; margin-bottom: 16px;">Supprimer Mes Données</h3>
+                <p style="color: #6e6e73; margin-bottom: 16px;">Supprimez de manière permanente toutes vos données de l'app. Cette action ne peut pas être annulée. Assurez-vous d'avoir exporté vos rapports importants avant de procéder.</p>
+                <div class="warning-box">
+                    ⚠️ Attention: La suppression est définitive et ne peut pas être annulée.
+                </div>
+                <button class="btn btn-danger" style="margin-top: 16px;" onclick="deleteAllData()">Supprimer Toutes Mes Données</button>
+            </div>
+        </section>
+
+        <footer>
+            <p>SymptomDiary © 2026 — Tous droits réservés</p>
+            <p style="margin-top: 8px; font-size: 12px;">Pensez à sauvegarder vos données importantes régulièrement</p>
+        </footer>
+    </div>
+
+    <script>
+        function toggleFaq(element) {
+            const faqItem = element.parentElement;
+            faqItem.classList.toggle('active');
+        }
+
+        function restorePurchases() {
+            alert('Redirection vers App Store pour restaurer vos achats...\n\nVeuillez vous connecter avec votre identifiant Apple.');
+        }
+
+        function deleteAllData() {
+            if (confirm('Êtes-vous sûr de vouloir supprimer TOUTES vos données? Cette action est définitive et ne peut pas être annulée.')) {
+                if (confirm('Dernière confirmation: Supprimer définitivement toutes les données de SymptomDiary?')) {
+                    alert('Vos données ont été supprimées. L\'app sera réinitialisée à la prochaine ouverture.');
+                }
+            }
+        }
+
+        // Ouvrir la première FAQ par défaut
+        document.querySelector('.faq-item').classList.add('active');
+    </script>
+</body>
+</html>
+```
