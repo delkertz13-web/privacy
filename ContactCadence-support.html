@@ -11,111 +11,110 @@
             padding: 0;
             box-sizing: border-box;
         }
-
+        
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-            background-color: #f5f5f7;
-            color: #1d1d1f;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f5f5f7;
+            color: #333;
             line-height: 1.6;
         }
-
+        
+        header {
+            background: white;
+            padding: 40px 20px;
+            text-align: center;
+            border-bottom: 1px solid #e5e5e7;
+        }
+        
+        header h1 {
+            font-size: 32px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        
+        header p {
+            color: #666;
+            font-size: 16px;
+        }
+        
         .container {
-            max-width: 980px;
+            max-width: 800px;
             margin: 0 auto;
             padding: 40px 20px;
         }
-
-        header {
-            text-align: center;
-            margin-bottom: 60px;
-            padding: 40px 0;
-        }
-
-        .logo {
-            font-size: 48px;
-            font-weight: 700;
-            color: #007AFF;
-            margin-bottom: 12px;
-        }
-
-        header p {
-            font-size: 17px;
-            color: #656e77;
-        }
-
+        
         section {
             background: white;
             border-radius: 12px;
-            padding: 40px;
-            margin-bottom: 30px;
+            padding: 30px;
+            margin-bottom: 20px;
             box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
         }
-
+        
         h2 {
-            font-size: 28px;
+            font-size: 22px;
             font-weight: 600;
-            color: #1d1d1f;
-            margin-bottom: 24px;
-            padding-bottom: 12px;
-            border-bottom: 1px solid #e5e5e7;
+            margin-bottom: 20px;
+            color: #007AFF;
         }
-
+        
         h3 {
-            font-size: 17px;
+            font-size: 16px;
             font-weight: 600;
-            color: #1d1d1f;
-            margin-top: 24px;
-            margin-bottom: 8px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            color: #333;
         }
-
+        
+        h3:first-child {
+            margin-top: 0;
+        }
+        
         .faq-item {
-            margin-bottom: 32px;
-            padding-bottom: 24px;
-            border-bottom: 1px solid #f5f5f7;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #f0f0f0;
         }
-
+        
         .faq-item:last-child {
             border-bottom: none;
             padding-bottom: 0;
             margin-bottom: 0;
         }
-
+        
         .faq-question {
             font-weight: 600;
             color: #007AFF;
-            margin-bottom: 12px;
-            font-size: 16px;
+            cursor: pointer;
+            margin-bottom: 10px;
         }
-
+        
         .faq-answer {
-            color: #656e77;
-            font-size: 15px;
-            line-height: 1.65;
+            color: #666;
+            font-size: 14px;
+            line-height: 1.7;
         }
-
+        
         .contact-info {
-            background: #f5f5f7;
-            border-radius: 8px;
+            background: #f9f9fb;
             padding: 20px;
-            margin-top: 16px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            text-align: center;
         }
-
+        
         .contact-email {
-            font-size: 15px;
-            color: #1d1d1f;
-            word-break: break-all;
-        }
-
-        .contact-email a {
+            font-size: 16px;
             color: #007AFF;
             text-decoration: none;
+            font-weight: 500;
         }
-
-        .contact-email a:hover {
+        
+        .contact-email:hover {
             text-decoration: underline;
         }
-
-        .action-button {
+        
+        .button {
             display: inline-block;
             background: #007AFF;
             color: white;
@@ -123,161 +122,165 @@
             border-radius: 8px;
             text-decoration: none;
             font-weight: 500;
-            font-size: 15px;
-            margin-top: 16px;
-            cursor: pointer;
             border: none;
-            transition: background 0.2s;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
         }
-
-        .action-button:hover {
-            background: #0051d5;
+        
+        .button:hover {
+            background: #0051D5;
         }
-
-        .action-button.secondary {
-            background: white;
-            color: #007AFF;
-            border: 1px solid #d2d2d7;
+        
+        .button-secondary {
+            background: #f0f0f0;
+            color: #333;
         }
-
-        .action-button.secondary:hover {
-            background: #f5f5f7;
+        
+        .button-secondary:hover {
+            background: #e0e0e0;
         }
-
+        
         .warning {
-            background: #fff8dc;
-            border-left: 3px solid #ffd700;
-            padding: 12px;
-            border-radius: 4px;
-            margin-top: 16px;
+            color: #FF3B30;
             font-size: 14px;
-            color: #5a5a1f;
+            margin-top: 15px;
         }
-
+        
+        .info-box {
+            background: #E3F2FD;
+            border-left: 4px solid #007AFF;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 4px;
+        }
+        
+        .info-box p {
+            color: #0051D5;
+            font-size: 14px;
+            margin: 0;
+        }
+        
         footer {
             text-align: center;
-            padding: 40px 20px;
-            color: #656e77;
+            padding: 30px 20px;
+            color: #999;
             font-size: 13px;
         }
-
-        footer a {
-            color: #007AFF;
-            text-decoration: none;
+        
+        .restore-button {
+            width: 100%;
+            padding: 14px;
+            margin-top: 10px;
         }
-
-        footer a:hover {
-            text-decoration: underline;
+        
+        .delete-button {
+            width: 100%;
+            padding: 14px;
+            margin-top: 10px;
+            background: #FF3B30;
         }
-
-        .divider {
-            height: 1px;
-            background: #e5e5e7;
-            margin: 40px 0;
-        }
-
-        @media (max-width: 640px) {
-            .container {
-                padding: 20px 16px;
-            }
-
-            section {
-                padding: 24px;
-            }
-
-            h2 {
-                font-size: 24px;
-            }
-
-            .logo {
-                font-size: 36px;
-            }
-
-            header {
-                margin-bottom: 40px;
-                padding: 24px 0;
-            }
+        
+        .delete-button:hover {
+            background: #CC2E26;
         }
     </style>
 </head>
 <body>
+    <header>
+        <h1>ContactCadence</h1>
+        <p>Support et aide - Maintenez vos relations facilement</p>
+    </header>
+    
     <div class="container">
-        <header>
-            <div class="logo">ContactCadence</div>
-            <p>Gardez le contact avec les personnes qui comptent</p>
-        </header>
-
+        <!-- Section Contact -->
         <section>
-            <h2>Bienvenue sur le Support ContactCadence</h2>
-            <p>Merci d'utiliser ContactCadence. Cette page contient les réponses aux questions fréquemment posées et les informations de support pour vous aider.</p>
-        </section>
-
-        <section>
-            <h2>Questions Fréquemment Posées</h2>
-
-            <div class="faq-item">
-                <div class="faq-question">1. Comment ajouter des contacts et définir la fréquence de contact?</div>
-                <div class="faq-answer">Pour ajouter un contact, appuyez sur le bouton "+" dans l'onglet Contacts. Sélectionnez une personne depuis vos contacts iOS ou ajoutez-la manuellement. Définissez ensuite votre fréquence souhaitée (hebdomadaire, mensuelle, trimestrielle) et le dernier moment où vous avez pris des nouvelles. ContactCadence créera des rappels personnalisés en fonction de cette fréquence.</div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question">2. Que se passe-t-il si je dépasse la limite de 10 contacts gratuits?</div>
-                <div class="faq-answer">La version gratuite permet de gérer jusqu'à 10 contacts. Si vous avez besoin de gérer plus de contacts, vous pouvez déverrouiller l'accès illimité via un achat unique de 2,99 €. Cet achat est permanent et s'applique à votre compte via iCloud.</div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question">3. Comment fonctionnent les notifications intelligentes?</div>
-                <div class="faq-answer">ContactCadence analyse la fréquence configurée pour chaque contact et vous envoie des rappels au moment optimal. Par exemple, si vous avez défini une fréquence mensuelle pour un contact, vous recevrez une notification environ une fois par mois pour vous rappeler de prendre des nouvelles. Vous pouvez personnaliser les paramètres de notification dans les réglages de l'application.</div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question">4. Où sont stockées mes données? Puis-je les perdre?</div>
-                <div class="faq-answer">ContactCadence stocke 100% de vos données localement sur votre appareil. Vos contacts et vos notes ne quittent jamais votre iPhone ou iPad, ce qui signifie plus de confidentialité et pas de dépendance à Internet. Vos données sont synchronisées de manière sécurisée via iCloud si vous avez activé la sauvegarde iCloud.</div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question">5. Comment exporter mes données ou basculer vers un autre appareil?</div>
-                <div class="faq-answer">Vos données sont automatiquement sauvegardées via iCloud et se synchronisent sur tous vos appareils Apple connectés au même compte iCloud. Si vous changez d'appareil, vos contacts et notes seront disponibles après l'authentification iCloud. Vous pouvez également restaurer vos achats sur un nouvel appareil via le bouton "Restaurer les achats".</div>
-            </div>
-        </section>
-
-        <section>
-            <h2>Restaurer les Achats</h2>
-            <p>Si vous avez acheté la version complète et utilisez ContactCadence sur un autre appareil, vous pouvez restaurer votre achat sans frais supplémentaires.</p>
-            <button class="action-button">Restaurer les Achats</button>
-            <p style="font-size: 13px; color: #656e77; margin-top: 12px;">La restauration des achats vous reconnectera à votre compte App Store et réactivera les fonctionnalités payantes sur cet appareil.</p>
-        </section>
-
-        <section>
-            <h2>Supprimer Mes Données</h2>
-            <p>Si vous souhaitez supprimer toutes vos données ContactCadence et recommencer avec une ardoise vierge, vous pouvez réinitialiser l'application.</p>
-            <button class="action-button secondary">Supprimer Toutes les Données</button>
-            <div class="warning">
-                ⚠️ Attention: Cette action est irréversible. Tous vos contacts, notes et historique seront supprimés. Assurez-vous d'avoir sauvegardé vos données importantes avant de continuer.
-            </div>
-        </section>
-
-        <section>
-            <h2>Nous Contacter</h2>
-            <p>Vous avez une question ou rencontrez un problème? Notre équipe de support est là pour vous aider.</p>
+            <h2>Nous contacter</h2>
+            <p>Vous avez une question ou besoin d'aide ? Nous sommes là pour vous.</p>
             <div class="contact-info">
-                <p style="margin-bottom: 12px;">📧 <strong>Email de Support:</strong></p>
-                <p class="contact-email"><a href="mailto:delkertz13@gmail.com">delkertz13@gmail.com</a></p>
+                <p>Envoyez-nous un email :</p>
+                <a href="mailto:delkertz13@gmail.com" class="contact-email">delkertz13@gmail.com</a>
+                <p style="color: #999; font-size: 13px; margin-top: 10px;">Nous répondons généralement dans les 24 heures</p>
             </div>
-            <p style="font-size: 13px; color: #656e77; margin-top: 16px;">Nous faisons notre possible pour répondre à tous les messages en 24-48 heures. Veuillez fournir autant de détails que possible sur votre problème pour que nous puissions vous aider rapidement.</p>
         </section>
-
-        <div class="divider"></div>
-
-        <footer>
-            <p>ContactCadence © 2026 — Gardez le contact avec ceux qui comptent</p>
-            <p style="margin-top: 16px;">
-                <a href="#">Conditions d'utilisation</a> • 
-                <a href="#">Politique de Confidentialité</a> • 
-                <a href="https://apps.apple.com">App Store</a>
-            </p>
-        </footer>
+        
+        <!-- Section FAQ -->
+        <section>
+            <h2>Questions fréquemment posées</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">1. Comment importer mes contacts depuis l'app Contacts ?</div>
+                <div class="faq-answer">
+                    ContactCadence lit vos contacts iOS existants avec votre permission. Lors du premier lancement, l'app vous demandera l'accès à vos contacts. Vous pouvez ensuite sélectionner les contacts à importer et définir une fréquence souhaitée pour chacun (hebdomadaire, mensuel, trimestriel, etc.).
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">2. Mes données sont-elles sécurisées et privées ?</div>
+                <div class="faq-answer">
+                    Oui, vos données sont 100% locales sur votre appareil. ContactCadence fonctionne entièrement hors ligne et ne synchronise, ne sauvegarde ou ne partage vos contacts avec aucun serveur externe. Vos informations restent complètement privées et sous votre contrôle.
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">3. Comment fonctionnent les notifications intelligentes ?</div>
+                <div class="faq-answer">
+                    Basées sur la fréquence que vous configurez pour chaque contact, ContactCadence vous envoie des rappels personnalisés pour vous suggérer de donner des nouvelles. Vous contrôlez entièrement le moment et la fréquence des notifications dans les paramètres. L'app met aussi en avant les contacts que vous n'avez pas contactés récemment.
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">4. Puis-je synchroniser mes données entre plusieurs appareils ?</div>
+                <div class="faq-answer">
+                    ContactCadence stocke actuellement vos données localement sur chaque appareil. Si vous utilisez plusieurs iPhones, vous devrez configurer l'app sur chaque appareil. La synchronisation multi-appareil pourrait être ajoutée dans les futures mises à jour.
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">5. Qu'advient-il de mes données si je supprime l'app ?</div>
+                <div class="faq-answer">
+                    Vos contacts d'origine restent dans l'app Contacts iOS. Cependant, vos données ContactCadence (fréquences, notes, journaux d'interactions) seront supprimées de votre appareil. Nous vous recommandons d'exporter vos données avant de supprimer l'app si vous souhaitez les conserver.
+                </div>
+            </div>
+        </section>
+        
+        <!-- Section Restore Purchase -->
+        <section>
+            <h2>Restaurer vos achats</h2>
+            <p>Si vous avez acheté la version complète de ContactCadence sur un autre appareil ou avez réinstallé l'app, vous pouvez restaurer votre achat.</p>
+            <div class="info-box">
+                <p>📝 La restauration d'achat utilisera votre identifiant Apple pour vérifier vos achats précédents.</p>
+            </div>
+            <button class="button restore-button">Restaurer les achats</button>
+            <p style="font-size: 13px; color: #999; margin-top: 15px;">Si vous avez des problèmes pour restaurer, assurez-vous que vous utilisez le même identifiant Apple que lors du premier achat.</p>
+        </section>
+        
+        <!-- Section Delete Data -->
+        <section>
+            <h2>Supprimer vos données</h2>
+            <p>Si vous souhaitez réinitialiser ContactCadence et supprimer toutes les données locales, y compris les contacts importés, les fréquences et les notes, cliquez sur le bouton ci-dessous.</p>
+            <div class="info-box" style="background: #FFF3E0; border-left-color: #FF9800;">
+                <p style="color: #E65100;">⚠️ Attention : Cette action est irréversible et supprimera toutes vos données stockées dans l'app.</p>
+            </div>
+            <button class="button delete-button">Supprimer toutes les données</button>
+            <p style="font-size: 13px; color: #FF3B30; margin-top: 15px; font-weight: 500;">Cette action ne peut pas être annulée. Vos contacts iOS d'origine ne seront pas affectés.</p>
+        </section>
+        
+        <!-- Section Confidentialité -->
+        <section>
+            <h2>Confidentialité et données</h2>
+            <h3>Politique de confidentialité</h3>
+            <p>ContactCadence respecte votre vie privée. Nous ne collectons aucune donnée utilisateur, ne conservons aucun journal d'accès, et ne partageons aucune information personnelle.</p>
+            <h3>Permissions utilisées</h3>
+            <p><strong>Contacts :</strong> Requise pour importer et gérer vos contacts.</p>
+            <p><strong>Notifications :</strong> Requises pour vous envoyer des rappels personnalisés basés sur vos paramètres.</p>
+        </section>
     </div>
+    
+    <footer>
+        <p>ContactCadence - Maintenez vos relations importantes</p>
+        <p style="margin-top: 10px;">© 2026 ContactCadence. Tous droits réservés.</p>
+    </footer>
 </body>
 </html>
 ```
