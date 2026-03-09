@@ -1,0 +1,283 @@
+```html
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ContactCadence - Support</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: #f5f5f7;
+            color: #1d1d1f;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 60px;
+            padding: 40px 0;
+        }
+
+        .logo {
+            font-size: 48px;
+            font-weight: 700;
+            color: #007AFF;
+            margin-bottom: 12px;
+        }
+
+        header p {
+            font-size: 17px;
+            color: #656e77;
+        }
+
+        section {
+            background: white;
+            border-radius: 12px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            font-size: 28px;
+            font-weight: 600;
+            color: #1d1d1f;
+            margin-bottom: 24px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid #e5e5e7;
+        }
+
+        h3 {
+            font-size: 17px;
+            font-weight: 600;
+            color: #1d1d1f;
+            margin-top: 24px;
+            margin-bottom: 8px;
+        }
+
+        .faq-item {
+            margin-bottom: 32px;
+            padding-bottom: 24px;
+            border-bottom: 1px solid #f5f5f7;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+            margin-bottom: 0;
+        }
+
+        .faq-question {
+            font-weight: 600;
+            color: #007AFF;
+            margin-bottom: 12px;
+            font-size: 16px;
+        }
+
+        .faq-answer {
+            color: #656e77;
+            font-size: 15px;
+            line-height: 1.65;
+        }
+
+        .contact-info {
+            background: #f5f5f7;
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 16px;
+        }
+
+        .contact-email {
+            font-size: 15px;
+            color: #1d1d1f;
+            word-break: break-all;
+        }
+
+        .contact-email a {
+            color: #007AFF;
+            text-decoration: none;
+        }
+
+        .contact-email a:hover {
+            text-decoration: underline;
+        }
+
+        .action-button {
+            display: inline-block;
+            background: #007AFF;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 15px;
+            margin-top: 16px;
+            cursor: pointer;
+            border: none;
+            transition: background 0.2s;
+        }
+
+        .action-button:hover {
+            background: #0051d5;
+        }
+
+        .action-button.secondary {
+            background: white;
+            color: #007AFF;
+            border: 1px solid #d2d2d7;
+        }
+
+        .action-button.secondary:hover {
+            background: #f5f5f7;
+        }
+
+        .warning {
+            background: #fff8dc;
+            border-left: 3px solid #ffd700;
+            padding: 12px;
+            border-radius: 4px;
+            margin-top: 16px;
+            font-size: 14px;
+            color: #5a5a1f;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: #656e77;
+            font-size: 13px;
+        }
+
+        footer a {
+            color: #007AFF;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        .divider {
+            height: 1px;
+            background: #e5e5e7;
+            margin: 40px 0;
+        }
+
+        @media (max-width: 640px) {
+            .container {
+                padding: 20px 16px;
+            }
+
+            section {
+                padding: 24px;
+            }
+
+            h2 {
+                font-size: 24px;
+            }
+
+            .logo {
+                font-size: 36px;
+            }
+
+            header {
+                margin-bottom: 40px;
+                padding: 24px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">ContactCadence</div>
+            <p>Gardez le contact avec les personnes qui comptent</p>
+        </header>
+
+        <section>
+            <h2>Bienvenue sur le Support ContactCadence</h2>
+            <p>Merci d'utiliser ContactCadence. Cette page contient les réponses aux questions fréquemment posées et les informations de support pour vous aider.</p>
+        </section>
+
+        <section>
+            <h2>Questions Fréquemment Posées</h2>
+
+            <div class="faq-item">
+                <div class="faq-question">1. Comment ajouter des contacts et définir la fréquence de contact?</div>
+                <div class="faq-answer">Pour ajouter un contact, appuyez sur le bouton "+" dans l'onglet Contacts. Sélectionnez une personne depuis vos contacts iOS ou ajoutez-la manuellement. Définissez ensuite votre fréquence souhaitée (hebdomadaire, mensuelle, trimestrielle) et le dernier moment où vous avez pris des nouvelles. ContactCadence créera des rappels personnalisés en fonction de cette fréquence.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">2. Que se passe-t-il si je dépasse la limite de 10 contacts gratuits?</div>
+                <div class="faq-answer">La version gratuite permet de gérer jusqu'à 10 contacts. Si vous avez besoin de gérer plus de contacts, vous pouvez déverrouiller l'accès illimité via un achat unique de 2,99 €. Cet achat est permanent et s'applique à votre compte via iCloud.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">3. Comment fonctionnent les notifications intelligentes?</div>
+                <div class="faq-answer">ContactCadence analyse la fréquence configurée pour chaque contact et vous envoie des rappels au moment optimal. Par exemple, si vous avez défini une fréquence mensuelle pour un contact, vous recevrez une notification environ une fois par mois pour vous rappeler de prendre des nouvelles. Vous pouvez personnaliser les paramètres de notification dans les réglages de l'application.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">4. Où sont stockées mes données? Puis-je les perdre?</div>
+                <div class="faq-answer">ContactCadence stocke 100% de vos données localement sur votre appareil. Vos contacts et vos notes ne quittent jamais votre iPhone ou iPad, ce qui signifie plus de confidentialité et pas de dépendance à Internet. Vos données sont synchronisées de manière sécurisée via iCloud si vous avez activé la sauvegarde iCloud.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">5. Comment exporter mes données ou basculer vers un autre appareil?</div>
+                <div class="faq-answer">Vos données sont automatiquement sauvegardées via iCloud et se synchronisent sur tous vos appareils Apple connectés au même compte iCloud. Si vous changez d'appareil, vos contacts et notes seront disponibles après l'authentification iCloud. Vous pouvez également restaurer vos achats sur un nouvel appareil via le bouton "Restaurer les achats".</div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Restaurer les Achats</h2>
+            <p>Si vous avez acheté la version complète et utilisez ContactCadence sur un autre appareil, vous pouvez restaurer votre achat sans frais supplémentaires.</p>
+            <button class="action-button">Restaurer les Achats</button>
+            <p style="font-size: 13px; color: #656e77; margin-top: 12px;">La restauration des achats vous reconnectera à votre compte App Store et réactivera les fonctionnalités payantes sur cet appareil.</p>
+        </section>
+
+        <section>
+            <h2>Supprimer Mes Données</h2>
+            <p>Si vous souhaitez supprimer toutes vos données ContactCadence et recommencer avec une ardoise vierge, vous pouvez réinitialiser l'application.</p>
+            <button class="action-button secondary">Supprimer Toutes les Données</button>
+            <div class="warning">
+                ⚠️ Attention: Cette action est irréversible. Tous vos contacts, notes et historique seront supprimés. Assurez-vous d'avoir sauvegardé vos données importantes avant de continuer.
+            </div>
+        </section>
+
+        <section>
+            <h2>Nous Contacter</h2>
+            <p>Vous avez une question ou rencontrez un problème? Notre équipe de support est là pour vous aider.</p>
+            <div class="contact-info">
+                <p style="margin-bottom: 12px;">📧 <strong>Email de Support:</strong></p>
+                <p class="contact-email"><a href="mailto:delkertz13@gmail.com">delkertz13@gmail.com</a></p>
+            </div>
+            <p style="font-size: 13px; color: #656e77; margin-top: 16px;">Nous faisons notre possible pour répondre à tous les messages en 24-48 heures. Veuillez fournir autant de détails que possible sur votre problème pour que nous puissions vous aider rapidement.</p>
+        </section>
+
+        <div class="divider"></div>
+
+        <footer>
+            <p>ContactCadence © 2026 — Gardez le contact avec ceux qui comptent</p>
+            <p style="margin-top: 16px;">
+                <a href="#">Conditions d'utilisation</a> • 
+                <a href="#">Politique de Confidentialité</a> • 
+                <a href="https://apps.apple.com">App Store</a>
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
+```
