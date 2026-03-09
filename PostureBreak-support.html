@@ -1,0 +1,324 @@
+```html
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PostureBreak - Support</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background: #f5f5f7;
+            color: #1d1d1f;
+            line-height: 1.6;
+        }
+        
+        header {
+            background: #ffffff;
+            padding: 24px;
+            border-bottom: 1px solid #e5e5e7;
+            text-align: center;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: #007AFF;
+            margin-bottom: 8px;
+        }
+        
+        .subtitle {
+            font-size: 14px;
+            color: #666;
+        }
+        
+        main {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 24px;
+        }
+        
+        section {
+            background: #ffffff;
+            border-radius: 12px;
+            margin-bottom: 16px;
+            padding: 24px;
+            border: 1px solid #e5e5e7;
+        }
+        
+        h2 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #1d1d1f;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #1d1d1f;
+            margin-top: 16px;
+            margin-bottom: 8px;
+        }
+        
+        h3:first-child {
+            margin-top: 0;
+        }
+        
+        .faq-item {
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #f5f5f7;
+        }
+        
+        .faq-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        
+        .faq-question {
+            font-weight: 600;
+            color: #007AFF;
+            cursor: pointer;
+            user-select: none;
+            font-size: 15px;
+        }
+        
+        .faq-answer {
+            margin-top: 12px;
+            font-size: 14px;
+            color: #555;
+        }
+        
+        .contact-info {
+            background: #f5f5f7;
+            padding: 16px;
+            border-radius: 8px;
+            margin-bottom: 16px;
+        }
+        
+        .contact-label {
+            font-size: 12px;
+            color: #999;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 4px;
+        }
+        
+        .contact-value {
+            font-size: 15px;
+            color: #007AFF;
+            word-break: break-all;
+        }
+        
+        .button {
+            display: inline-block;
+            padding: 12px 24px;
+            background: #007AFF;
+            color: #ffffff;
+            border: none;
+            border-radius: 8px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+            margin-top: 8px;
+            margin-right: 8px;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+        }
+        
+        .button:hover {
+            background: #0051d5;
+        }
+        
+        .button.secondary {
+            background: #f5f5f7;
+            color: #007AFF;
+            border: 1px solid #e5e5e7;
+        }
+        
+        .button.secondary:hover {
+            background: #e8e8ed;
+        }
+        
+        .button.danger {
+            background: #ff3b30;
+            color: #ffffff;
+        }
+        
+        .button.danger:hover {
+            background: #cc2f26;
+        }
+        
+        .warning {
+            background: #fff3cd;
+            border: 1px solid #ffc107;
+            padding: 12px;
+            border-radius: 8px;
+            margin-top: 12px;
+            font-size: 13px;
+            color: #664d03;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 24px;
+            color: #999;
+            font-size: 12px;
+        }
+        
+        .icon {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            line-height: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">PostureBreak</div>
+        <div class="subtitle">Support & Aide</div>
+    </header>
+    
+    <main>
+        <!-- FAQ Section -->
+        <section>
+            <h2>❓ Questions Fréquemment Posées</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">Comment configurer la durée de ma session de travail ?</div>
+                <div class="faq-answer">
+                    Ouvrez l'app et accédez à Paramètres (roue dentée). Vous pouvez choisir entre 3 profils prédéfinis : 25 minutes (Pomodoro), 50 minutes (session standard) ou 90 minutes (session longue). Vous pouvez également créer un profil personnalisé en saisissant le nombre de minutes souhaité. Votre choix sera automatiquement appliqué au prochain timer lancé.
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">Puis-je ignorer une pause posturale ?</div>
+                <div class="faq-answer">
+                    Les pauses sont recommandées mais pas obligatoires. Quand votre session arrive à terme, PostureBreak affiche une notification avec l'exercice du jour. Vous pouvez ignorer cette pause, mais votre compliance hebdomadaire sera affectée. Pour ignorer sans notification, vous pouvez aussi utiliser la fonction "Ignorer cette pause" dans l'app pour continuer à travailler.
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">Comment fonctionne le mode Focus avec détection idle ?</div>
+                <div class="faq-answer">
+                    Si vous activez "Mode Focus" dans les paramètres, PostureBreak utilise les capteurs de mouvement de votre iPhone pour détecter si vous êtes inactif sur votre Mac. Si l'app détecte que vous n'avez pas bougé pendant 2 minutes, elle génère une notification plus intense pour vous rappeler de faire une pause. Cette fonction nécessite l'accès aux données de mouvement et peut être désactivée à tout moment.
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">Qu'est-ce qui est inclus dans la version gratuite ?</div>
+                <div class="faq-answer">
+                    La version gratuite inclut le timer de session, 3 exercices d'étirement illustrés (cou, épaules, dos), un profil utilisateur et les notifications de base. L'achat unique à 1,99 $ déverrouille la bibliothèque complète de 12 exercices, les statistiques avancées de compliance, les streaks de bonnes journées, et un widget iOS pour votre écran d'accueil.
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">Pourquoi mon historique de compliance a disparu après une réinstallation ?</div>
+                <div class="faq-answer">
+                    Les données de compliance sont stockées localement sur votre appareil. Si vous réinstallez l'app, les données historiques ne peuvent pas être récupérées automatiquement. Cependant, si vous utilisez iCloud Sync (activable dans les paramètres), vos données seront synchronisées et restaurées après la réinstallation. Nous recommandons d'activer iCloud Sync pour protéger votre historique.
+                </div>
+            </div>
+        </section>
+        
+        <!-- Contact Section -->
+        <section>
+            <h2>📧 Nous Contacter</h2>
+            <p style="margin-bottom: 16px; font-size: 14px;">
+                Vous avez des questions, des suggestions ou avez rencontré un problème ? Notre équipe de support est là pour vous aider.
+            </p>
+            
+            <div class="contact-info">
+                <div class="contact-label">Email Support</div>
+                <div class="contact-value">delkertz13@gmail.com</div>
+            </div>
+            
+            <p style="font-size: 13px; color: #666;">
+                Temps de réponse : généralement dans les 24 heures. Veuillez inclure votre version d'iOS et une description détaillée du problème pour une meilleure assistance.
+            </p>
+        </section>
+        
+        <!-- Restore Purchase Section -->
+        <section>
+            <h2>🔄 Restaurer l'Achat</h2>
+            <p style="margin-bottom: 16px; font-size: 14px;">
+                Si vous avez déjà acheté l'accès complet sur cet appareil ou un autre, vous pouvez restaurer votre achat sans frais supplémentaires.
+            </p>
+            
+            <button class="button">Restaurer les Achats</button>
+            
+            <p style="margin-top: 16px; font-size: 13px; color: #666;">
+                Cette action se connectera à votre compte Apple ID et restaurera tous les achats associés. Aucun frais ne vous sera facturé.
+            </p>
+        </section>
+        
+        <!-- Delete Data Section -->
+        <section>
+            <h2>🗑️ Supprimer Mes Données</h2>
+            <p style="margin-bottom: 16px; font-size: 14px;">
+                Si vous souhaitez supprimer complètement vos données de PostureBreak, y compris votre historique de compliance, vos paramètres et vos préférences, vous pouvez utiliser l'option ci-dessous.
+            </p>
+            
+            <button class="button danger">Supprimer Toutes Mes Données</button>
+            
+            <div class="warning">
+                ⚠️ Cette action est irréversible. Tous vos données, y compris votre historique de pauses et votre compliance tracking, seront supprimées de manière permanente. Veuillez confirmer avant de procéder.
+            </div>
+            
+            <p style="margin-top: 16px; font-size: 13px; color: #666;">
+                Si vous utilisez iCloud Sync, vous aurez la possibilité de désactiver la synchronisation ou de supprimer également les données du cloud. Cette action ne supprimera pas votre achat et vous pourrez réactiver votre profil avec les mêmes fonctionnalités.
+            </p>
+        </section>
+        
+        <!-- Additional Resources -->
+        <section>
+            <h2>📚 Ressources Supplémentaires</h2>
+            <p style="font-size: 14px; margin-bottom: 16px;">
+                Pour explorer davantage PostureBreak et optimiser votre utilisation :
+            </p>
+            <ul style="font-size: 14px; color: #555; margin-left: 20px;">
+                <li style="margin-bottom: 8px;">Consultez les conseils de posture inclus dans chaque exercice</li>
+                <li style="margin-bottom: 8px;">Configurez des rappels personnalisés dans les paramètres</li>
+                <li style="margin-bottom: 8px;">Consultez votre compliance hebdomadaire pour suivre votre progression</li>
+                <li>Activez les notifications pour recevoir des rappels contextuels tout au long de la journée</li>
+            </ul>
+        </section>
+    </main>
+    
+    <footer>
+        <p>PostureBreak © 2026 • <a href="mailto:delkertz13@gmail.com" style="color: #007AFF; text-decoration: none;">Support</a> • Version 1.0</p>
+    </footer>
+    
+    <script>
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', function() {
+                const answer = this.nextElementSibling;
+                answer.style.display = answer.style.display === 'none' ? 'block' : 'none';
+            });
+        });
+        
+        document.querySelector('.button:not(.danger)').addEventListener('click', function() {
+            alert('Redirection vers l\'App Store pour restaurer les achats...');
+        });
+        
+        document.querySelector('.button.danger').addEventListener('click', function() {
+            if (confirm('Êtes-vous certain ? Cette action est irréversible. Tous vos données seront supprimées.')) {
+                alert('Vos données sont en cours de suppression...');
+            }
+        });
+    </script>
+</body>
+</html>
+```
