@@ -13,7 +13,7 @@
         }
         
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             background-color: #f5f5f7;
             color: #1d1d1f;
             line-height: 1.6;
@@ -25,304 +25,373 @@
             padding: 40px 20px;
         }
         
-        .header {
+        header {
             text-align: center;
             margin-bottom: 60px;
-            padding: 40px 0;
-            border-bottom: 1px solid #d5d5d7;
+            padding: 40px 20px;
+            background: white;
+            border-radius: 18px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
         }
         
-        .header h1 {
-            font-size: 48px;
+        h1 {
+            font-size: 36px;
             font-weight: 700;
-            margin-bottom: 12px;
-            color: #007AFF;
+            margin-bottom: 8px;
         }
         
-        .header p {
-            font-size: 16px;
-            color: #666;
+        .tagline {
+            font-size: 17px;
+            color: #86868b;
+            margin-bottom: 20px;
         }
         
-        .section {
-            margin-bottom: 60px;
+        .logo {
+            font-size: 64px;
+            margin-bottom: 20px;
         }
         
-        .section-title {
-            font-size: 32px;
-            font-weight: 600;
+        section {
+            background: white;
+            border-radius: 18px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+        
+        h2 {
+            font-size: 28px;
+            font-weight: 700;
             margin-bottom: 24px;
             color: #1d1d1f;
         }
         
-        .contact-box {
-            background: #fff;
-            border: 1px solid #d5d5d7;
-            border-radius: 12px;
-            padding: 32px;
-            margin-bottom: 24px;
-        }
-        
-        .contact-box h3 {
-            font-size: 18px;
+        h3 {
+            font-size: 17px;
             font-weight: 600;
+            margin-top: 24px;
             margin-bottom: 12px;
+            color: #1d1d1f;
         }
         
-        .contact-box p {
+        p {
             font-size: 16px;
+            color: #424245;
             margin-bottom: 16px;
-            color: #666;
-        }
-        
-        .email-link {
-            color: #007AFF;
-            text-decoration: none;
-            font-weight: 500;
-        }
-        
-        .email-link:hover {
-            text-decoration: underline;
         }
         
         .faq-item {
-            background: #fff;
-            border: 1px solid #d5d5d7;
-            border-radius: 12px;
-            margin-bottom: 16px;
-            overflow: hidden;
+            border-bottom: 1px solid #e5e5e7;
+            padding: 20px 0;
+        }
+        
+        .faq-item:last-child {
+            border-bottom: none;
         }
         
         .faq-question {
-            padding: 20px 24px;
+            font-size: 16px;
+            font-weight: 600;
+            color: #007aff;
             cursor: pointer;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            font-weight: 600;
-            font-size: 16px;
-            background: #fff;
-            border: none;
-            width: 100%;
-            text-align: left;
-            transition: background-color 0.2s;
+            margin-bottom: 12px;
         }
         
         .faq-question:hover {
-            background-color: #f9f9f9;
+            color: #0051d5;
         }
         
-        .faq-toggle {
-            color: #007AFF;
+        .toggle-icon {
             font-size: 20px;
+            transition: transform 0.3s;
         }
         
         .faq-answer {
-            padding: 0 24px;
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s, padding 0.3s;
-            background-color: #f9f9f9;
-            border-top: 1px solid #d5d5d7;
-        }
-        
-        .faq-answer.open {
-            padding: 20px 24px;
-            max-height: 500px;
-        }
-        
-        .faq-answer p {
-            color: #666;
+            display: none;
             font-size: 15px;
-            line-height: 1.7;
+            color: #424245;
+            padding-top: 12px;
         }
         
-        .button-group {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 16px;
-            margin-bottom: 60px;
+        .faq-answer.active {
+            display: block;
         }
         
-        @media (max-width: 768px) {
-            .button-group {
-                grid-template-columns: 1fr;
-            }
+        .faq-question.active .toggle-icon {
+            transform: rotate(180deg);
         }
         
-        .btn {
-            padding: 14px 24px;
+        .contact-info {
+            background: #f5f5f7;
             border-radius: 12px;
-            border: none;
+            padding: 24px;
+            margin-bottom: 20px;
+        }
+        
+        .contact-info p {
+            margin-bottom: 8px;
+        }
+        
+        a {
+            color: #007aff;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            color: #0051d5;
+        }
+        
+        .button {
+            display: inline-block;
+            background-color: #007aff;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
             font-size: 16px;
             font-weight: 600;
-            cursor: pointer;
-            transition: all 0.2s;
-            text-align: center;
             text-decoration: none;
-            display: inline-block;
+            border: none;
+            cursor: pointer;
+            margin-top: 16px;
+            transition: background-color 0.3s;
         }
         
-        .btn-primary {
-            background-color: #007AFF;
-            color: white;
-        }
-        
-        .btn-primary:hover {
+        .button:hover {
             background-color: #0051d5;
         }
         
-        .btn-secondary {
-            background-color: #f5f5f7;
-            color: #1d1d1f;
-            border: 1px solid #d5d5d7;
-        }
-        
-        .btn-secondary:hover {
-            background-color: #e8e8eb;
-        }
-        
-        .btn-danger {
-            background-color: #ff3b30;
-            color: white;
-        }
-        
-        .btn-danger:hover {
-            background-color: #ff1700;
-        }
-        
-        .info-box {
-            background: #f0f6ff;
-            border-left: 4px solid #007AFF;
-            padding: 16px 20px;
+        .warning {
+            background-color: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 16px;
             border-radius: 8px;
-            margin-bottom: 24px;
-            font-size: 14px;
-            color: #333;
+            margin-bottom: 20px;
         }
         
-        .footer {
-            border-top: 1px solid #d5d5d7;
-            padding-top: 40px;
-            margin-top: 60px;
+        .warning p {
+            color: #856404;
+            margin-bottom: 0;
+        }
+        
+        .steps {
+            background-color: #f5f5f7;
+            border-radius: 12px;
+            padding: 20px;
+            margin-top: 16px;
+        }
+        
+        .steps ol {
+            margin-left: 20px;
+            color: #424245;
+            font-size: 15px;
+        }
+        
+        .steps li {
+            margin-bottom: 12px;
+        }
+        
+        footer {
             text-align: center;
-            color: #666;
+            padding: 40px 20px;
+            color: #86868b;
             font-size: 14px;
+        }
+        
+        footer p {
+            margin-bottom: 8px;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px 16px;
+            }
+            
+            section {
+                padding: 24px;
+            }
+            
+            h1 {
+                font-size: 28px;
+            }
+            
+            h2 {
+                font-size: 24px;
+            }
+            
+            .logo {
+                font-size: 48px;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="header">
+        <header>
+            <div class="logo">💰</div>
             <h1>SinkFund</h1>
-            <p>Support & FAQ</p>
-        </div>
+            <p class="tagline">Budgétez vos dépenses irrégulières en toute simplicité</p>
+        </header>
         
-        <div class="section">
-            <h2 class="section-title">Contact & Support</h2>
-            <div class="contact-box">
-                <h3>Nous contacter</h3>
-                <p>Vous avez une question ou un problème avec SinkFund ? Nous sommes là pour vous aider.</p>
-                <p>Envoyez-nous un email à : <a href="mailto:delkertz13@gmail.com" class="email-link">delkertz13@gmail.com</a></p>
-                <p style="font-size: 14px; color: #999; margin-top: 16px;">Nous répondons généralement dans les 24 heures.</p>
+        <section id="contact">
+            <h2>Nous contacter</h2>
+            <p>Vous avez une question, un problème ou une suggestion ? Nous serions ravis de vous aider.</p>
+            <div class="contact-info">
+                <h3>Email de support</h3>
+                <p>
+                    <strong>delkertz13@gmail.com</strong>
+                </p>
+                <p style="font-size: 14px; color: #86868b; margin-bottom: 0;">
+                    Nous répondons généralement dans les 24 heures.
+                </p>
             </div>
-        </div>
+            <p style="color: #86868b; font-size: 15px;">
+                Pour les problèmes d'achat in-app, veuillez d'abord essayer la fonction "Restaurer les achats" ci-dessous.
+            </p>
+        </section>
         
-        <div class="section">
-            <h2 class="section-title">Questions Fréquentes</h2>
+        <section id="faq">
+            <h2>Questions fréquemment posées</h2>
             
             <div class="faq-item">
-                <button class="faq-question" onclick="toggleFaq(this)">
-                    <span>Comment SinkFund calcule-t-il le montant à économiser par paie ?</span>
-                    <span class="faq-toggle">+</span>
-                </button>
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <span>Comment fonctionne le calcul du montant par paie ?</span>
+                    <span class="toggle-icon">▼</span>
+                </div>
                 <div class="faq-answer">
-                    <p>SinkFund divise le montant cible du fonds par le nombre de paies jusqu'à la date limite. Par exemple, si vous avez besoin de $600 pour les cadeaux de Noël (12 paies restantes) avec un salaire bimensuel, SinkFund calcule automatiquement que vous devez économiser $50 par paie.</p>
+                    SinkFund divise automatiquement votre montant cible par le nombre de paies jusqu'à la date d'échéance. Par exemple, si vous devez économiser 600 € pour Noël d'ici 26 paies, l'application calculera automatiquement que vous devez mettre de côté ~23 € par paie. C'est simple, transparent et efficace.
                 </div>
             </div>
             
             <div class="faq-item">
-                <button class="faq-question" onclick="toggleFaq(this)">
-                    <span>Quelle est la différence entre la version gratuite et la version payante ?</span>
-                    <span class="faq-toggle">+</span>
-                </button>
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <span>Quelle est la limite de fonds gratuits ?</span>
+                    <span class="toggle-icon">▼</span>
+                </div>
                 <div class="faq-answer">
-                    <p>La version gratuite vous permet de créer jusqu'à 3 fonds de sauvetage. Avec l'achat unique de $2.99, vous déverrouillez les fonds illimités et l'export de données en CSV. Il n'y a pas d'abonnement mensuel ou annuel - c'est un achat unique et définitif.</p>
+                    La version gratuite vous permet de créer et gérer jusqu'à 3 fonds. Pour débloquer un nombre illimité de fonds, vous pouvez faire un achat unique de 2,99 € dans les paramètres de l'application. Pas d'abonnement, pas de frais mensuels – juste un paiement unique.
                 </div>
             </div>
             
             <div class="faq-item">
-                <button class="faq-question" onclick="toggleFaq(this)">
-                    <span>Comment puis-je modifier ma fréquence de paie ?</span>
-                    <span class="faq-toggle">+</span>
-                </button>
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <span>Comment modifier la fréquence de paie ?</span>
+                    <span class="toggle-icon">▼</span>
+                </div>
                 <div class="faq-answer">
-                    <p>Vous pouvez modifier votre fréquence de paie (hebdomadaire, bimensuel, mensuel) dans l'onglet Paramètres. Tous vos fonds recalculeront automatiquement les montants à économiser par paie en fonction de votre nouvelle fréquence. Les contributions précédentes restent dans l'historique.</p>
+                    Allez dans l'onglet "Paramètres" de l'application et sélectionnez votre fréquence de paie (hebdomadaire, bimensuel, ou mensuel). SinkFund recalculera automatiquement tous vos montants par paie en fonction de cette nouvelle fréquence. Pas besoin de modifier vos fonds existants.
                 </div>
             </div>
             
             <div class="faq-item">
-                <button class="faq-question" onclick="toggleFaq(this)">
-                    <span>Que signifie un "Sinking Fund" ?</span>
-                    <span class="faq-toggle">+</span>
-                </button>
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <span>Où sont stockées mes données ?</span>
+                    <span class="toggle-icon">▼</span>
+                </div>
                 <div class="faq-answer">
-                    <p>Un sinking fund est une stratégie d'épargne où vous économisez régulièrement de petits montants pour payer une dépense importante connue à l'avance. C'est populaire auprès des budgéticiens et des adeptes de Dave Ramsey. SinkFund simplifie cette stratégie en calculant automatiquement exactement combien vous devez mettre de côté à chaque paie.</p>
+                    Vos données sont sauvegardées localement sur votre iPhone dans le stockage de l'application. SinkFund ne synchronise pas vos données sur un serveur cloud ni ne les partage avec des tiers. Votre vie financière reste totalement privée. Vous pouvez exporter vos données en CSV depuis les Paramètres.
                 </div>
             </div>
             
             <div class="faq-item">
-                <button class="faq-question" onclick="toggleFaq(this)">
-                    <span>Mes données sont-elles synchronisées sur iCloud ?</span>
-                    <span class="faq-toggle">+</span>
-                </button>
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <span>Puis-je recevoir des rappels avant chaque échéance ?</span>
+                    <span class="toggle-icon">▼</span>
+                </div>
                 <div class="faq-answer">
-                    <p>Vos données SinkFund sont stockées localement sur votre appareil via UserDefaults. Elles ne sont pas synchronisées sur iCloud pour le moment. Nous recommandons d'utiliser la fonction d'export CSV (disponible avec le déverrouillage payant) pour sauvegarder vos données régulièrement.</p>
+                    Oui ! SinkFund vous permet de configurer des notifications push pour vous rappeler les échéances imminentes de vos fonds. Vous contrôlez complètement la fréquence et le moment des rappels dans les Paramètres. Activez simplement les notifications pour l'application dans les réglages de votre iPhone.
                 </div>
             </div>
-        </div>
+        </section>
         
-        <div class="section">
-            <h2 class="section-title">Gestion des Achats & Données</h2>
+        <section id="purchases">
+            <h2>Restaurer les achats</h2>
+            <p>
+                Si vous avez déjà acheté l'accès "Fonds illimités" sur un autre appareil ou après la réinstallation de l'application, vous pouvez restaurer votre achat.
+            </p>
             
-            <div class="info-box">
-                <strong>Restaurer les Achats :</strong> Si vous avez acheté le déverrouillage premium sur un autre appareil ou après une réinstallation, utilisez le bouton ci-dessous pour restaurer votre achat.
+            <div class="contact-info">
+                <h3>Comment restaurer vos achats</h3>
+                <div class="steps">
+                    <ol>
+                        <li>Ouvrez l'application SinkFund</li>
+                        <li>Allez dans l'onglet "Paramètres"</li>
+                        <li>Appuyez sur "Achats Premium"</li>
+                        <li>Sélectionnez "Restaurer les achats"</li>
+                        <li>Connectez-vous avec votre identifiant Apple si demandé</li>
+                        <li>Votre achat sera restauré en quelques secondes</li>
+                    </ol>
+                </div>
             </div>
             
-            <div class="button-group">
-                <button class="btn btn-primary" onclick="restorePurchase()">Restaurer les Achats</button>
-                <button class="btn btn-danger" onclick="deleteData()">Supprimer Toutes les Données</button>
-            </div>
-            
-            <div class="info-box">
-                <strong>Attention :</strong> Supprimer toutes les données effacera définitivement tous vos fonds, contributions et historique. Cette action ne peut pas être annulée. Assurez-vous d'avoir exporté vos données en CSV avant de procéder.
-            </div>
-        </div>
+            <p style="font-size: 15px; color: #86868b; margin-top: 20px;">
+                <strong>Besoin d'aide ?</strong> Si la restauration ne fonctionne pas, contactez-nous à delkertz13@gmail.com avec votre adresse e-mail Apple.
+            </p>
+        </section>
         
-        <div class="footer">
-            <p>&copy; 2026 SinkFund. Tous droits réservés.</p>
-            <p style="margin-top: 12px; font-size: 12px;">SinkFund est une application iOS gratuite avec un achat optionnel unique.</p>
-        </div>
+        <section id="delete-data">
+            <h2>Supprimer vos données</h2>
+            <p>
+                Vous souhaitez recommencer à zéro ou supprimer complètement vos données de SinkFund ?
+            </p>
+            
+            <div class="warning">
+                <p><strong>⚠️ Attention :</strong> Cette action supprimera définitivement tous vos fonds, contributions et historiques. Elle ne peut pas être annulée.</p>
+            </div>
+            
+            <div class="contact-info">
+                <h3>Comment supprimer vos données</h3>
+                <div class="steps">
+                    <ol>
+                        <li>Ouvrez l'application SinkFund</li>
+                        <li>Allez dans l'onglet "Paramètres"</li>
+                        <li>Faites défiler jusqu'au bas de l'écran</li>
+                        <li>Appuyez sur "Supprimer toutes les données"</li>
+                        <li>Confirmez votre choix quand vous êtes invité</li>
+                        <li>Tous vos fonds seront supprimés et l'application réinitialisée</li>
+                    </ol>
+                </div>
+            </div>
+            
+            <h3>Alternative : Désinstaller l'application</h3>
+            <p>
+                Vous pouvez également simplement supprimer l'application de votre iPhone. Ses données seront automatiquement supprimées. Si vous décidez de la réinstaller plus tard, vous commencerez avec une ardoise vierge (ou pouvez restaurer votre achat premium si applicable).
+            </p>
+            
+            <p style="font-size: 15px; color: #86868b; margin-top: 20px;">
+                <strong>Besoin d'aide pour votre compte ?</strong> Contactez-nous à delkertz13@gmail.com pour toute question sur la suppression de données ou la gestion de compte.
+            </p>
+        </section>
+        
+        <footer>
+            <p><strong>SinkFund</strong> — Budgétiser vos dépenses irrégulières</p>
+            <p>© 2025 SinkFund. Tous droits réservés.</p>
+            <p style="margin-top: 20px; font-size: 13px;">Pour les demandes d'accès, de rectification ou de suppression de données, veuillez nous contacter.</p>
+        </footer>
     </div>
     
     <script>
-        function toggleFaq(button) {
-            const answer = button.nextElementSibling;
-            const toggle = button.querySelector('.faq-toggle');
+        function toggleFAQ(element) {
+            const answer = element.nextElementSibling;
+            const isActive = answer.classList.contains('active');
             
-            answer.classList.toggle('open');
-            toggle.textContent = answer.classList.contains('open') ? '−' : '+';
-        }
-        
-        function restorePurchase() {
-            alert('Fonctionnalité de restauration d\'achat disponible dans l\'application iOS SinkFund.\n\nVeuillez utiliser le bouton "Restaurer les Achats" directement dans l\'app.');
-        }
-        
-        function deleteData() {
-            if (confirm('⚠️  Êtes-vous sûr de vouloir supprimer TOUTES vos données SinkFund ?\n\nCette action est irréversible.')) {
-                if (confirm('Dernière confirmation : Cette action supprimera définitivement tous vos fonds et votre historique. Continuer ?')) {
-                    alert('Fonctionnalité de suppression de données disponible dans l\'application iOS SinkFund.\n\nVeuillez accéder à Paramètres > Supprimer Toutes les Données pour procéder.');
+            // Fermer tous les autres éléments
+            document.querySelectorAll('.faq-answer.active').forEach(item => {
+                if (item !== answer) {
+                    item.classList.remove('active');
+                    item.previousElementSibling.classList.remove('active');
                 }
+            });
+            
+            // Basculer l'élément courant
+            if (isActive) {
+                answer.classList.remove('active');
+                element.classList.remove('active');
+            } else {
+                answer.classList.add('active');
+                element.classList.add('active');
             }
         }
     </script>
