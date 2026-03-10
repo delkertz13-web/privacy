@@ -1,0 +1,463 @@
+```html
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support CardOptimizer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+            background-color: #f5f5f7;
+            color: #1d1d1d;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 60px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid #e5e5e7;
+        }
+        
+        h1 {
+            font-size: 48px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            letter-spacing: -0.3px;
+        }
+        
+        .subtitle {
+            font-size: 21px;
+            color: #666;
+            font-weight: 400;
+        }
+        
+        .section {
+            background-color: white;
+            border-radius: 12px;
+            padding: 40px;
+            margin-bottom: 32px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+        }
+        
+        h2 {
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 24px;
+            color: #1d1d1d;
+            display: flex;
+            align-items: center;
+        }
+        
+        h2::before {
+            content: "";
+            display: inline-block;
+            width: 4px;
+            height: 28px;
+            background-color: #007AFF;
+            border-radius: 2px;
+            margin-right: 12px;
+        }
+        
+        h3 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-top: 24px;
+            margin-bottom: 12px;
+            color: #1d1d1d;
+        }
+        
+        h3:first-child {
+            margin-top: 0;
+        }
+        
+        p {
+            font-size: 16px;
+            color: #424245;
+            margin-bottom: 16px;
+        }
+        
+        a {
+            color: #007AFF;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        a:hover {
+            color: #0051D5;
+        }
+        
+        .contact-info {
+            background-color: #f5f5f7;
+            padding: 24px;
+            border-radius: 8px;
+            margin-top: 16px;
+        }
+        
+        .contact-info p {
+            margin-bottom: 8px;
+        }
+        
+        .faq-item {
+            margin-bottom: 32px;
+        }
+        
+        .faq-question {
+            font-size: 16px;
+            font-weight: 600;
+            color: #1d1d1d;
+            margin-bottom: 8px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            padding: 12px;
+            background-color: #f5f5f7;
+            border-radius: 8px;
+            transition: background-color 0.2s;
+        }
+        
+        .faq-question:hover {
+            background-color: #efefef;
+        }
+        
+        .faq-question::before {
+            content: "▶";
+            display: inline-block;
+            margin-right: 12px;
+            font-size: 12px;
+            color: #007AFF;
+            transition: transform 0.2s;
+            min-width: 12px;
+        }
+        
+        .faq-item.open .faq-question::before {
+            transform: rotate(90deg);
+        }
+        
+        .faq-answer {
+            display: none;
+            padding: 16px 12px 0 12px;
+            color: #424245;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        
+        .faq-item.open .faq-answer {
+            display: block;
+        }
+        
+        .button {
+            display: inline-block;
+            background-color: #007AFF;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            margin-top: 16px;
+        }
+        
+        .button:hover {
+            background-color: #0051D5;
+        }
+        
+        .button.secondary {
+            background-color: #e5e5e7;
+            color: #1d1d1d;
+        }
+        
+        .button.secondary:hover {
+            background-color: #d1d1d6;
+        }
+        
+        .button.danger {
+            background-color: #FF3B30;
+        }
+        
+        .button.danger:hover {
+            background-color: #E60000;
+        }
+        
+        .warning {
+            background-color: #FFF3CD;
+            border-left: 4px solid #FFC107;
+            padding: 16px;
+            border-radius: 8px;
+            margin-top: 16px;
+        }
+        
+        .success {
+            background-color: #D4EDDA;
+            border-left: 4px solid #28A745;
+            padding: 16px;
+            border-radius: 8px;
+            margin-top: 16px;
+            display: none;
+        }
+        
+        .success.show {
+            display: block;
+        }
+        
+        footer {
+            text-align: center;
+            padding-top: 40px;
+            border-top: 1px solid #e5e5e7;
+            color: #666;
+            font-size: 14px;
+            margin-top: 60px;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 24px 16px;
+            }
+            
+            header {
+                margin-bottom: 40px;
+            }
+            
+            h1 {
+                font-size: 32px;
+            }
+            
+            .subtitle {
+                font-size: 17px;
+            }
+            
+            .section {
+                padding: 24px;
+                margin-bottom: 24px;
+            }
+            
+            h2 {
+                font-size: 22px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>CardOptimizer</h1>
+            <p class="subtitle">Maximisez vos récompenses de carte de crédit</p>
+        </header>
+        
+        <!-- Contact Section -->
+        <div class="section">
+            <h2>Nous Contacter</h2>
+            <p>Vous avez une question ou besoin d'aide? Nous sommes là pour vous aider.</p>
+            <div class="contact-info">
+                <p><strong>Email Support:</strong></p>
+                <p><a href="mailto:delkertz13@gmail.com">delkertz13@gmail.com</a></p>
+                <p style="margin-top: 16px; font-size: 14px; color: #666;">Nous répondons aux emails dans les 24-48 heures.</p>
+            </div>
+        </div>
+        
+        <!-- FAQ Section -->
+        <div class="section">
+            <h2>Questions Fréquemment Posées</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">Comment ajouter mes cartes de crédit dans CardOptimizer?</div>
+                <div class="faq-answer">
+                    <p>CardOptimizer fonctionne hors ligne et ne stocke jamais vos données bancaires. Pour ajouter vos cartes:</p>
+                    <ol style="margin-left: 20px; color: #424245;">
+                        <li>Ouvrez l'onglet "Mes Cartes"</li>
+                        <li>Appuyez sur le bouton "+"</li>
+                        <li>Sélectionnez votre type de carte (Visa, Mastercard, etc.)</li>
+                        <li>Les taux de cashback sont automatiquement remplis pour les 50+ cartes pré-chargées</li>
+                        <li>Vos données restent uniquement sur votre téléphone</li>
+                    </ol>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">Comment utiliser le Scanner d'Achat pour optimiser mes récompenses?</div>
+                <div class="faq-answer">
+                    <p>Le Scanner d'Achat vous aide à choisir la meilleure carte instantanément:</p>
+                    <ol style="margin-left: 20px; color: #424245;">
+                        <li>Ouvrez l'onglet "Scanner"</li>
+                        <li>Sélectionnez la catégorie d'achat (alimentation, carburant, voyage, etc.)</li>
+                        <li>Entrez le montant de votre achat</li>
+                        <li>L'app affiche quelle carte vous donne le meilleur cashback</li>
+                        <li>Vous voyez aussi le gain estimé en points</li>
+                    </ol>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">Les données de mes cartes sont-elles sécurisées?</div>
+                <div class="faq-answer">
+                    <p>Oui, vos données sont complètement sécurisées. CardOptimizer:</p>
+                    <ul style="margin-left: 20px; color: #424245;">
+                        <li>Fonctionne entièrement hors ligne</li>
+                        <li>Ne se connecte jamais à Internet pour vos données personnelles</li>
+                        <li>Ne stocke vos informations que localement sur votre téléphone</li>
+                        <li>Ne demande jamais vos numéros de carte complets</li>
+                        <li>N'envoie aucune donnée à des serveurs externes</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">Que signifie le Dashboard et comment l'interpréter?</div>
+                <div class="faq-answer">
+                    <p>Le Dashboard affiche vos statistiques de récompenses:</p>
+                    <ul style="margin-left: 20px; color: #424245;">
+                        <li><strong>Récompenses Gagnées:</strong> Points et cashback que vous avez reçus</li>
+                        <li><strong>Récompenses Perdues:</strong> Points que vous auriez pu gagner avec la meilleure carte</li>
+                        <li><strong>Gain Potentiel:</strong> Argent que vous pourriez économiser par mois</li>
+                        <li>Ces statistiques vous aident à voir l'impact réel d'optimiser vos cartes</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">Comment puis-je exporter ou sauvegarder mes données de cartes?</div>
+                <div class="faq-answer">
+                    <p>Pour exporter vos données et les sauvegarder de manière sécurisée:</p>
+                    <ol style="margin-left: 20px; color: #424245;">
+                        <li>Allez dans l'onglet "Paramètres"</li>
+                        <li>Appuyez sur "Exporter les Données"</li>
+                        <li>Vos données de cartes seront envoyées à votre email sous forme sécurisée</li>
+                        <li>Vous pourrez les importer dans une nouvelle installation de l'app</li>
+                        <li>Cette fonctionnalité est disponible dans la version Premium</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Restore Purchase Section -->
+        <div class="section">
+            <h2>Restaurer Votre Achat</h2>
+            <p>Si vous avez acheté la version Premium de CardOptimizer sur un autre appareil ou après une réinstallation, vous pouvez restaurer votre achat.</p>
+            
+            <h3>Comment restaurer votre achat:</h3>
+            <ol style="color: #424245; margin-left: 20px;">
+                <li>Ouvrez CardOptimizer</li>
+                <li>Allez dans l'onglet "Paramètres"</li>
+                <li>Appuyez sur le bouton "Restaurer les Achats"</li>
+                <li>Identifiez-vous avec votre compte Apple ID</li>
+                <li>L'app vérifiera vos achats précédents</li>
+                <li>Vous recevrez un message de confirmation</li>
+            </ol>
+            
+            <button class="button" onclick="simulateRestore()">Simuler Restauration d'Achat</button>
+            <div class="success" id="restoreSuccess">
+                ✓ Achat restauré avec succès! La version Premium est maintenant activée.
+            </div>
+        </div>
+        
+        <!-- Delete Data Section -->
+        <div class="section">
+            <h2>Supprimer Vos Données</h2>
+            <p>CardOptimizer respecte votre vie privée. Vous pouvez à tout moment supprimer toutes vos données personnelles stockées sur votre appareil.</p>
+            
+            <h3>Que sera supprimé:</h3>
+            <ul style="color: #424245; margin-left: 20px;">
+                <li>Toutes les cartes de crédit que vous avez ajoutées</li>
+                <li>Tous les historiques d'achats et transactions</li>
+                <li>Vos paramètres personnalisés</li>
+                <li>Vos statistiques de récompenses</li>
+            </ul>
+            
+            <h3>Que ne sera PAS supprimé:</h3>
+            <ul style="color: #424245; margin-left: 20px;">
+                <li>Votre achat Premium (stocké dans les serveurs Apple)</li>
+                <li>Les données de votre compte Apple ID</li>
+            </ul>
+            
+            <div class="warning">
+                ⚠️ <strong>Attention:</strong> Cette action est irréversible. Assurez-vous que vous avez sauvegardé vos données importantes avant de continuer.
+            </div>
+            
+            <h3>Comment supprimer vos données:</h3>
+            <ol style="color: #424245; margin-left: 20px;">
+                <li>Ouvrez CardOptimizer</li>
+                <li>Allez dans l'onglet "Paramètres"</li>
+                <li>Faites défiler vers le bas</li>
+                <li>Appuyez sur "Supprimer Toutes les Données"</li>
+                <li>Confirmez l'action (impossible à annuler)</li>
+            </ol>
+            
+            <p style="margin-top: 20px; font-size: 14px;"><strong>Besoin de nous contacter avant de supprimer?</strong> <a href="mailto:delkertz13@gmail.com">Envoyez-nous un email</a> si vous avez des questions.</p>
+            
+            <button class="button danger" onclick="simulateDelete()">Simuler Suppression de Données</button>
+            <div class="success" id="deleteSuccess">
+                ✓ Toutes vos données ont été supprimées. CardOptimizer est maintenant réinitialisé.
+            </div>
+        </div>
+        
+        <!-- Additional Support Section -->
+        <div class="section">
+            <h2>Besoin d'Aide Supplémentaire?</h2>
+            <p>Si vous ne trouvez pas la réponse à votre question, n'hésitez pas à nous contacter directement.</p>
+            <p style="margin-top: 16px;">
+                <strong>Email:</strong> <a href="mailto:delkertz13@gmail.com">delkertz13@gmail.com</a>
+            </p>
+            <p style="font-size: 14px; color: #666; margin-top: 16px;">
+                Nous valorisons vos retours et continuons à améliorer CardOptimizer en fonction de vos besoins.
+            </p>
+        </div>
+        
+        <footer>
+            <p>&copy; 2024 CardOptimizer. Tous droits réservés.</p>
+            <p style="margin-top: 8px; font-size: 12px;">
+                <a href="mailto:delkertz13@gmail.com">Support</a> • 
+                <span style="color: #999;">Version 1.0</span>
+            </p>
+        </footer>
+    </div>
+    
+    <script>
+        // FAQ Toggle functionality
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', function() {
+                const faqItem = this.parentElement;
+                faqItem.classList.toggle('open');
+            });
+        });
+        
+        // Simulate restore purchase
+        function simulateRestore() {
+            document.getElementById('restoreSuccess').classList.add('show');
+            setTimeout(() => {
+                document.getElementById('restoreSuccess').classList.remove('show');
+            }, 4000);
+        }
+        
+        // Simulate delete data
+        function simulateDelete() {
+            const confirmed = confirm('Êtes-vous absolument certain? Cette action supprimera TOUTES vos données et ne peut pas être annulée.');
+            if (confirmed) {
+                const doubleConfirm = confirm('Dernière confirmation: Supprimer toutes les données de CardOptimizer?');
+                if (doubleConfirm) {
+                    document.getElementById('deleteSuccess').classList.add('show');
+                    setTimeout(() => {
+                        document.getElementById('deleteSuccess').classList.remove('show');
+                    }, 4000);
+                }
+            }
+        }
+    </script>
+</body>
+</html>
+```
