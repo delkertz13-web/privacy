@@ -1,0 +1,324 @@
+```html
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support DryCount</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", sans-serif;
+            background-color: #f5f5f7;
+            color: #1d1d1f;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 60px;
+            padding: 40px 0;
+            border-bottom: 1px solid #d2d2d7;
+        }
+        
+        h1 {
+            font-size: 38px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: #1d1d1f;
+        }
+        
+        .subtitle {
+            font-size: 16px;
+            color: #666;
+            font-weight: 400;
+        }
+        
+        .section {
+            margin-bottom: 50px;
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+        }
+        
+        h2 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 24px;
+            color: #1d1d1f;
+        }
+        
+        .faq-item {
+            margin-bottom: 28px;
+            padding-bottom: 28px;
+            border-bottom: 1px solid #f5f5f7;
+        }
+        
+        .faq-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        
+        .faq-question {
+            font-size: 16px;
+            font-weight: 600;
+            color: #007AFF;
+            margin-bottom: 12px;
+            cursor: pointer;
+            user-select: none;
+        }
+        
+        .faq-answer {
+            font-size: 15px;
+            color: #666;
+            line-height: 1.7;
+        }
+        
+        .button-group {
+            display: flex;
+            gap: 12px;
+            flex-direction: column;
+            margin-top: 20px;
+        }
+        
+        .button {
+            padding: 14px 24px;
+            border-radius: 8px;
+            border: none;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .button-primary {
+            background-color: #007AFF;
+            color: white;
+        }
+        
+        .button-primary:hover {
+            background-color: #0051d5;
+        }
+        
+        .button-secondary {
+            background-color: #f5f5f7;
+            color: #1d1d1f;
+            border: 1px solid #d2d2d7;
+        }
+        
+        .button-secondary:hover {
+            background-color: #e8e8ed;
+        }
+        
+        .warning-box {
+            background-color: #fff3cd;
+            border-left: 4px solid #007AFF;
+            padding: 16px;
+            border-radius: 6px;
+            margin-top: 16px;
+            font-size: 14px;
+            color: #333;
+        }
+        
+        .info-text {
+            font-size: 15px;
+            color: #666;
+            margin-bottom: 16px;
+            line-height: 1.7;
+        }
+        
+        .contact-item {
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #f5f5f7;
+        }
+        
+        .contact-item:last-child {
+            border-bottom: none;
+        }
+        
+        .contact-label {
+            font-size: 14px;
+            color: #999;
+            text-transform: uppercase;
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+        
+        .contact-value {
+            font-size: 16px;
+            color: #007AFF;
+            word-break: break-all;
+        }
+        
+        a {
+            color: #007AFF;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            border-top: 1px solid #d2d2d7;
+            color: #999;
+            font-size: 14px;
+            margin-top: 60px;
+        }
+        
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 28px;
+            }
+            
+            h2 {
+                font-size: 20px;
+            }
+            
+            .section {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Support DryCount</h1>
+            <p class="subtitle">Suivi intelligent de votre consommation d'alcool</p>
+        </header>
+        
+        <!-- FAQ Section -->
+        <div class="section">
+            <h2>Questions Fréquemment Posées</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">Comment puis-je restaurer mes achats premium ?</div>
+                <div class="faq-answer">
+                    Si vous avez précédemment acheté la version premium de DryCount sur cet appareil ou un autre appareil Apple avec le même identifiant Apple, vous pouvez restaurer votre accès en appuyant sur le bouton "Restaurer les achats" dans l'onglet Paramètres de l'application. Cette action est gratuite et instantanée. Assurez-vous d'être connecté avec le même identifiant Apple utilisé pour l'achat initial.
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">Comment puis-je supprimer mes données personnelles ?</div>
+                <div class="faq-answer">
+                    Vous pouvez supprimer toutes vos données de DryCount (journal, streaks, statistiques) à tout moment en accédant à l'onglet Paramètres et en sélectionnant "Supprimer toutes les données". Cette action est irréversible et supprimera définitivement vos informations de l'appareil. Pour supprimer vos données de nos serveurs de sauvegarde iCloud, vous devrez également accéder à Réglages > [Votre nom] > iCloud > Gérer le stockage iCloud et supprimer DryCount.
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">Qu'est-ce qui est inclus dans la version premium ?</div>
+                <div class="faq-answer">
+                    La version premium de DryCount déverrouille des statistiques avancées, y compris des graphiques détaillés de consommation, l'analyse des tendances sur plusieurs mois, l'export de rapports PDF mensuels, et un widget iOS avancé pour votre écran d'accueil. Le suivi quotidien, les streaks et les jalons de santé restent gratuits pour tous les utilisateurs.
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">Puis-je réinitialiser mon compteur de jours consécutifs ?</div>
+                <div class="faq-answer">
+                    Oui, vous pouvez réinitialiser votre streak directement depuis l'onglet Dashboard. Appuyez et maintenez sur votre compteur actuel, puis confirmez votre intention de réinitialiser. Cela réinitialisera votre compteur à 0 jours mais conservera tout votre historique de journal pour votre référence future. Vous pouvez commencer un nouveau streak immédiatement après.
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">Mes données sont-elles sauvegardées sur iCloud ?</div>
+                <div class="faq-answer">
+                    Oui, DryCount utilise iCloud CloudKit pour sauvegarder automatiquement votre journal, vos streaks et vos paramètres lorsque vous êtes connecté avec votre identifiant Apple. Cela signifie que vos données se synchronisent entre vos appareils Apple et restent sûres. Vous pouvez désactiver cette synchronisation à tout moment dans les paramètres de l'application, mais vos données seront alors stockées localement uniquement.
+                </div>
+            </div>
+        </div>
+        
+        <!-- Restore Purchases Section -->
+        <div class="section">
+            <h2>Restaurer les Achats</h2>
+            <p class="info-text">
+                Si vous avez acheté la version premium de DryCount, vous pouvez restaurer votre accès à tout moment. Cette fonctionnalité vous permet de conserver votre premium sur plusieurs appareils ou après une réinstallation de l'application.
+            </p>
+            <div class="button-group">
+                <button class="button button-primary" onclick="restorePurchases()">Restaurer les Achats</button>
+            </div>
+            <div class="warning-box">
+                <strong>Remarque :</strong> Vous devez être connecté avec le même identifiant Apple utilisé pour l'achat initial. La restauration est gratuite et instantanée.
+            </div>
+        </div>
+        
+        <!-- Delete Data Section -->
+        <div class="section">
+            <h2>Supprimer Mes Données</h2>
+            <p class="info-text">
+                Vous pouvez supprimer toutes vos données personnelles (journal, streaks, statistiques, préférences) de DryCount. Cette action est irréversible et supprimera définitivement vos informations de votre appareil.
+            </p>
+            <div class="button-group">
+                <button class="button button-secondary" onclick="deleteData()">Supprimer Toutes les Données</button>
+            </div>
+            <div class="warning-box">
+                <strong>Attention :</strong> Cette action ne peut pas être annulée. Assurez-vous de vouloir vraiment supprimer toutes vos données avant de continuer. Pour une meilleure protection, envisagez d'exporter un rapport PDF avant suppression.
+            </div>
+        </div>
+        
+        <!-- Contact Section -->
+        <div class="section">
+            <h2>Nous Contacter</h2>
+            <p class="info-text">
+                Avez-vous des questions, des commentaires ou besoin d'assistance ? Nous serions ravis de vous aider. N'hésitez pas à nous contacter directement.
+            </p>
+            
+            <div class="contact-item">
+                <div class="contact-label">Email Support</div>
+                <div class="contact-value">
+                    <a href="mailto:delkertz13@gmail.com">delkertz13@gmail.com</a>
+                </div>
+            </div>
+            
+            <div class="contact-item">
+                <div class="contact-label">Temps de Réponse</div>
+                <div class="contact-value">Nous répondons généralement dans les 24 heures</div>
+            </div>
+            
+            <div class="contact-item">
+                <div class="contact-label">App Store</div>
+                <div class="contact-value">
+                    <a href="#">Avis et Évaluations</a>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>&copy; 2026 DryCount. Tous droits réservés.</p>
+            <p>Pour les questions liées aux achats App Store, veuillez contacter l'assistance Apple directement.</p>
+        </footer>
+    </div>
+    
+    <script>
+        function restorePurchases() {
+            alert('Accédez à l\'onglet Paramètres de DryCount et appuyez sur "Restaurer les Achats"');
+        }
+        
+        function deleteData() {
+            if (confirm('Êtes-vous certain de vouloir supprimer TOUTES vos données ? Cette action est irréversible.')) {
+                alert('Accédez à l\'onglet Paramètres de DryCount et appuyez sur "Supprimer Toutes les Données"');
+            }
+        }
+    </script>
+</body>
+</html>
+```
