@@ -4,320 +4,422 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PostureBreak - Support</title>
+    <title>PostureBreak - Support & Aide</title>
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-            background: #f5f5f7;
-            color: #1d1d1f;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f5f5f7;
+            color: #1d1d1d;
             line-height: 1.6;
         }
-        
+
         header {
-            background: #ffffff;
-            padding: 24px;
-            border-bottom: 1px solid #e5e5e7;
+            background: linear-gradient(135deg, #007AFF 0%, #0051D5 100%);
+            color: white;
+            padding: 40px 20px;
             text-align: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
-        
-        .logo {
-            font-size: 24px;
-            font-weight: 700;
-            color: #007AFF;
+
+        header h1 {
+            font-size: 32px;
+            font-weight: 600;
             margin-bottom: 8px;
         }
-        
-        .subtitle {
-            font-size: 14px;
-            color: #666;
+
+        header p {
+            font-size: 16px;
+            opacity: 0.95;
         }
-        
-        main {
-            max-width: 800px;
+
+        .container {
+            max-width: 900px;
             margin: 0 auto;
-            padding: 24px;
+            padding: 40px 20px;
         }
-        
-        section {
-            background: #ffffff;
+
+        .section {
+            background: white;
             border-radius: 12px;
-            margin-bottom: 16px;
-            padding: 24px;
-            border: 1px solid #e5e5e7;
+            padding: 30px;
+            margin-bottom: 24px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
         }
-        
-        h2 {
-            font-size: 20px;
+
+        .section h2 {
+            color: #007AFF;
+            font-size: 24px;
             font-weight: 600;
-            color: #1d1d1f;
-            margin-bottom: 16px;
+            margin-bottom: 20px;
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 10px;
         }
-        
-        h3 {
-            font-size: 16px;
-            font-weight: 600;
-            color: #1d1d1f;
-            margin-top: 16px;
-            margin-bottom: 8px;
+
+        .section h2::before {
+            content: "";
+            width: 4px;
+            height: 24px;
+            background: #007AFF;
+            border-radius: 2px;
         }
-        
-        h3:first-child {
-            margin-top: 0;
-        }
-        
+
         .faq-item {
             margin-bottom: 20px;
+            border-bottom: 1px solid #e5e5e7;
             padding-bottom: 20px;
-            border-bottom: 1px solid #f5f5f7;
         }
-        
+
         .faq-item:last-child {
             border-bottom: none;
             margin-bottom: 0;
             padding-bottom: 0;
         }
-        
+
         .faq-question {
+            font-size: 16px;
             font-weight: 600;
-            color: #007AFF;
+            color: #1d1d1d;
+            margin-bottom: 10px;
             cursor: pointer;
             user-select: none;
-            font-size: 15px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
-        
+
+        .faq-question::before {
+            content: "▶";
+            font-size: 12px;
+            color: #007AFF;
+            transition: transform 0.3s ease;
+            display: inline-block;
+            width: 16px;
+        }
+
+        .faq-item.active .faq-question::before {
+            transform: rotate(90deg);
+        }
+
         .faq-answer {
-            margin-top: 12px;
-            font-size: 14px;
-            color: #555;
+            color: #424245;
+            font-size: 15px;
+            line-height: 1.7;
+            display: none;
+            animation: slideDown 0.3s ease;
         }
-        
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
         .contact-info {
             background: #f5f5f7;
-            padding: 16px;
+            padding: 20px;
             border-radius: 8px;
-            margin-bottom: 16px;
+            margin-bottom: 20px;
         }
-        
-        .contact-label {
-            font-size: 12px;
-            color: #999;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            margin-bottom: 4px;
-        }
-        
-        .contact-value {
+
+        .contact-info p {
             font-size: 15px;
-            color: #007AFF;
-            word-break: break-all;
+            color: #424245;
+            margin-bottom: 12px;
         }
-        
-        .button {
+
+        .contact-info strong {
+            color: #1d1d1d;
+        }
+
+        .email-link {
             display: inline-block;
-            padding: 12px 24px;
-            background: #007AFF;
-            color: #ffffff;
-            border: none;
+            color: #007AFF;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 10px;
+        }
+
+        .email-link:hover {
+            opacity: 0.7;
+        }
+
+        .button-group {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-top: 24px;
+        }
+
+        .btn {
+            padding: 14px 20px;
             border-radius: 8px;
             font-size: 15px;
             font-weight: 600;
+            border: none;
             cursor: pointer;
-            transition: background 0.2s;
-            margin-top: 8px;
-            margin-right: 8px;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            transition: all 0.2s ease;
+            text-align: center;
+            text-decoration: none;
+            display: block;
         }
-        
-        .button:hover {
-            background: #0051d5;
+
+        .btn-primary {
+            background: #007AFF;
+            color: white;
         }
-        
-        .button.secondary {
-            background: #f5f5f7;
-            color: #007AFF;
-            border: 1px solid #e5e5e7;
+
+        .btn-primary:hover {
+            background: #0051D5;
+            box-shadow: 0 4px 12px rgba(0, 122, 255, 0.3);
         }
-        
-        .button.secondary:hover {
-            background: #e8e8ed;
+
+        .btn-secondary {
+            background: #e5e5e7;
+            color: #1d1d1d;
         }
-        
-        .button.danger {
+
+        .btn-secondary:hover {
+            background: #d1d1d6;
+        }
+
+        .btn-danger {
             background: #ff3b30;
-            color: #ffffff;
+            color: white;
         }
-        
-        .button.danger:hover {
-            background: #cc2f26;
+
+        .btn-danger:hover {
+            background: #ff453a;
+            box-shadow: 0 4px 12px rgba(255, 59, 48, 0.3);
         }
-        
-        .warning {
+
+        .warning-box {
             background: #fff3cd;
-            border: 1px solid #ffc107;
-            padding: 12px;
-            border-radius: 8px;
-            margin-top: 12px;
-            font-size: 13px;
-            color: #664d03;
+            border-left: 4px solid #ffc107;
+            padding: 16px;
+            border-radius: 6px;
+            margin-bottom: 20px;
         }
-        
+
+        .warning-box p {
+            color: #856404;
+            font-size: 14px;
+            margin: 0;
+        }
+
         footer {
             text-align: center;
-            padding: 24px;
-            color: #999;
-            font-size: 12px;
+            padding: 30px 20px;
+            color: #86868b;
+            font-size: 13px;
         }
-        
-        .icon {
-            display: inline-block;
-            width: 20px;
-            height: 20px;
-            line-height: 20px;
-            text-align: center;
+
+        .feature-list {
+            list-style: none;
+            margin: 20px 0;
+        }
+
+        .feature-list li {
+            padding: 12px 0;
+            padding-left: 28px;
+            position: relative;
+            color: #424245;
+            font-size: 15px;
+        }
+
+        .feature-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #007AFF;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        @media (max-width: 600px) {
+            .button-group {
+                grid-template-columns: 1fr;
+            }
+
+            header h1 {
+                font-size: 24px;
+            }
+
+            .section {
+                padding: 20px;
+            }
         }
     </style>
 </head>
 <body>
     <header>
-        <div class="logo">PostureBreak</div>
-        <div class="subtitle">Support & Aide</div>
+        <h1>PostureBreak Support</h1>
+        <p>Votre compagnon pour des pauses posturales saines</p>
     </header>
-    
-    <main>
-        <!-- FAQ Section -->
-        <section>
-            <h2>❓ Questions Fréquemment Posées</h2>
-            
-            <div class="faq-item">
-                <div class="faq-question">Comment configurer la durée de ma session de travail ?</div>
-                <div class="faq-answer">
-                    Ouvrez l'app et accédez à Paramètres (roue dentée). Vous pouvez choisir entre 3 profils prédéfinis : 25 minutes (Pomodoro), 50 minutes (session standard) ou 90 minutes (session longue). Vous pouvez également créer un profil personnalisé en saisissant le nombre de minutes souhaité. Votre choix sera automatiquement appliqué au prochain timer lancé.
-                </div>
-            </div>
-            
-            <div class="faq-item">
-                <div class="faq-question">Puis-je ignorer une pause posturale ?</div>
-                <div class="faq-answer">
-                    Les pauses sont recommandées mais pas obligatoires. Quand votre session arrive à terme, PostureBreak affiche une notification avec l'exercice du jour. Vous pouvez ignorer cette pause, mais votre compliance hebdomadaire sera affectée. Pour ignorer sans notification, vous pouvez aussi utiliser la fonction "Ignorer cette pause" dans l'app pour continuer à travailler.
-                </div>
-            </div>
-            
-            <div class="faq-item">
-                <div class="faq-question">Comment fonctionne le mode Focus avec détection idle ?</div>
-                <div class="faq-answer">
-                    Si vous activez "Mode Focus" dans les paramètres, PostureBreak utilise les capteurs de mouvement de votre iPhone pour détecter si vous êtes inactif sur votre Mac. Si l'app détecte que vous n'avez pas bougé pendant 2 minutes, elle génère une notification plus intense pour vous rappeler de faire une pause. Cette fonction nécessite l'accès aux données de mouvement et peut être désactivée à tout moment.
-                </div>
-            </div>
-            
-            <div class="faq-item">
-                <div class="faq-question">Qu'est-ce qui est inclus dans la version gratuite ?</div>
-                <div class="faq-answer">
-                    La version gratuite inclut le timer de session, 3 exercices d'étirement illustrés (cou, épaules, dos), un profil utilisateur et les notifications de base. L'achat unique à 1,99 $ déverrouille la bibliothèque complète de 12 exercices, les statistiques avancées de compliance, les streaks de bonnes journées, et un widget iOS pour votre écran d'accueil.
-                </div>
-            </div>
-            
-            <div class="faq-item">
-                <div class="faq-question">Pourquoi mon historique de compliance a disparu après une réinstallation ?</div>
-                <div class="faq-answer">
-                    Les données de compliance sont stockées localement sur votre appareil. Si vous réinstallez l'app, les données historiques ne peuvent pas être récupérées automatiquement. Cependant, si vous utilisez iCloud Sync (activable dans les paramètres), vos données seront synchronisées et restaurées après la réinstallation. Nous recommandons d'activer iCloud Sync pour protéger votre historique.
-                </div>
-            </div>
-        </section>
-        
+
+    <div class="container">
         <!-- Contact Section -->
-        <section>
-            <h2>📧 Nous Contacter</h2>
-            <p style="margin-bottom: 16px; font-size: 14px;">
-                Vous avez des questions, des suggestions ou avez rencontré un problème ? Notre équipe de support est là pour vous aider.
-            </p>
-            
+        <div class="section">
+            <h2>Nous Contacter</h2>
             <div class="contact-info">
-                <div class="contact-label">Email Support</div>
-                <div class="contact-value">delkertz13@gmail.com</div>
+                <p>Des questions sur PostureBreak ? Nous sommes là pour vous aider.</p>
+                <p><strong>Email Support :</strong></p>
+                <a href="mailto:delkertz13@gmail.com" class="email-link">delkertz13@gmail.com</a>
+                <p style="margin-top: 16px; font-size: 14px; color: #86868b;">
+                    Temps de réponse moyen : 24-48 heures
+                </p>
             </div>
+        </div>
+
+        <!-- FAQ Section -->
+        <div class="section">
+            <h2>Questions Fréquentes</h2>
             
-            <p style="font-size: 13px; color: #666;">
-                Temps de réponse : généralement dans les 24 heures. Veuillez inclure votre version d'iOS et une description détaillée du problème pour une meilleure assistance.
-            </p>
-        </section>
-        
+            <div class="faq-item active">
+                <div class="faq-question">Quels sont les exercices disponibles dans la version gratuite ?</div>
+                <div class="faq-answer">
+                    La version gratuite de PostureBreak inclut 3 exercices essentiels pour débuter : 
+                    <ul class="feature-list">
+                        <li>Étirement du cou latéral</li>
+                        <li>Roulement des épaules</li>
+                        <li>Étirement du dos inférieur</li>
+                    </ul>
+                    Pour accéder à la bibliothèque complète de 12 exercices illustrés (cou, épaules, dos, poignets), veuillez passer à PostureBreak Pro (1,99 $).
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Comment fonctionne le suivi de conformité hebdomadaire ?</div>
+                <div class="faq-answer">
+                    PostureBreak enregistre automatiquement chaque fois que vous terminez une session de pause posturale. Le suivi affiche :
+                    <ul class="feature-list">
+                        <li>Pourcentage de pauses prises par rapport au calendrier</li>
+                        <li>Votre série actuelle de "bonnes journées" (streak)</li>
+                        <li>Statistiques détaillées accessible en version Pro</li>
+                    </ul>
+                    Vos données restent privées et stockées localement sur votre appareil.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Puis-je configurer des durées de session personnalisées ?</div>
+                <div class="faq-answer">
+                    Oui ! PostureBreak propose des durées pré-configurées (25, 50 et 90 minutes) adaptées à différents styles de travail. Vous pouvez sélectionner celle qui correspond le mieux à votre routine. Les timers restent flexibles et peuvent être modifiés à tout moment avant de démarrer une session.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Comment désactiver les notifications ou modifier les rappels ?</div>
+                <div class="faq-answer">
+                    Dans les paramètres de PostureBreak, vous pouvez :
+                    <ul class="feature-list">
+                        <li>Désactiver toutes les notifications</li>
+                        <li>Activer le "Mode Focus" pour ignorer temporairement les rappels</li>
+                        <li>Personnaliser le volume et le style des notifications</li>
+                    </ul>
+                    Les paramètres de notification du système iOS s'appliquent également à PostureBreak. Vérifiez Réglages > PostureBreak > Notifications pour plus d'options.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Mes données seront-elles perdues si je désinstalle l'app ?</div>
+                <div class="faq-answer">
+                    Vos données de session et votre historique de conformité sont stockés localement sur votre appareil. Si vous réinstallez PostureBreak, utilisez la fonction "Restore Purchase" pour accéder à vos contenus premium. Pour sauvegarder vos données entre appareils, veuillez nous contacter à delkertz13@gmail.com avec vos détails d'appareil.
+                </div>
+            </div>
+        </div>
+
         <!-- Restore Purchase Section -->
-        <section>
-            <h2>🔄 Restaurer l'Achat</h2>
-            <p style="margin-bottom: 16px; font-size: 14px;">
-                Si vous avez déjà acheté l'accès complet sur cet appareil ou un autre, vous pouvez restaurer votre achat sans frais supplémentaires.
+        <div class="section">
+            <h2>Restaurer l'Achat</h2>
+            <p style="margin-bottom: 20px; color: #424245;">
+                Si vous avez précédemment acheté PostureBreak Pro sur cet appareil ou sur un autre, utilisez le bouton ci-dessous pour restaurer votre accès sans frais supplémentaires.
             </p>
-            
-            <button class="button">Restaurer les Achats</button>
-            
-            <p style="margin-top: 16px; font-size: 13px; color: #666;">
-                Cette action se connectera à votre compte Apple ID et restaurera tous les achats associés. Aucun frais ne vous sera facturé.
+            <button class="btn btn-primary" onclick="restorePurchase()">Restaurer l'Achat</button>
+            <p style="margin-top: 16px; font-size: 14px; color: #86868b;">
+                Cela utilisera votre compte Apple Store existant. Un identifiant Apple valide est requis.
             </p>
-        </section>
-        
+        </div>
+
         <!-- Delete Data Section -->
-        <section>
-            <h2>🗑️ Supprimer Mes Données</h2>
-            <p style="margin-bottom: 16px; font-size: 14px;">
-                Si vous souhaitez supprimer complètement vos données de PostureBreak, y compris votre historique de compliance, vos paramètres et vos préférences, vous pouvez utiliser l'option ci-dessous.
-            </p>
-            
-            <button class="button danger">Supprimer Toutes Mes Données</button>
-            
-            <div class="warning">
-                ⚠️ Cette action est irréversible. Tous vos données, y compris votre historique de pauses et votre compliance tracking, seront supprimées de manière permanente. Veuillez confirmer avant de procéder.
+        <div class="section">
+            <h2>Supprimer mes Données</h2>
+            <div class="warning-box">
+                <p>⚠️ Cette action est irréversible. Toutes vos sessions, historique d'exercices et statistiques seront supprimées définitivement.</p>
             </div>
-            
-            <p style="margin-top: 16px; font-size: 13px; color: #666;">
-                Si vous utilisez iCloud Sync, vous aurez la possibilité de désactiver la synchronisation ou de supprimer également les données du cloud. Cette action ne supprimera pas votre achat et vous pourrez réactiver votre profil avec les mêmes fonctionnalités.
+            <p style="margin-bottom: 20px; color: #424245;">
+                Si vous souhaitez supprimer toutes vos données PostureBreak :
             </p>
-        </section>
-        
-        <!-- Additional Resources -->
-        <section>
-            <h2>📚 Ressources Supplémentaires</h2>
-            <p style="font-size: 14px; margin-bottom: 16px;">
-                Pour explorer davantage PostureBreak et optimiser votre utilisation :
+            <div class="button-group">
+                <button class="btn btn-secondary" onclick="cancelDelete()">Annuler</button>
+                <button class="btn btn-danger" onclick="deleteData()">Supprimer mes Données</button>
+            </div>
+        </div>
+
+        <!-- Info Section -->
+        <div class="section">
+            <h2>À Propos de PostureBreak</h2>
+            <p style="color: #424245; margin-bottom: 16px;">
+                PostureBreak est conçu pour les travailleurs à distance qui souhaitent améliorer leur posture sans compliquer leur routine. Avec des exercices illustrés, un suivi intelligent et des notifications contextuelles, PostureBreak vous aide à maintenir une bonne santé cervicale et dorsale.
             </p>
-            <ul style="font-size: 14px; color: #555; margin-left: 20px;">
-                <li style="margin-bottom: 8px;">Consultez les conseils de posture inclus dans chaque exercice</li>
-                <li style="margin-bottom: 8px;">Configurez des rappels personnalisés dans les paramètres</li>
-                <li style="margin-bottom: 8px;">Consultez votre compliance hebdomadaire pour suivre votre progression</li>
-                <li>Activez les notifications pour recevoir des rappels contextuels tout au long de la journée</li>
+            <ul class="feature-list">
+                <li>Version actuelle : 1.0.0</li>
+                <li>Développé pour iOS 15 et versions ultérieures</li>
+                <li>Conçu avec SwiftUI pour une expérience native Apple</li>
+                <li>Données stockées localement, pas de suivi cloud</li>
             </ul>
-        </section>
-    </main>
-    
+        </div>
+    </div>
+
     <footer>
-        <p>PostureBreak © 2026 • <a href="mailto:delkertz13@gmail.com" style="color: #007AFF; text-decoration: none;">Support</a> • Version 1.0</p>
+        <p>&copy; 2026 PostureBreak. Tous droits réservés.</p>
+        <p style="margin-top: 12px; font-size: 12px;">Conception optimisée pour iOS | Support multlingue en route</p>
     </footer>
-    
+
     <script>
+        // FAQ Toggle
         document.querySelectorAll('.faq-question').forEach(question => {
-            question.addEventListener('click', function() {
-                const answer = this.nextElementSibling;
-                answer.style.display = answer.style.display === 'none' ? 'block' : 'none';
+            question.addEventListener('click', () => {
+                const item = question.parentElement;
+                item.classList.toggle('active');
             });
         });
-        
-        document.querySelector('.button:not(.danger)').addEventListener('click', function() {
-            alert('Redirection vers l\'App Store pour restaurer les achats...');
-        });
-        
-        document.querySelector('.button.danger').addEventListener('click', function() {
-            if (confirm('Êtes-vous certain ? Cette action est irréversible. Tous vos données seront supprimées.')) {
-                alert('Vos données sont en cours de suppression...');
+
+        // Restore Purchase
+        function restorePurchase() {
+            alert('Restauration des achats initiée...\n\nVous serez redirigé vers App Store pour valider votre compte Apple ID.\n\nCette fonctionnalité serait intégrée à StoreKit 2 en production.');
+        }
+
+        // Delete Data
+        function deleteData() {
+            const confirmation = confirm('Êtes-vous absolument certain ? Cette action supprimera définitivement :\n• Toutes vos sessions\n• Votre historique de conformité\n• Vos préférences de configuration\n\nCette action ne peut pas être annulée.');
+            
+            if (confirmation) {
+                const final = confirm('Dernière confirmation : tapez "SUPPRIMER" dans l\'alerte suivante pour confirmer.');
+                if (final) {
+                    alert('Vos données PostureBreak ont été supprimées.\n\nVous pouvez maintenant réinstaller l\'app ou contacter delkertz13@gmail.com si vous avez besoin d\'aide.');
+                }
             }
-        });
+        }
+
+        function cancelDelete() {
+            alert('Suppression annulée. Vos données sont sûres.');
+        }
     </script>
 </body>
 </html>
