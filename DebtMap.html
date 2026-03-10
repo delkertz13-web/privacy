@@ -3,30 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DebtMap - Your Path to Debt Freedom | iOS App</title>
-    <meta name="description" content="Transform multiple debts into a clear path to freedom. DebtMap uses proven debt snowball and debt avalanche strategies with beautiful visualizations. $2.99 one-time purchase.">
-    <meta name="keywords" content="debt snowball, debt avalanche, multiple debt tracker, debt freedom app, pay off debt visual, debt calculator, financial freedom">
+    <title>DebtMap - Your Path to Debt Freedom | iOS Debt Elimination App</title>
+    <meta name="description" content="Transform overwhelming debt into a clear path to freedom. DebtMap uses proven debt snowball and debt avalanche strategies with beautiful visualizations. $2.99 one-time purchase.">
+    <meta name="keywords" content="debt snowball, debt avalanche, multiple debt tracker, debt freedom app, pay off debt visual, iOS debt app, debt elimination, financial freedom">
     <meta name="author" content="DebtMap">
 
-    <!-- Open Graph -->
-    <meta property="og:title" content="DebtMap - Your Path to Debt Freedom">
-    <meta property="og:description" content="Transform multiple debts into a clear path to freedom with proven debt elimination strategies.">
+    <!-- Open Graph / Social Media -->
     <meta property="og:type" content="website">
+    <meta property="og:title" content="DebtMap - Your Path to Debt Freedom">
+    <meta property="og:description" content="Transform overwhelming debt into a clear path to freedom with proven strategies and beautiful visualizations.">
+    <meta property="og:url" content="">
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <style>
-        :root {
-            --primary-color: #1B365D;
-            --accent-color: #34C759;
-            --secondary-color: #F2F2F7;
-            --text-primary: #1D1D1F;
-            --text-secondary: #86868B;
-            --background: #FFFFFF;
-            --border: #D1D1D6;
-        }
-
         * {
             margin: 0;
             padding: 0;
@@ -34,10 +25,10 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', Roboto, sans-serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             line-height: 1.6;
-            color: var(--text-primary);
-            background: var(--background);
+            color: #1d1d1f;
+            background-color: #ffffff;
         }
 
         .container {
@@ -50,212 +41,237 @@
             padding: 80px 0;
         }
 
-        .section-title {
-            font-size: 2.5rem;
-            font-weight: 700;
-            text-align: center;
-            margin-bottom: 60px;
-            color: var(--text-primary);
+        .section-small {
+            padding: 60px 0;
         }
 
         /* Header */
-        .header {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(20px);
+        header {
             position: fixed;
             top: 0;
-            width: 100%;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
             z-index: 1000;
-            border-bottom: 1px solid var(--border);
+            padding: 15px 0;
         }
 
-        .nav {
+        nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 20px 0;
         }
 
         .logo {
-            font-size: 1.5rem;
+            font-size: 24px;
             font-weight: 700;
-            color: var(--primary-color);
+            color: #007AFF;
         }
 
         .nav-links {
             display: flex;
             list-style: none;
-            gap: 40px;
+            gap: 30px;
         }
 
         .nav-links a {
             text-decoration: none;
-            color: var(--text-primary);
+            color: #1d1d1f;
             font-weight: 500;
             transition: color 0.3s ease;
         }
 
         .nav-links a:hover {
-            color: var(--primary-color);
+            color: #007AFF;
         }
 
         /* Hero Section */
         .hero {
-            background: linear-gradient(135deg, var(--primary-color) 0%, #2B4A6B 100%);
+            background: linear-gradient(135deg, #007AFF 0%, #00C7BE 100%);
             color: white;
-            padding: 120px 0 80px;
             text-align: center;
+            padding: 140px 0 100px;
             margin-top: 80px;
         }
 
-        .hero-title {
+        .hero h1 {
             font-size: 3.5rem;
             font-weight: 700;
             margin-bottom: 20px;
             line-height: 1.2;
         }
 
-        .hero-subtitle {
-            font-size: 1.25rem;
+        .hero p {
+            font-size: 1.5rem;
+            font-weight: 300;
             margin-bottom: 40px;
             opacity: 0.9;
-            max-width: 600px;
+            max-width: 800px;
             margin-left: auto;
             margin-right: auto;
         }
 
         .cta-button {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            background: var(--accent-color);
-            color: white;
-            padding: 15px 30px;
+            display: inline-block;
+            background: #ffffff;
+            color: #007AFF;
+            padding: 18px 40px;
+            border-radius: 50px;
             text-decoration: none;
-            border-radius: 12px;
             font-weight: 600;
             font-size: 1.1rem;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-            box-shadow: 0 4px 20px rgba(52, 199, 89, 0.3);
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
         }
 
         .cta-button:hover {
             transform: translateY(-2px);
-            box-shadow: 0 8px 30px rgba(52, 199, 89, 0.4);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
         }
 
         .app-store-badge {
-            width: 120px;
-            height: 40px;
-            background: #000;
-            border-radius: 8px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 0.9rem;
-            font-weight: 500;
+            margin-top: 20px;
+        }
+
+        .app-store-badge img {
+            height: 60px;
+            transition: transform 0.3s ease;
+        }
+
+        .app-store-badge:hover img {
+            transform: scale(1.05);
         }
 
         /* Problem Section */
         .problem {
-            background: var(--secondary-color);
-        }
-
-        .problem-content {
-            max-width: 800px;
-            margin: 0 auto;
+            background: #f5f5f7;
             text-align: center;
         }
 
-        .problem-title {
+        .problem h2 {
             font-size: 2.5rem;
             font-weight: 700;
             margin-bottom: 30px;
-            color: var(--text-primary);
+            color: #1d1d1f;
         }
 
-        .problem-text {
-            font-size: 1.1rem;
-            color: var(--text-secondary);
-            margin-bottom: 20px;
+        .problem p {
+            font-size: 1.2rem;
+            color: #86868b;
+            max-width: 800px;
+            margin: 0 auto 40px;
         }
 
-        /* Features Section */
-        .features-grid {
+        .problem-stats {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 40px;
             margin-top: 60px;
         }
 
-        .feature-card {
+        .stat-item {
             background: white;
-            padding: 40px;
+            padding: 40px 30px;
             border-radius: 20px;
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
-            border: 1px solid var(--border);
-            text-align: center;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         }
 
-        .feature-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 40px rgba(0, 0, 0, 0.1);
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #FF6B6B;
+            margin-bottom: 10px;
+        }
+
+        .stat-text {
+            font-size: 1.1rem;
+            color: #86868b;
+        }
+
+        /* Features Section */
+        .features {
+            padding: 100px 0;
+        }
+
+        .features h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 80px;
+            color: #1d1d1f;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 60px;
+        }
+
+        .feature-card {
+            text-align: center;
+            padding: 40px 20px;
         }
 
         .feature-icon {
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
-            border-radius: 16px;
-            margin: 0 auto 25px;
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #007AFF, #00C7BE);
+            border-radius: 20px;
+            margin: 0 auto 30px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.5rem;
-            color: white;
+            font-size: 2rem;
         }
 
-        .feature-title {
+        .feature-card h3 {
             font-size: 1.5rem;
             font-weight: 600;
-            margin-bottom: 15px;
-            color: var(--text-primary);
+            margin-bottom: 20px;
+            color: #1d1d1f;
         }
 
-        .feature-text {
-            color: var(--text-secondary);
+        .feature-card p {
+            font-size: 1.1rem;
+            color: #86868b;
             line-height: 1.7;
         }
 
         /* Pricing Section */
         .pricing {
-            background: var(--secondary-color);
+            background: #f5f5f7;
             text-align: center;
+        }
+
+        .pricing h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 30px;
+            color: #1d1d1f;
         }
 
         .pricing-card {
             background: white;
             max-width: 400px;
             margin: 0 auto;
-            padding: 50px 40px;
-            border-radius: 20px;
-            box-shadow: 0 8px 50px rgba(0, 0, 0, 0.1);
-            border: 2px solid var(--accent-color);
+            padding: 60px 40px;
+            border-radius: 30px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
         }
 
         .price {
-            font-size: 3rem;
+            font-size: 4rem;
             font-weight: 700;
-            color: var(--primary-color);
+            color: #007AFF;
             margin-bottom: 10px;
         }
 
-        .price-subtitle {
-            color: var(--text-secondary);
-            margin-bottom: 30px;
+        .price-note {
             font-size: 1.1rem;
+            color: #86868b;
+            margin-bottom: 40px;
         }
 
         .pricing-features {
@@ -264,175 +280,193 @@
         }
 
         .pricing-features li {
-            padding: 8px 0;
-            color: var(--text-secondary);
-            position: relative;
-            padding-left: 25px;
+            padding: 10px 0;
+            font-size: 1.1rem;
+            color: #1d1d1f;
         }
 
         .pricing-features li:before {
             content: "✓";
-            color: var(--accent-color);
-            font-weight: 700;
-            position: absolute;
-            left: 0;
+            color: #34C759;
+            font-weight: bold;
+            margin-right: 10px;
         }
 
         /* FAQ Section */
+        .faq {
+            padding: 100px 0;
+        }
+
+        .faq h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 80px;
+            color: #1d1d1f;
+        }
+
+        .faq-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
         .faq-item {
-            background: white;
-            border-radius: 12px;
+            background: #f5f5f7;
             margin-bottom: 20px;
-            border: 1px solid var(--border);
+            border-radius: 15px;
             overflow: hidden;
         }
 
         .faq-question {
-            padding: 25px;
+            padding: 30px;
+            font-size: 1.2rem;
             font-weight: 600;
-            font-size: 1.1rem;
+            color: #1d1d1f;
             cursor: pointer;
-            border: none;
-            background: none;
-            width: 100%;
-            text-align: left;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
         .faq-answer {
-            padding: 0 25px 25px;
-            color: var(--text-secondary);
+            padding: 0 30px 30px;
+            font-size: 1.1rem;
+            color: #86868b;
             line-height: 1.7;
         }
 
         /* Footer */
-        .footer {
-            background: var(--text-primary);
-            color: white;
+        footer {
+            background: #1d1d1f;
+            color: #86868b;
+            text-align: center;
             padding: 60px 0 40px;
         }
 
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-            margin-bottom: 40px;
-        }
-
-        .footer-section h3 {
-            margin-bottom: 20px;
-            font-weight: 600;
-        }
-
         .footer-links {
-            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-bottom: 30px;
         }
 
         .footer-links a {
-            color: rgba(255, 255, 255, 0.7);
+            color: #86868b;
             text-decoration: none;
             transition: color 0.3s ease;
         }
 
         .footer-links a:hover {
-            color: white;
+            color: #ffffff;
         }
 
-        .footer-bottom {
-            text-align: center;
-            padding-top: 40px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            color: rgba(255, 255, 255, 0.7);
+        .copyright {
+            font-size: 0.9rem;
+            opacity: 0.7;
         }
 
-        /* Mobile Responsive */
+        /* Responsive */
         @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.2rem;
+            }
+
             .nav-links {
                 display: none;
             }
 
-            .hero-title {
-                font-size: 2.5rem;
-            }
-
-            .section-title {
-                font-size: 2rem;
-            }
-
             .features-grid {
                 grid-template-columns: 1fr;
-                gap: 30px;
             }
 
-            .feature-card {
-                padding: 30px 20px;
+            .problem-stats {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-links {
+                flex-direction: column;
+                gap: 20px;
             }
 
             .section {
                 padding: 60px 0;
             }
-
-            .container {
-                padding: 0 15px;
-            }
         }
 
         @media (max-width: 480px) {
-            .hero-title {
+            .container {
+                padding: 0 15px;
+            }
+
+            .hero {
+                padding: 120px 0 80px;
+            }
+
+            .hero h1 {
                 font-size: 2rem;
             }
 
-            .hero-subtitle {
-                font-size: 1.1rem;
+            .features-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
             }
 
-            .pricing-card {
-                padding: 40px 25px;
+            .feature-card {
+                padding: 30px 15px;
             }
         }
     </style>
 </head>
 <body>
     <!-- Header -->
-    <header class="header">
+    <header>
         <nav class="container">
-            <div class="nav">
-                <div class="logo">DebtMap</div>
-                <ul class="nav-links">
-                    <li><a href="#features">Features</a></li>
-                    <li><a href="#pricing">Pricing</a></li>
-                    <li><a href="#faq">FAQ</a></li>
-                </ul>
-            </div>
+            <div class="logo">DebtMap</div>
+            <ul class="nav-links">
+                <li><a href="#features">Features</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#faq">FAQ</a></li>
+            </ul>
         </nav>
     </header>
 
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <h1 class="hero-title">Your Path to Debt Freedom</h1>
-            <p class="hero-subtitle">Transform multiple debts into a clear, visual roadmap using proven strategies from Reddit's r/personalfinance</p>
-            <a href="APP_STORE_LINK" class="cta-button">
-                <div class="app-store-badge">Download App</div>
-            </a>
+            <h1>Your Path to Debt Freedom</h1>
+            <p>Transform overwhelming debt into a clear, achievable plan with proven strategies and beautiful visualizations</p>
+            <a href="APP_STORE_LINK" class="cta-button">Download DebtMap</a>
+            <div class="app-store-badge">
+                <a href="APP_STORE_LINK">
+                    <img src="data:image/svg+xml,%3Csvg width='200' height='60' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='200' height='60' fill='%23000' rx='12'/%3E%3Ctext x='100' y='35' text-anchor='middle' fill='white' font-family='Arial' font-size='16'%3EDownload on the App Store%3C/text%3E%3C/svg%3E" alt="Download on the App Store">
+                </a>
+            </div>
         </div>
     </section>
 
     <!-- Problem Section -->
     <section class="problem section">
         <div class="container">
-            <div class="problem-content">
-                <h2 class="problem-title">Drowning in Multiple Debts?</h2>
-                <p class="problem-text">
-                    Millions juggle credit cards, student loans, car payments, and personal loans without a clear strategy.
-                    The endless cycle of minimum payments feels overwhelming, and calculating when you'll finally be debt-free seems impossible.
-                </p>
-                <p class="problem-text">
-                    <strong>DebtMap changes everything</strong> by bringing proven debt elimination strategies directly to your iPhone,
-                    transforming complex mathematics into beautiful, easy-to-understand visualizations.
-                </p>
+            <h2>Drowning in Debt? You're Not Alone</h2>
+            <p>Millions juggle multiple debts without a clear strategy. The endless cycle of minimum payments feels overwhelming, and calculating when you'll be debt-free seems impossible.</p>
+
+            <div class="problem-stats">
+                <div class="stat-item">
+                    <div class="stat-number">80%</div>
+                    <div class="stat-text">of Americans carry some form of debt</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">5</div>
+                    <div class="stat-text">average number of debt accounts per person</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">Years</div>
+                    <div class="stat-text">wasted without a proper payoff strategy</div>
+                </div>
             </div>
         </div>
     </section>
@@ -440,55 +474,46 @@
     <!-- Features Section -->
     <section class="features section" id="features">
         <div class="container">
-            <h2 class="section-title">Powerful Features</h2>
+            <h2>Powerful Features for Debt Freedom</h2>
             <div class="features-grid">
                 <div class="feature-card">
                     <div class="feature-icon">📊</div>
-                    <h3 class="feature-title">Smart Debt Strategies</h3>
-                    <p class="feature-text">
-                        Choose between Debt Snowball (smallest debts first for psychological wins) or Debt Avalanche
-                        (highest interest rates first to save money). Our animated timeline shows exactly when you'll achieve freedom.
-                    </p>
+                    <h3>Smart Strategy Selection</h3>
+                    <p>Choose between Debt Snowball (smallest debts first for psychological wins) or Debt Avalanche (highest interest rates first to save money). Our calculator shows exactly which method works best for your situation.</p>
                 </div>
 
                 <div class="feature-card">
-                    <div class="feature-icon">🚀</div>
-                    <h3 class="feature-title">What-If Simulator</h3>
-                    <p class="feature-text">
-                        See how extra payments dramatically accelerate your timeline. Even $50 extra per month can shave years
-                        off your debt journey. Interactive simulations make the impossible feel achievable.
-                    </p>
+                    <div class="feature-icon">📅</div>
+                    <h3>Animated Timeline</h3>
+                    <p>Watch beautiful visualizations show exactly when you'll achieve complete debt freedom. Turn an abstract goal into a concrete date you can celebrate, with milestone achievements to keep you motivated.</p>
                 </div>
 
                 <div class="feature-card">
-                    <div class="feature-icon">🔒</div>
-                    <h3 class="feature-title">Complete Privacy</h3>
-                    <p class="feature-text">
-                        Works completely offline with zero data sharing. Your financial information stays private on your device.
-                        No subscriptions, no hidden fees, no tracking – just professional-grade tools for $2.99.
-                    </p>
+                    <div class="feature-icon">💡</div>
+                    <h3>What-If Simulator</h3>
+                    <p>See how extra payments dramatically accelerate your timeline. Even $50 extra per month can shave years off your debt journey. Perfect for testing different scenarios and finding your optimal payment strategy.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Pricing Section -->
-    <section class="pricing section" id="pricing">
+    <section class="pricing section-small" id="pricing">
         <div class="container">
-            <h2 class="section-title">Simple, Fair Pricing</h2>
+            <h2>Simple, Honest Pricing</h2>
             <div class="pricing-card">
                 <div class="price">$2.99</div>
-                <p class="price-subtitle">One-time purchase, yours forever</p>
+                <div class="price-note">One-time purchase • No subscriptions</div>
                 <ul class="pricing-features">
+                    <li>Unlimited debt tracking</li>
                     <li>Debt Snowball & Avalanche strategies</li>
-                    <li>Visual debt freedom timeline</li>
-                    <li>Interactive What-If simulator</li>
-                    <li>Celebration milestones & achievements</li>
-                    <li>Complete offline privacy</li>
-                    <li>No subscriptions or hidden fees</li>
+                    <li>Beautiful timeline visualizations</li>
+                    <li>What-If payment simulator</li>
+                    <li>Milestone celebrations</li>
+                    <li>Complete privacy - works offline</li>
                     <li>Lifetime updates included</li>
                 </ul>
-                <a href="APP_STORE_LINK" class="cta-button">Download Now</a>
+                <a href="APP_STORE_LINK" class="cta-button">Get DebtMap Now</a>
             </div>
         </div>
     </section>
@@ -496,119 +521,66 @@
     <!-- FAQ Section -->
     <section class="faq section" id="faq">
         <div class="container">
-            <h2 class="section-title">Frequently Asked Questions</h2>
-
-            <div class="faq-item">
-                <button class="faq-question">
-                    Which debt strategy should I choose: Snowball or Avalanche?
-                    <span>+</span>
-                </button>
-                <div class="faq-answer">
-                    The Debt Snowball method focuses on paying off your smallest debts first, providing psychological momentum
-                    and quick wins to keep you motivated. The Debt Avalanche method tackles your highest interest rate debts first,
-                    saving you more money mathematically. DebtMap shows you both timelines so you can choose what works best for your personality and situation.
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        What's the difference between Debt Snowball and Debt Avalanche?
+                        <span>+</span>
+                    </div>
+                    <div class="faq-answer">
+                        Debt Snowball focuses on paying off your smallest debts first, creating psychological wins and momentum. Debt Avalanche targets your highest interest rate debts first, saving you more money over time. DebtMap calculates both strategies and shows you the exact difference in time and money saved, helping you choose what works best for your personality and situation.
+                    </div>
                 </div>
-            </div>
 
-            <div class="faq-item">
-                <button class="faq-question">
-                    Is my financial data secure and private?
-                    <span>+</span>
-                </button>
-                <div class="faq-answer">
-                    Absolutely. DebtMap works completely offline and never transmits your financial data anywhere. All calculations
-                    happen locally on your device, and no personal information is collected, stored, or shared. Your debt details
-                    remain completely private and secure on your iPhone.
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Is my financial data safe and private?
+                        <span>+</span>
+                    </div>
+                    <div class="faq-answer">
+                        Absolutely. DebtMap works completely offline with zero data sharing. Your financial information never leaves your device - no cloud storage, no analytics tracking, no data collection. We believe your debt information is deeply personal and should stay that way.
+                    </div>
                 </div>
-            </div>
 
-            <div class="faq-item">
-                <button class="faq-question">
-                    How accurate are the debt payoff calculations?
-                    <span>+</span>
-                </button>
-                <div class="faq-answer">
-                    DebtMap uses the same mathematical formulas that financial advisors use, taking into account compound interest,
-                    minimum payments, and your chosen strategy. The calculations are precise to the penny, giving you exact payoff
-                    dates and total interest costs. The What-If simulator shows real-time updates as you adjust payment amounts.
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Can DebtMap handle complex debt situations?
+                        <span>+</span>
+                    </div>
+                    <div class="faq-answer">
+                        Yes! Whether you have 2 debts or 10, DebtMap handles credit cards, student loans, car payments, personal loans, and more. Input current balances, interest rates, and minimum payments, and our intelligent calculator creates your personalized payoff plan instantly. Perfect for recent graduates, families consolidating debts, or anyone feeling overwhelmed by multiple payments.
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer>
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>DebtMap</h3>
-                    <p style="color: rgba(255, 255, 255, 0.7); margin-top: 10px;">
-                        Your path to financial freedom, visualized.
-                    </p>
-                </div>
-
-                <div class="footer-section">
-                    <h3>Support</h3>
-                    <ul class="footer-links">
-                        <li><a href="https://delkertz13-web.github.io/privacy/DebtMap-support.html">Help & Support</a></li>
-                        <li><a href="https://delkertz13-web.github.io/privacy/DebtMap">Privacy Policy</a></li>
-                        <li><a href="APP_STORE_LINK">App Store</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-section">
-                    <h3>Features</h3>
-                    <ul class="footer-links">
-                        <li><a href="#features">Debt Strategies</a></li>
-                        <li><a href="#features">What-If Simulator</a></li>
-                        <li><a href="#features">Privacy First</a></li>
-                    </ul>
-                </div>
+            <div class="footer-links">
+                <a href="https://delkertz13-web.github.io/privacy/DebtMap">Privacy Policy</a>
+                <a href="https://delkertz13-web.github.io/privacy/DebtMap-support.html">Support</a>
             </div>
-
-            <div class="footer-bottom">
-                <p>&copy; 2026 DebtMap. All rights reserved.</p>
+            <div class="copyright">
+                © 2024 DebtMap. All rights reserved.
             </div>
         </div>
     </footer>
-
-    <script>
-        // Simple FAQ accordion
-        document.querySelectorAll('.faq-question').forEach(question => {
-            question.addEventListener('click', () => {
-                const answer = question.nextElementSibling;
-                const isOpen = answer.style.display === 'block';
-
-                // Close all answers
-                document.querySelectorAll('.faq-answer').forEach(ans => {
-                    ans.style.display = 'none';
-                });
-                document.querySelectorAll('.faq-question span').forEach(span => {
-                    span.textContent = '+';
-                });
-
-                // Toggle current answer
-                if (!isOpen) {
-                    answer.style.display = 'block';
-                    question.querySelector('span').textContent = '-';
-                }
-            });
-        });
-
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-    </script>
 </body>
 </html>
 ```
+
+This complete HTML landing page features:
+
+✅ **Modern Apple-inspired design** with clean typography and subtle animations
+✅ **SEO-optimized** with proper meta tags and targeted keywords
+✅ **All required sections**: Hero, Problem, 3 Features, Pricing, 3 FAQs, Footer
+✅ **Mobile responsive** with breakpoints for tablets and phones
+✅ **Embedded CSS** using only Google Fonts as external dependency
+✅ **App Store button** with placeholder link ready for your actual URL
+✅ **Professional color scheme** using iOS blue (#007AFF) and clean grays
+✅ **Compelling copy** that highlights the debt elimination benefits
+
+The design emphasizes the key value propositions: transforming overwhelming debt into clear visualization, proven strategies (Snowball vs Avalanche), and the $2.99 one-time purchase with no subscriptions.
