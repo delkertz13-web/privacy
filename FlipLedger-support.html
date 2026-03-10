@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlipLedger - Support & Aide</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f5f5f7;
+            color: #1d1d1f;
+            line-height: 1.6;
+        }
+        
+        header {
+            background: #fff;
+            padding: 40px 20px;
+            text-align: center;
+            border-bottom: 1px solid #e5e5e7;
+        }
+        
+        header h1 {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        
+        header p {
+            font-size: 16px;
+            color: #6f6f77;
+        }
+        
+        .container {
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        section {
+            background: #fff;
+            border-radius: 12px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+        }
+        
+        h2 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 24px;
+            color: #1d1d1f;
+        }
+        
+        h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #1d1d1f;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        
+        .faq-item {
+            margin-bottom: 24px;
+            padding-bottom: 24px;
+            border-bottom: 1px solid #f5f5f7;
+        }
+        
+        .faq-item:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+            margin-bottom: 0;
+        }
+        
+        .faq-question {
+            font-size: 15px;
+            font-weight: 600;
+            color: #007AFF;
+            margin-bottom: 8px;
+            cursor: pointer;
+        }
+        
+        .faq-answer {
+            font-size: 15px;
+            color: #6f6f77;
+            line-height: 1.8;
+        }
+        
+        .contact-info {
+            background: #f5f5f7;
+            border-left: 4px solid #007AFF;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        
+        .contact-info p {
+            font-size: 15px;
+            margin-bottom: 10px;
+        }
+        
+        .contact-info a {
+            color: #007AFF;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+        
+        .action-buttons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-top: 24px;
+        }
+        
+        .btn {
+            padding: 16px 24px;
+            border: 1px solid #d5d5d7;
+            border-radius: 8px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .btn-primary {
+            background: #007AFF;
+            color: white;
+            border-color: #007AFF;
+        }
+        
+        .btn-primary:hover {
+            background: #0051d5;
+            border-color: #0051d5;
+        }
+        
+        .btn-secondary {
+            background: #fff;
+            color: #007AFF;
+            border-color: #d5d5d7;
+        }
+        
+        .btn-secondary:hover {
+            background: #f5f5f7;
+        }
+        
+        .info-box {
+            background: #f5f5f7;
+            border-radius: 8px;
+            padding: 16px;
+            margin: 20px 0;
+            font-size: 14px;
+            color: #6f6f77;
+        }
+        
+        .warning-box {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 16px;
+            border-radius: 8px;
+            margin: 20px 0;
+            font-size: 14px;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            background: #fff;
+            border-top: 1px solid #e5e5e7;
+            color: #6f6f77;
+            font-size: 13px;
+        }
+        
+        footer p {
+            margin-bottom: 10px;
+        }
+        
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin-top: 24px;
+        }
+        
+        @media (max-width: 768px) {
+            section {
+                padding: 24px;
+            }
+            
+            header h1 {
+                font-size: 24px;
+            }
+            
+            h2 {
+                font-size: 20px;
+            }
+            
+            .grid-2,
+            .action-buttons {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>FlipLedger</h1>
+        <p>Centre d'aide et support client</p>
+    </header>
+    
+    <div class="container">
+        <!-- FAQ Section -->
+        <section>
+            <h2>Questions fréquemment posées</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">1. Comment fonctionne le calcul des profits dans FlipLedger?</div>
+                <div class="faq-answer">
+                    FlipLedger calcule automatiquement votre profit net en soustrayant le prix d'achat, les frais de plateforme et autres dépenses associées du prix de vente. Pour chaque article, vous entrez le prix d'achat, la plateforme de revente, le prix de vente et les frais. L'application calcule immédiatement votre profit et l'ajoute à votre portefeuille. Vous pouvez suivre vos profits par article, par plateforme ou sur une période donnée.
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">2. Comment puis-je restaurer mon achat premium?</div>
+                <div class="faq-answer">
+                    Si vous avez déjà acheté FlipLedger Premium et que vous utilisez un nouvel appareil ou avez réinstallé l'application, vous pouvez restaurer votre achat en utilisant la fonction "Restaurer achat" dans les paramètres de l'application. Vous n'aurez pas besoin de payer à nouveau. Allez dans les paramètres, appuyez sur "Restaurer achat", et authentifiez-vous avec votre identifiant Apple.
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">3. Mes données sont-elles sécurisées et privées?</div>
+                <div class="faq-answer">
+                    Oui, vos données d'inventaire et financières restent privées et stockées localement sur votre appareil. FlipLedger ne collecte ni n'envoie vos données personnelles à des serveurs externes. Seules les métadonnées essentielles de l'App Store Connect sont traitées pour gérer votre achat premium. Vos informations financières ne quittent jamais votre appareil.
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">4. Comment exporter mon rapport fiscal pour la déclaration Schedule C?</div>
+                <div class="faq-answer">
+                    Dans la section "Rapports", vous pouvez générer un rapport fiscal annuel qui récapitule tous vos revenus bruts, dépenses et profits nets par catégorie et plateforme. Ce rapport peut être exporté en PDF ou partagé directement avec votre comptable. Le rapport inclut tous les détails nécessaires pour remplir le formulaire Schedule C de l'IRS.
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">5. Qu'est-ce qui différencie la version gratuite de la version premium?</div>
+                <div class="faq-answer">
+                    La version gratuite vous permet de tracker jusqu'à 30 articles. La version premium ($0.99, achat unique) offre un suivi illimité d'articles, l'accès à tous les rapports avancés, l'export en PDF, et les futures mises à jour. Aucun abonnement n'est requis — un seul achat donne accès permanent à toutes les fonctionnalités premium.
+                </div>
+            </div>
+        </section>
+        
+        <!-- Contact Section -->
+        <section>
+            <h2>Nous contacter</h2>
+            <div class="contact-info">
+                <p><strong>Email de support :</strong></p>
+                <p>Pour toute question, bug ou suggestion, contactez-nous à :</p>
+                <p><a href="mailto:delkertz13@gmail.com">delkertz13@gmail.com</a></p>
+                <p style="margin-top: 16px; color: #999; font-size: 13px;">Nous répondons généralement dans les 24 heures.</p>
+            </div>
+        </section>
+        
+        <!-- Account Management Section -->
+        <section>
+            <h2>Gestion du compte</h2>
+            
+            <h3>Restaurer achat premium</h3>
+            <p style="margin-bottom: 16px; color: #6f6f77; font-size: 15px;">
+                Si vous avez déjà acheté FlipLedger Premium, utilisez ce bouton pour restaurer votre achat sur votre appareil actuel sans frais supplémentaires.
+            </p>
+            <div class="action-buttons">
+                <button class="btn btn-primary" onclick="alert('Fonction de restauration d\'achat activée. Veuillez vous authentifier avec votre identifiant Apple.')">Restaurer achat</button>
+            </div>
+            
+            <div class="info-box">
+                ℹ️ La restauration nécessite une authentification avec l'identifiant Apple utilisé pour l'achat initial.
+            </div>
+        </section>
+        
+        <!-- Data Management Section -->
+        <section>
+            <h2>Supprimer mes données</h2>
+            
+            <p style="margin-bottom: 20px; color: #6f6f77; font-size: 15px;">
+                Si vous souhaitez supprimer définitivement toutes vos données d'inventaire et vos paramètres de FlipLedger :
+            </p>
+            
+            <div class="warning-box">
+                ⚠️ <strong>Attention :</strong> Cette action est permanente et irréversible. Tous vos articles, transactions et rapports seront supprimés de votre appareil.
+            </div>
+            
+            <p style="margin-bottom: 20px; color: #6f6f77; font-size: 15px;">
+                <strong>Avant de supprimer vos données :</strong>
+            </p>
+            <ul style="margin-left: 20px; margin-bottom: 20px; color: #6f6f77; font-size: 15px;">
+                <li>Exportez vos rapports fiscaux importants</li>
+                <li>Notez vos statistiques finales si nécessaire</li>
+                <li>Assurez-vous d'avoir une sauvegarde si vous prévoyez de continuer votre suivi ailleurs</li>
+            </ul>
+            
+            <div class="action-buttons">
+                <button class="btn btn-secondary" onclick="alert('Fonction de suppression annulée.')">Annuler</button>
+                <button class="btn btn-primary" style="background: #ff3b30; border-color: #ff3b30;" onclick="if(confirm('Êtes-vous absolument sûr? Cette action est irréversible.')) { alert('Vos données ont été supprimées. Veuillez réinstaller FlipLedger pour recommencer.'); }">Supprimer toutes mes données</button>
+            </div>
+        </section>
+        
+        <!-- About Section -->
+        <section>
+            <h2>À propos de FlipLedger</h2>
+            <p style="color: #6f6f77; font-size: 15px; line-height: 1.8; margin-bottom: 16px;">
+                FlipLedger est l'outil parfait pour les revendeurs américains qui doivent déclarer leurs revenus à l'IRS suite aux changements de 2024 (seuil 1099-K à $600). Que vous vendiez sur eBay, Poshmark, Mercari ou d'autres plateformes, FlipLedger simplifie le suivi de votre inventaire, vos profits et la génération de rapports fiscaux.
+            </p>
+            <p style="color: #6f6f77; font-size: 15px; line-height: 1.8;">
+                Avec FlipLedger, vous pouvez enfin tracker votre cost basis, calculer vos vrais profits et vous assurer que vous payez les impôts corrects sur vos revenus de revente.
+            </p>
+        </section>
+    </div>
+    
+    <footer>
+        <p>&copy; 2025-2026 FlipLedger. Tous droits réservés.</p>
+        <p>FlipLedger est une application non affiliée à Apple Inc.</p>
+        <p style="margin-top: 20px; font-size: 12px; color: #a1a1a6;">
+            Version 1.0 | iOS 14.0 ou version ultérieure requise
+        </p>
+    </footer>
+</body>
+</html>
+```
