@@ -1,0 +1,386 @@
+```html
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedBillTracker - Support</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f5f5f7;
+            color: #1d1d1d;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, #007AFF 0%, #0051D5 100%);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 32px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 16px;
+            opacity: 0.9;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        section {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 20px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        section h2 {
+            color: #007AFF;
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #f5f5f7;
+        }
+
+        .faq-item {
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #f5f5f7;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .faq-item h3 {
+            color: #1d1d1d;
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            cursor: pointer;
+        }
+
+        .faq-item p {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        .contact-info {
+            background: #f5f5f7;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .contact-info p {
+            margin-bottom: 10px;
+            font-size: 15px;
+        }
+
+        .contact-info a {
+            color: #007AFF;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .btn {
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background-color: #007AFF;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: #0051D5;
+        }
+
+        .btn-secondary {
+            background-color: #f5f5f7;
+            color: #007AFF;
+            border: 1px solid #d5d5d7;
+        }
+
+        .btn-secondary:hover {
+            background-color: #e8e8eb;
+        }
+
+        .btn-danger {
+            background-color: #ff3b30;
+            color: white;
+        }
+
+        .btn-danger:hover {
+            background-color: #ff2d20;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .modal-content {
+            background-color: white;
+            margin: 10% auto;
+            padding: 30px;
+            border-radius: 12px;
+            width: 90%;
+            max-width: 500px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .modal-content h3 {
+            color: #1d1d1d;
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+
+        .modal-content p {
+            color: #666;
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+
+        .modal-buttons {
+            display: flex;
+            gap: 10px;
+            justify-content: flex-end;
+        }
+
+        .close-btn {
+            color: #666;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close-btn:hover {
+            color: #1d1d1d;
+        }
+
+        .info-banner {
+            background: #e8f4fd;
+            border-left: 4px solid #007AFF;
+            padding: 15px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+            font-size: 14px;
+            color: #1d1d1d;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 20px 20px;
+            color: #666;
+            font-size: 12px;
+        }
+
+        footer a {
+            color: #007AFF;
+            text-decoration: none;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 24px;
+            }
+
+            section {
+                padding: 20px;
+            }
+
+            section h2 {
+                font-size: 20px;
+            }
+
+            .button-group {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>MedBillTracker</h1>
+        <p>Centre d'assistance et support</p>
+    </header>
+
+    <div class="container">
+        <section id="contact">
+            <h2>Contactez-nous</h2>
+            <div class="contact-info">
+                <p><strong>Email de support:</strong></p>
+                <p><a href="mailto:delkertz13@gmail.com">delkertz13@gmail.com</a></p>
+                <p style="color: #999; font-size: 13px; margin-top: 10px;">Nous répondons à tous les messages dans les 24 heures</p>
+            </div>
+            <div class="info-banner">
+                Avez-vous besoin d'aide pour utiliser MedBillTracker? Notre équipe est prête à vous assister pour toute question ou problème technique.
+            </div>
+        </section>
+
+        <section id="faq">
+            <h2>Questions Fréquemment Posées</h2>
+
+            <div class="faq-item">
+                <h3>❓ Comment fonctionnent le suivi de la franchise et du maximum out-of-pocket?</h3>
+                <p>MedBillTracker suit automatiquement vos dépenses médicales annuelles par rapport à votre franchise (deductible) et votre maximum out-of-pocket. Vous pouvez configurer ces montants dans les paramètres de l'app. Un graphique visuel vous montre votre progression tout au long de l'année. Les montants se réinitialisent automatiquement le 1er janvier.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>❓ Comment scanner et enregistrer mes factures médicales?</h3>
+                <p>Appuyez sur le bouton '+' pour ajouter une nouvelle facture. Vous pouvez prendre une photo de votre Explication des avantages (EOB) ou facture, ou saisir manuellement les informations. L'app extrait automatiquement les montants importants. Assignez un statut (payé, contesté, en attente) et organisez vos dossiers par année ou prestataire de santé.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>❓ Comment fonctionne le suivi FSA/HSA?</h3>
+                <p>Configurez votre solde FSA/HSA initial dans les paramètres. MedBillTracker suit chaque dépense liée à la santé que vous enregistrez. Des alertes vous avertissent 30, 15 et 7 jours avant la date d'expiration, vous aidant à ne pas perdre vos fonds. Vous pouvez également consulter un historique détaillé de vos transactions.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>❓ Comment puis-je utiliser le récapitulatif annuel pour mes impôts?</h3>
+                <p>À la fin de l'année, accédez à l'onglet 'Récapitulatif fiscal'. MedBillTracker génère un résumé détaillé de toutes vos dépenses médicales déductibles (Schedule A). Vous pouvez exporter ce récapitulatif au format PDF pour le partager avec votre comptable ou l'utiliser lors de votre déclaration d'impôts.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>❓ Quelle est la différence entre la version gratuite et l'abonnement illimité?</h3>
+                <p>La version gratuite vous permet de suivre une personne avec jusqu'à 15 entrées de factures. L'abonnement illimité ($2.99 achat unique) déverrouille le suivi pour plusieurs personnes et factures illimitées. Aucun abonnement récurrent - un seul paiement unique pour un accès à vie.</p>
+            </div>
+        </section>
+
+        <section id="restore-purchase">
+            <h2>Restaurer les achats</h2>
+            <p style="margin-bottom: 15px;">Si vous avez précédemment acheté l'accès illimité sur un autre appareil ou après une réinstallation de l'app, vous pouvez restaurer votre achat.</p>
+            <button class="btn btn-primary" onclick="openRestoreModal()">Restaurer les achats</button>
+            <p style="color: #999; font-size: 13px; margin-top: 15px;">Vous serez invité à vous connecter avec votre Apple ID pour vérifier vos achats précédents.</p>
+        </section>
+
+        <section id="delete-data">
+            <h2>Supprimer vos données</h2>
+            <p style="margin-bottom: 15px;">Vous pouvez supprimer toutes vos données MedBillTracker à tout moment. Cette action est irréversible et supprimera tous vos dossiers de factures, soldes FSA/HSA et historiques.</p>
+            <button class="btn btn-danger" onclick="openDeleteModal()">Supprimer toutes les données</button>
+            <p style="color: #999; font-size: 13px; margin-top: 15px;">Avant de supprimer vos données, considérez à exporter votre récapitulatif fiscal si vous avez besoin de ces informations pour vos impôts.</p>
+        </section>
+
+        <section>
+            <h2>Besoin d'aide supplémentaire?</h2>
+            <p style="margin-bottom: 20px;">Si vous ne trouvez pas la réponse à votre question, n'hésitez pas à nous contacter directement:</p>
+            <a href="mailto:delkertz13@gmail.com" class="btn btn-primary">Envoyer un email au support</a>
+        </section>
+    </div>
+
+    <div id="restoreModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeRestoreModal()">&times;</span>
+            <h3>Restaurer les achats</h3>
+            <p>Pour restaurer votre accès illimité, appuyez sur le bouton ci-dessous. Vous serez invité à vous connecter avec votre Apple ID.</p>
+            <div class="modal-buttons">
+                <button class="btn btn-secondary" onclick="closeRestoreModal()">Annuler</button>
+                <button class="btn btn-primary" onclick="confirmRestore()">Restaurer maintenant</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="deleteModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeDeleteModal()">&times;</span>
+            <h3>Supprimer toutes les données</h3>
+            <p>Êtes-vous sûr? Toutes vos factures, soldes FSA/HSA et historiques seront supprimés de manière irréversible.</p>
+            <div class="modal-buttons">
+                <button class="btn btn-secondary" onclick="closeDeleteModal()">Annuler</button>
+                <button class="btn btn-danger" onclick="confirmDelete()">Supprimer définitivement</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 MedBillTracker. Tous droits réservés.</p>
+        <p><a href="mailto:delkertz13@gmail.com">Contact</a></p>
+    </footer>
+
+    <script>
+        function openRestoreModal() {
+            document.getElementById('restoreModal').style.display = 'block';
+        }
+
+        function closeRestoreModal() {
+            document.getElementById('restoreModal').style.display = 'none';
+        }
+
+        function openDeleteModal() {
+            document.getElementById('deleteModal').style.display = 'block';
+        }
+
+        function closeDeleteModal() {
+            document.getElementById('deleteModal').style.display = 'none';
+        }
+
+        function confirmRestore() {
+            alert('Redirection vers App Store pour restaurer vos achats...');
+            closeRestoreModal();
+        }
+
+        function confirmDelete() {
+            alert('Vos données vont être supprimées. Veuillez confirmer dans l\'app.');
+            closeDeleteModal();
+        }
+
+        window.onclick = function(event) {
+            const restoreModal = document.getElementById('restoreModal');
+            const deleteModal = document.getElementById('deleteModal');
+            if (event.target == restoreModal) {
+                restoreModal.style.display = 'none';
+            }
+            if (event.target == deleteModal) {
+                deleteModal.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>
+```
