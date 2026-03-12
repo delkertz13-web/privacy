@@ -1,0 +1,318 @@
+I need permission to write the file. Here's the complete HTML landing page code:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Smart Sinking Fund Calculator - Plan your finances with ease. Manage savings goals and budget allocations effortlessly.">
+    <meta name="keywords" content="sinking fund, calculator, budgeting, savings, financial planning">
+    <meta name="author" content="app-1773096968">
+    <meta name="theme-color" content="#6366f1">
+    <meta property="og:title" content="Smart Sinking Fund Calculator">
+    <meta property="og:description" content="Manage your savings goals with our intelligent sinking fund calculator. Available now for $2.99.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://delkertz13-web.github.io/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Smart Sinking Fund Calculator">
+    <meta name="twitter:description" content="Manage your savings goals with our intelligent sinking fund calculator.">
+    <title>Smart Sinking Fund Calculator - app-1773096968</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            color: #1f2937;
+            line-height: 1.6;
+            background-color: #f9fafb;
+        }
+
+        header {
+            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+            color: white;
+            padding: 3rem 1.5rem;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-content h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-size: 1.25rem;
+            font-weight: 400;
+            opacity: 0.95;
+            margin-bottom: 1.5rem;
+        }
+
+        .price-badge {
+            display: inline-block;
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 0.5rem 1.5rem;
+            border-radius: 2rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        main {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+        }
+
+        .features {
+            background: white;
+            border-radius: 0.75rem;
+            padding: 2rem 1.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .features h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+            color: #1f2937;
+        }
+
+        .feature-list {
+            list-style: none;
+        }
+
+        .feature-item {
+            padding: 1rem 0;
+            border-bottom: 1px solid #e5e7eb;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .feature-item:last-child {
+            border-bottom: none;
+        }
+
+        .feature-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 2rem;
+            height: 2rem;
+            background-color: #e0e7ff;
+            border-radius: 0.5rem;
+            color: #6366f1;
+            font-weight: bold;
+            margin-right: 1rem;
+            flex-shrink: 0;
+        }
+
+        .feature-text h3 {
+            font-size: 1rem;
+            margin-bottom: 0.25rem;
+            color: #1f2937;
+        }
+
+        .feature-text p {
+            font-size: 0.9rem;
+            color: #6b7280;
+        }
+
+        .cta-section {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 600;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+            border: none;
+            cursor: pointer;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(99, 102, 241, 0.4);
+        }
+
+        .cta-button:active {
+            transform: translateY(0);
+        }
+
+        footer {
+            background-color: #1f2937;
+            color: #f3f4f6;
+            padding: 2rem 1.5rem;
+            text-align: center;
+            font-size: 0.9rem;
+            border-top: 1px solid #374151;
+        }
+
+        footer p {
+            margin-bottom: 1rem;
+        }
+
+        footer a {
+            color: #60a5fa;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        footer a:hover {
+            color: #93c5fd;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .footer-divider {
+            color: #6b7280;
+            margin: 0 0.5rem;
+        }
+
+        @media (min-width: 768px) {
+            header {
+                padding: 4rem 2rem;
+            }
+
+            .header-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .subtitle {
+                font-size: 1.5rem;
+            }
+
+            main {
+                padding: 3rem 2rem;
+            }
+
+            .features {
+                padding: 2.5rem;
+            }
+
+            .footer-links {
+                flex-direction: row;
+                justify-content: center;
+            }
+
+            .footer-divider {
+                display: inline;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            header {
+                padding: 5rem 2rem;
+            }
+
+            .header-content h1 {
+                font-size: 3rem;
+            }
+
+            .subtitle {
+                font-size: 1.75rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>app-1773096968</h1>
+            <p class="subtitle">Smart Sinking Fund Calculator</p>
+            <span class="price-badge">$2.99</span>
+        </div>
+    </header>
+
+    <main>
+        <section class="features">
+            <h2>Features</h2>
+            <ul class="feature-list">
+                <li class="feature-item">
+                    <div class="feature-icon">✓</div>
+                    <div class="feature-text">
+                        <h3>Smart Calculations</h3>
+                        <p>Automatically calculate savings needed for your financial goals</p>
+                    </div>
+                </li>
+                <li class="feature-item">
+                    <div class="feature-icon">✓</div>
+                    <div class="feature-text">
+                        <h3>Multi-Goal Tracking</h3>
+                        <p>Manage multiple sinking funds simultaneously with ease</p>
+                    </div>
+                </li>
+                <li class="feature-item">
+                    <div class="feature-icon">✓</div>
+                    <div class="feature-text">
+                        <h3>Budget Planning</h3>
+                        <p>Allocate funds intelligently across your financial priorities</p>
+                    </div>
+                </li>
+                <li class="feature-item">
+                    <div class="feature-icon">✓</div>
+                    <div class="feature-text">
+                        <h3>Progress Tracking</h3>
+                        <p>Visualize your savings progress toward each goal</p>
+                    </div>
+                </li>
+                <li class="feature-item">
+                    <div class="feature-icon">✓</div>
+                    <div class="feature-text">
+                        <h3>Quick & Simple</h3>
+                        <p>Intuitive interface designed for fast financial planning</p>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <div class="cta-section">
+            <button class="cta-button" onclick="handleDownload()">Download Now - $2.99</button>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 app-1773096968. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="https://delkertz13-web.github.io/privacy/" target="_blank">Privacy Policy</a>
+            <span class="footer-divider">|</span>
+            <a href="mailto:delkertz13@gmail.com">Contact Us</a>
+        </div>
+    </footer>
+
+    <script>
+        function handleDownload() {
+            alert('Download functionality would be implemented here.\n\nApp: app-1773096968\nPrice: $2.99');
+        }
+    </script>
+</body>
+</html>
+```
+
+**Features included:**
+- Purple gradient header (indigo → violet)
+- Mobile-first responsive design with breakpoints at 768px & 1024px
+- 5 app features with icons
+- CTA button with hover effects
+- Footer with privacy link & contact email
+- Complete SEO meta tags (description, OG, Twitter)
+- Inline CSS only, single HTML file
+- Smooth transitions and modern typography
